@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:sapassadoman/classegiornirifiuti.dart';
 import 'package:sapassadoman/recuperaData.dart';
+import 'package:sapassadoman/tiporifiuti.dart';
 
 // R I F I U T I        G I A L L O
 
+NomeRifiuto rifiuto = NomeRifiuto();
 
 final datadioggi = Dataoggi();
 
@@ -13,13 +15,13 @@ class AbbinamentoGiorniRifiuti {    // LISTA RIFIUTI GIALLO
 
   List <GiornoRifiuti> elencoZonaGialla = [
 
-    GiornoRifiuti(giorno: "1999-12-05 00:00:00.000", rifiuto: "NON PASSA NULLA"), // lasciare in posizione 0
-    GiornoRifiuti(giorno: "2020-12-03 00:00:00.000", rifiuto: "CartaX"),
-    GiornoRifiuti(giorno: "2020-12-07 00:00:00.000", rifiuto: "Vetro e Umido"),
-    GiornoRifiuti(giorno: "2020-12-09 00:00:00.000", rifiuto: "CartaAAA"),
-    GiornoRifiuti(giorno: "2020-12-10 00:00:00.000", rifiuto: "Vetro e Umido"),
-    GiornoRifiuti(giorno: "2020-12-11 00:00:00.000", rifiuto: "Verde"),
-    GiornoRifiuti(giorno: "2020-12-12 00:00:00.000", rifiuto: "Verde")
+    GiornoRifiuti(giorno: "1999-12-05 00:00:00.000", rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta)), // lasciare in posizione 0
+    GiornoRifiuti(giorno: "2020-12-03 00:00:00.000", rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco) + " " + rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta)),
+    GiornoRifiuti(giorno: "2020-12-07 00:00:00.000", rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco) + " e " + rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta)),
+    GiornoRifiuti(giorno: "2020-12-09 00:00:00.000", rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+    GiornoRifiuti(giorno: "2020-12-10 00:00:00.000", rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
+    GiornoRifiuti(giorno: "2020-12-11 00:00:00.000", rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta)),
+    GiornoRifiuti(giorno: "2020-12-12 00:00:00.000", rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.vetro))
 
 
   ];
@@ -59,7 +61,7 @@ class AbbinamentoGiorniRifiuti {    // LISTA RIFIUTI GIALLO
         } else {
 
 
-         return "Nessun rifiuto";
+         return "NESSUN RIFIUTO";
 
         }
 

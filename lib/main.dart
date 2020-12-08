@@ -3,7 +3,7 @@ import 'package:sapassadoman/giornirifiutiblu.dart';
 import 'recuperaData.dart';
 import 'giornirifiuti.dart';
 
-final datadioggi = Dataoggi();
+final datadomani = Dataoggi();
 final rifiutogiallo = AbbinamentoGiorniRifiuti(); // oggetto rifiuti giallo
 final rifiutoblu = AbbinamentoGiorniRifiutiBLU(); // oggetto rifiuti blu
 
@@ -42,18 +42,12 @@ class _MyHomePageState extends State<MyHomePage> {
     String rifiutodioggigiallo = rifiutogiallo.verifica();
     String rifiutodioggiblu = rifiutoblu.verifica();
 
-    void aggiornamento() {
-      setState(() {
-        rifiutodioggigiallo = rifiutogiallo.verifica();
-        rifiutodioggiblu = rifiutoblu.verifica();
-      });
-    }
 
-    const Key centerKey = ValueKey('bottom-sliver-list');
+
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text('Sa passa doman ad Arcole (VR)'),
+        title: Text('SA PASSA DOMAN'),
         centerTitle: true,
         backgroundColor: Colors.green[700],
       ),
@@ -66,7 +60,8 @@ class _MyHomePageState extends State<MyHomePage> {
               margin: EdgeInsets.only(top: 10, bottom: 10),
               height: 30,
               child: Text(
-                datadioggi.printData(),
+                datadomani.dataDomani(),
+                // datadioggi.printData(),
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 20,

@@ -1,3 +1,4 @@
+
 import 'package:intl/intl.dart';
 
 
@@ -9,16 +10,14 @@ class Dataoggi {
   String  formattedDate;
 
 
-  Dataoggi();
+  String dataDomani(){
+    DateTime tomorroww = DateTime(now.year, now.month, now.day + 1);
+    String tomorrowww = formatter.format(tomorroww);
+    return "DOMANI " + tomorrowww;
 
-  String printData(){
-    final tomorrow = DateTime(now.year, now.month, now.day + 1);
-    return formattedDate = "Domani " + formatter.format(tomorrow);
+    // tomorroww.toString();   è possibile converire in stringhe anche grazie a questo metodo
+
   }
-
-
-  //var now = new DateTime.now();
-  //var formatter = new DateFormat('yyyy-MM-dd');
 
 
 }

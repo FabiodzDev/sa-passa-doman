@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:sapassadoman/classegiornirifiuti.dart';
 import 'package:sapassadoman/recuperaData.dart';
+import 'tiporifiuti.dart';
 
 
 
@@ -9,17 +10,20 @@ import 'package:sapassadoman/recuperaData.dart';
 
 final datadioggi = Dataoggi();
 
+NomeRifiuto rifiuto = NomeRifiuto();
+
+
 class AbbinamentoGiorniRifiutiBLU {   // LISTA RIFIUTI BLU
 
     List <GiornoRifiuti> elencoZonaBlu = [
 
-      GiornoRifiuti(giorno: "1999-12-05 00:00:00.000", rifiuto: "NON PASSA NULLA"), // lasciare in posizione 0
-      GiornoRifiuti(giorno: "2020-12-03 00:00:00.000", rifiuto: "CartaX"),
-      GiornoRifiuti(giorno: "2020-12-04 00:00:00.000", rifiuto: "Vetro e Umido"),
-      GiornoRifiuti(giorno: "2020-12-07 00:00:00.000", rifiuto: "Carta e Secco"),
-      GiornoRifiuti(giorno: "2020-12-10 00:00:00.000", rifiuto: "Vetro e Umido"),
-      GiornoRifiuti(giorno: "2020-12-11 00:00:00.000", rifiuto: "Verde"),
-      GiornoRifiuti(giorno: "2020-12-12 00:00:00.000", rifiuto: "Verde")
+      GiornoRifiuti(giorno: "1999-12-05 00:00:00.000", rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.vetro)), 
+      GiornoRifiuti(giorno: "2020-12-03 00:00:00.000", rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+      GiornoRifiuti(giorno: "2020-12-04 00:00:00.000", rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
+      GiornoRifiuti(giorno: "2020-12-07 00:00:00.000", rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta)),
+      GiornoRifiuti(giorno: "2020-12-10 00:00:00.000", rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.vetro)),
+      GiornoRifiuti(giorno: "2020-12-11 00:00:00.000", rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta)),
+      GiornoRifiuti(giorno: "2020-12-12 00:00:00.000", rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido))
 
     ];
 
@@ -54,15 +58,13 @@ class AbbinamentoGiorniRifiutiBLU {   // LISTA RIFIUTI BLU
           break ;  // ESCE DAL LOOP SE LO TROVA
         }
         else if (difference < 0 ) {
-
           continue;
+
         } else {
 
-
-          return "Nessun rifiuto";
+          return "NESSUN RIFIUTO";
 
         }
-
 
 
       }
