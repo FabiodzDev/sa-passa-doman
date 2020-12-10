@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:sapassadoman/giornirifiutiblu.dart';
+import 'package:sapassadoman/tipoicone.dart';
+import 'package:sapassadoman/tiporifiuti.dart';
 import 'recuperaData.dart';
 import 'giornirifiuti.dart';
+import 'pulsantiDiNavigazione.dart';
+import 'zonaGialla.dart';
 
 final datadomani = Dataoggi();
 final rifiutogiallo = AbbinamentoGiorniRifiuti(); // oggetto rifiuti giallo
 final rifiutoblu = AbbinamentoGiorniRifiutiBLU(); // oggetto rifiuti blu
+final iconaDaUtilizzare = ElencoIcone();
 
 void main() {
   runApp(MyApp());
@@ -17,12 +22,18 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         title: 'Sa passa doman',
+        initialRoute: '/',            // pagina iniziale dell'app settata qui sotto, dove setto tutte le pagine che ho
+        routes: {                     // elenco delle pagine della mia app
+          '/' : (context) => MyHomePage(),
+          '/zonaGialla' : (context) => paginaZonaGialla(),
+        },
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
           primarySwatch: Colors.blue,
           visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
-        home: MyHomePage());
+        //home: MyHomePage()  Nel caso avessi più pagine da navigare, non uso il parametro home ma InitialRoute
+    );
   }
 }
 
@@ -38,18 +49,15 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-
-    String rifiutodioggigiallo = rifiutogiallo.verifica();
-    String rifiutodioggiblu = rifiutoblu.verifica();
-
-
+    String rifiutodidomanigiallo = rifiutogiallo.verifica();
+    String rifiutodidomaniblu = rifiutoblu.verifica();
 
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text('SA PASSA DOMAN'),
         centerTitle: true,
-        backgroundColor: Colors.green[700],
+        backgroundColor: Colors.blue[700],
       ),
       body: Container(
         child: Column(
@@ -61,11 +69,10 @@ class _MyHomePageState extends State<MyHomePage> {
               height: 30,
               child: Text(
                 datadomani.dataDomani(),
-                // datadioggi.printData(),
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  fontSize: 20,
-                  color: Colors.green.shade900,
+                  fontSize: 25,
+                  color: Colors.blue.shade900,
                   fontWeight: FontWeight.bold,
                   letterSpacing: 2,
                 ),
@@ -80,7 +87,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         30) // da un arrotondamento agli spigoli
                     ),
                 child: Column(
-                  //crossAxisAlignment: CrossAxisAlignment.stretch, // la colonna si estende orizzontalmente
+                  // crossAxisAlignment: CrossAxisAlignment.stretch, // la colonna si estende orizzontalmente
                   children: [
                     Container(
                       margin: EdgeInsets.only(top: 10),
@@ -95,22 +102,51 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                     ),
                     Expanded(
-                      child: Container(
-                        padding: EdgeInsets.all(50),
-                        margin: EdgeInsets.only(
-                            top: 10, left: 20, right: 20, bottom: 20),
-                        child: Text(
-                          rifiutodioggigiallo,
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            fontSize: 30,
+                      child: GestureDetector(
+                        onTap: (){
+                          Navigator.pushNamed(context, '/zonaGialla');
+                         },
+                        child: Container(
+                          padding: EdgeInsets.all(10),
+                          margin: EdgeInsets.only(
+                              top: 10, left: 20, right: 20, bottom: 10),
+                          decoration: BoxDecoration(
+                              color: Colors.white,
+                              image: DecorationImage(
+                                image: AssetImage(
+                                  iconaDaUtilizzare.percorsoDaUtilizzare(
+                                      rifiuto: rifiutodidomanigiallo),
+                                ),
+                                fit: BoxFit.contain,
+                              ),
+                              borderRadius: BorderRadius.circular(30)),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.end,
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            children: [
+                              Container(
+                                padding: EdgeInsets.all(3),
+                                decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(
+                                        30) // da un arrotondamento agli spigoli
+                                ),
+
+                                child: Text(
+                                  rifiutodidomanigiallo,
+                                  // textAlign: TextAlign.left,
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 25,
+                                  ),
+                                ),
+                              ),
+                            ],
+
                           ),
+                          height: 30,
+                          width: double.infinity,
                         ),
-                        decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(30)),
-                        height: 30,
-                        width: double.infinity,
                       ),
                     ),
                   ],
@@ -145,19 +181,42 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                     Expanded(
                       child: Container(
-                        padding: EdgeInsets.all(50),
+                        padding: EdgeInsets.all(10),
                         margin: EdgeInsets.only(
-                            top: 10, left: 20, right: 20, bottom: 20),
-                        child: Text(
-                          rifiutodioggiblu,
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            fontSize: 30,
-                          ),
-                        ),
+                            top: 10, left: 20, right: 20, bottom: 10),
                         decoration: BoxDecoration(
                             color: Colors.white,
+                            image: DecorationImage(
+                              image: AssetImage(
+                                iconaDaUtilizzare.percorsoDaUtilizzare(
+                                    rifiuto: rifiutodidomaniblu),
+                              ),
+                              fit: BoxFit.contain,
+                            ),
                             borderRadius: BorderRadius.circular(30)),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.end,
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                            Container(
+                              // color: Colors.white,
+                              padding: EdgeInsets.all(3),
+                              decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(
+                                      30) // da un arrotondamento agli spigoli
+                              ),
+                              child: Text(
+                                rifiutodidomaniblu,
+                                //textAlign: TextAlign.center,
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 25,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
                         height: 30,
                         width: double.infinity,
                       ),
@@ -174,34 +233,3 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 }
 
-class PulsantiDiNavigazione extends StatefulWidget {
-  @override
-  _PulsantiDiNavigazioneState createState() => _PulsantiDiNavigazioneState();
-}
-
-class _PulsantiDiNavigazioneState extends State<PulsantiDiNavigazione> {
-  @override
-  Widget build(BuildContext context) {
-    return BottomNavigationBar(
-      type: BottomNavigationBarType.fixed,
-      items: const <BottomNavigationBarItem>[
-        BottomNavigationBarItem(
-          icon: Icon(
-            Icons.home,
-          ),
-          label: "Home",
-        ),
-        BottomNavigationBarItem(
-          icon: Icon(
-            Icons.settings,
-          ),
-          label: "Setting",
-        ),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.info),
-          label: "Info",
-        ),
-      ],
-    );
-  }
-}

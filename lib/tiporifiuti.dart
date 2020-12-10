@@ -4,7 +4,9 @@ enum tipoRifiuti {      // elenco di possibilità al tipoRifiuti, accessibile tr
     vetro,
     carta,
     umido,
-    secco
+    secco,
+    plastica,
+    verde
   }
 
 class NomeRifiuto {
@@ -28,5 +30,14 @@ class NomeRifiuto {
     if (tipoRifiuto == tipoRifiuti.secco) {
       return "SECCO";
     }
+
+    if (tipoRifiuto == tipoRifiuti.plastica) {
+      return "PLASTICA";
+    }
+
+    if (tipoRifiuto == tipoRifiuti.verde ) {
+      return "VERDE";
+    }
+
   }
 }
