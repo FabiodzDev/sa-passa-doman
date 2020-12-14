@@ -32,7 +32,7 @@ class NomeRifiuto {
     }
 
     if (tipoRifiuto == tipoRifiuti.plastica) {
-      return "PLASTICA";
+      return "PLASTICA, LATTINE";
     }
 
     if (tipoRifiuto == tipoRifiuti.verde ) {

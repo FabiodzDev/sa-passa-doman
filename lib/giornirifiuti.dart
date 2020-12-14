@@ -17,11 +17,12 @@ class AbbinamentoGiorniRifiuti {    // LISTA RIFIUTI GIALLO
 
     GiornoRifiuti(giorno: "1999-12-01 00:00:00.000", rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta)), // lasciare in posizione 0
     GiornoRifiuti(giorno: "2020-12-07 00:00:00.000", rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco) + " " + rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta)),
-    GiornoRifiuti(giorno: "2020-12-08 00:00:00.000", rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco) + " e " + rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta)),
-    GiornoRifiuti(giorno: "2020-12-09 00:00:00.000", rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
-    GiornoRifiuti(giorno: "2020-12-09 00:00:00.000", rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
-    GiornoRifiuti(giorno: "2020-12-10 00:00:00.000", rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
-    GiornoRifiuti(giorno: "2020-12-12 00:00:00.000", rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco))
+    GiornoRifiuti(giorno: "2020-12-10 00:00:00.000", rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco) + " e " + rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta)),
+    GiornoRifiuti(giorno: "2020-12-13 00:00:00.000", rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
+    GiornoRifiuti(giorno: "2020-12-15 00:00:00.000", rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
+    GiornoRifiuti(giorno: "2020-12-16 00:00:00.000", rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(giorno: "2999-12-31 00:00:00.000", rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco))      // LASCIARE QUESTA LUNGHISSIMA DATA
 
 
   ];
@@ -43,16 +44,14 @@ class AbbinamentoGiorniRifiuti {    // LISTA RIFIUTI GIALLO
         // converto in formato data la data che ho nella List che è in formato String   1974-03-20 00:00:00.000
         String strDt = rilevagiorno(i);
         DateTime parseDt = DateTime.parse(strDt);
-        print(parseDt);
-        print(datadioggi.dataDomani());
 
         // facciamo la differenza tra oggi e la data della lista che sto analizzando
         final difference = parseDt.difference(datadioggi.dataDomaniFormatoDateTime()).inDays;
-        print (difference);
+
 
         // se la differenza è uguale a 1, significa che domani passa qualcosa.
         if (difference == 0 ) {
-          print("trovato GIALLO");
+
           return rilevarifiuto(i);
           break ;  // ESCE DAL LOOP SE LO TROVA
         }
@@ -60,7 +59,6 @@ class AbbinamentoGiorniRifiuti {    // LISTA RIFIUTI GIALLO
 
           continue;
         } else {
-
 
          return "NESSUN RIFIUTO";
 
@@ -71,4 +69,37 @@ class AbbinamentoGiorniRifiuti {    // LISTA RIFIUTI GIALLO
       }
 
     }
+
+  Widget listOfWidgets() {
+    List<Widget> list = List<Widget>();
+    for (var i = 0; i < elencoZonaGialla.length; i++) {
+
+      String giorno = rilevagiorno(i);
+      DateTime giornoconvertito = DateTime.parse(giorno);  // DA STRINGA CON ORARIO A DATETIME
+      print (giornoconvertito);
+      String formattedDate = DateFormat('dd-MM-yyyy').format(giornoconvertito);   // DA DATETIME CON ORARIO A STRINGA SENZA ORARIO
+      print (formattedDate);
+
+      // facciamo la differenza tra oggi e la data della lista che sto analizzando
+      final int differenceX = giornoconvertito.difference(datadioggi.dataDomaniFormatoDateTime()).inDays;
+
+      if (list.length < 5) {
+        // LIMITO I VALORI DELLA LISTA A 5
+        if (differenceX == 0 || differenceX > 1) {
+          // Se la data è uguale a domani oppure è maggiore aggiungi alla lista
+
+          list.add(
+            Container(
+              child: ListTile(
+                leading: Icon(Icons.play_arrow , size: 30, color: Colors.yellow[600],),
+                title: Text(formattedDate, style: TextStyle(fontSize: 18),),
+                subtitle: Text(elencoZonaGialla[i].rifiuto, style: TextStyle(fontSize:  17),),
+              ),
+            ),
+          );
+        }
+      }
+    }
+    return Column(children: list);
+  }
   }
