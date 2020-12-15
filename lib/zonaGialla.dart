@@ -1,22 +1,12 @@
 import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:sapassadoman/pulsantiDiNavigazione.dart';
-import 'menuDrawer.dart';
 import 'classeTestoZona.dart';
 
 class paginaZonaGialla extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('SA PASSA DOMAN'),
-        centerTitle: true,
-        backgroundColor: Colors.blue[700],
-      ),
-      //drawer: menuDrawer(),
-      body: SafeArea(
+    return SafeArea(
         child: ListView(
           //mainAxisAlignment: MainAxisAlignment.start,
          // crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -43,7 +33,6 @@ class paginaZonaGialla extends StatelessWidget {
             ),
             testoZona(testo: 'Abazzea'),
             testoZona(testo: 'Argine dx Alpone'),
-            testoZona(testo: 'Argine dx Alpone'),
             testoZona(testo: 'Borgoletto'),
             testoZona(testo: 'Cadenet'),
             testoZona(testo: 'Casamenti'),
@@ -57,7 +46,7 @@ class paginaZonaGialla extends StatelessWidget {
             testoZona(testo: 'Estienne'),
             testoZona(testo: 'Firenze'),
             testoZona(testo: 'Fornasa'),
-            testoZona(testo: 'Vicolo Fornasa'),
+            testoZona(testo: 'Fornasa (Vicolo)'),
             testoZona(testo: 'Friuli'),
             testoZona(testo: 'Garibaldi'),
             testoZona(testo: 'Genova'),
@@ -96,9 +85,8 @@ class paginaZonaGialla extends StatelessWidget {
 
           ],
         ),
-      ),
-      bottomNavigationBar: PulsantiDiNavigazione(),
-    );
+      );
+
   }
 }
 

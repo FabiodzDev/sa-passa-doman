@@ -9,14 +9,7 @@ import 'classeTestoZona.dart';
 class paginaZonaBlu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('SA PASSA DOMAN'),
-        centerTitle: true,
-        backgroundColor: Colors.blue[700],
-      ),
-      //drawer: menuDrawer(),
-      body: SafeArea(
+    return SafeArea(
         child: ListView(
           //mainAxisAlignment: MainAxisAlignment.start,
           //crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -91,9 +84,8 @@ class paginaZonaBlu extends StatelessWidget {
 
           ],
         ),
-      ),
-      bottomNavigationBar: PulsantiDiNavigazione(),
-    );
+      );
+
   }
 }
 

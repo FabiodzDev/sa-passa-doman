@@ -8,13 +8,14 @@ class Splash extends StatefulWidget {
   @override
   _SplashState createState() => new _SplashState();
 }
+Widget paginacorrente = MyHomePage();
 
 class _SplashState extends State<Splash> {
   @override
   Widget build(BuildContext context) {
     return SplashScreen(
         seconds: 4,
-        navigateAfterSeconds: MyHomePage(),
+        navigateAfterSeconds: paginacorrente,
         title: new Text(
           'ARCOLE',
           style:

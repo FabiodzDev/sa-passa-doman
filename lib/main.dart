@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:sapassadoman/giornirifiutiblu.dart';
 import 'package:sapassadoman/tipoicone.dart';
-import 'package:sapassadoman/tiporifiuti.dart';
+import 'home.dart';
+import 'info.dart';
 import 'recuperaData.dart';
 import 'giornirifiuti.dart';
-import 'pulsantiDiNavigazione.dart';
 import 'zonaGialla.dart';
 import 'zonaBlu.dart';
 import 'menuDrawer.dart';
@@ -31,6 +31,7 @@ class MyApp extends StatelessWidget {
           '/' : (context) => MyHomePage(),
           '/zonaGialla' : (context) => paginaZonaGialla(),
           '/zonaBlu' : (context) => paginaZonaBlu(),
+
         },
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
@@ -42,21 +43,23 @@ class MyApp extends StatelessWidget {
   }
 }
 
+
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
-
-  final String title;
-
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
 
+
 class _MyHomePageState extends State<MyHomePage> {
+
+  List <Widget> myPages = [Homex(), paginaZonaGialla(), paginaZonaBlu(), paginaZonaBlu(),paginaZonaBlu()];
+  int selectedIndex = 0;
+
   @override
   Widget build(BuildContext context) {
 
-    String rifiutodidomanigiallo = rifiutogiallo.verifica();
-    String rifiutodidomaniblu = rifiutoblu.verifica();
+   // String rifiutodidomanigiallo = rifiutogiallo.verifica();
+    // String rifiutodidomaniblu = rifiutoblu.verifica();
 
     return Scaffold(
       backgroundColor: Colors.white,
@@ -66,181 +69,53 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Colors.blue[700],
       ),
       drawer: menuDrawer(),
-      body: Container(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment
-              .stretch, // la colonna si estende orizzontalmente
-          children: [
-            Container(
-              margin: EdgeInsets.only(top: 10, bottom: 10),
-              height: 30,
-              child: Text(
-                datadomani.dataDomani(),
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: 25,
-                  color: Colors.blue.shade900,
-                  fontWeight: FontWeight.bold,
-                  letterSpacing: 2,
-                ),
-              ),
+      body: myPages[selectedIndex],
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: selectedIndex,
+        onTap: (index){
+          setState(() {
+            selectedIndex = index;
+            print(selectedIndex);
+          });
+        } ,
+        type: BottomNavigationBarType.fixed,
+        backgroundColor: Colors.blue[700],
+        selectedItemColor: Colors.white,
+        selectedFontSize: 20,
+        unselectedItemColor: Colors.white,
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.home,
             ),
-            Expanded(
-              child: Container(
-                margin: EdgeInsets.only(left: 20, right: 20),
-                decoration: BoxDecoration(
-                    color: Colors.yellow[200],
-                    borderRadius: BorderRadius.circular(
-                        30) // da un arrotondamento agli spigoli
-                    ),
-                child: Column(
-                  // crossAxisAlignment: CrossAxisAlignment.stretch, // la colonna si estende orizzontalmente
-                  children: [
-                    Container(
-                      margin: EdgeInsets.only(top: 10),
-                      child: Text(
-                        "ZONA GIALLA",
-                        style: TextStyle(
-                          color: Colors.yellow.shade900,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 20,
-                          letterSpacing: 2,
-                        ),
-                      ),
-                    ),
-                    Expanded(
-                      child: GestureDetector(
-                        onTap: (){
-                          Navigator.pushNamed(context, '/zonaGialla');
-                         },
-                        child: Container(
-                          padding: EdgeInsets.all(10),
-                          margin: EdgeInsets.only(
-                              top: 10, left: 20, right: 20, bottom: 10),
-                          decoration: BoxDecoration(
-                              color: Colors.white,
-                              image: DecorationImage(
-                                image: AssetImage(
-                                  iconaDaUtilizzare.percorsoDaUtilizzare(
-                                      rifiuto: rifiutodidomanigiallo),
-                                ),
-                                fit: BoxFit.contain,
-                              ),
-                              borderRadius: BorderRadius.circular(30)),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.end,
-                            mainAxisAlignment: MainAxisAlignment.end,
-                            children: [
-                              Container(
-                                padding: EdgeInsets.all(3),
-                                decoration: BoxDecoration(
-                                    color: Colors.white,
-                                    borderRadius: BorderRadius.circular(
-                                        30) // da un arrotondamento agli spigoli
-                                ),
-
-                                child: Text(
-                                  rifiutodidomanigiallo,
-                                  // textAlign: TextAlign.left,
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 25,
-                                  ),
-                                ),
-                              ),
-                            ],
-
-                          ),
-                          height: 30,
-                          width: double.infinity,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
+            label: "HOME",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.play_arrow,
+              color: Colors.yellowAccent,
             ),
-            SizedBox(
-              height: 5,
-              width: double.infinity, // si prende tutta la larghezza
+            label: "VIE",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.play_arrow,
+              color: Colors.lightBlueAccent,
             ),
-            Expanded(
-              child: Container(
-                margin: EdgeInsets.only(left: 20, right: 20, bottom: 10),
-                decoration: BoxDecoration(
-                    color: Colors.blue[200],
-                    borderRadius: BorderRadius.circular(
-                        30) // da un arrotondamento agli spigoli
-                    ),
-                child: Column(
-                  children: [
-                    Container(
-                      margin: EdgeInsets.only(top: 10),
-                      child: Text(
-                        "ZONA BLU",
-                        style: TextStyle(
-                          color: Colors.blue.shade900,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 20,
-                          letterSpacing: 2,
-                        ),
-                      ),
-                    ),
-                    Expanded(
-                      child: GestureDetector(
-                        onTap: (){
-                          Navigator.pushNamed(context, '/zonaBlu');
-                        },
-                        child: Container(
-                          padding: EdgeInsets.all(10),
-                          margin: EdgeInsets.only(
-                              top: 10, left: 20, right: 20, bottom: 10),
-                          decoration: BoxDecoration(
-                              color: Colors.white,
-                              image: DecorationImage(
-                                image: AssetImage(
-                                  iconaDaUtilizzare.percorsoDaUtilizzare(
-                                      rifiuto: rifiutodidomaniblu),
-                                ),
-                                fit: BoxFit.contain,
-                              ),
-                              borderRadius: BorderRadius.circular(30)),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.end,
-                            mainAxisAlignment: MainAxisAlignment.end,
-                            children: [
-                              Container(
-                                // color: Colors.white,
-                                padding: EdgeInsets.all(3),
-                                decoration: BoxDecoration(
-                                    color: Colors.white,
-                                    borderRadius: BorderRadius.circular(
-                                        30) // da un arrotondamento agli spigoli
-                                ),
-                                child: Text(
-                                  rifiutodidomaniblu,
-                                  //textAlign: TextAlign.center,
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 25,
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                          height: 30,
-                          width: double.infinity,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            )
-          ],
-        ),
+            label: "VIE",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.settings,
+            ),
+            label: "RIFIUTI",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.call),
+            label: "INFO",
+          ),
+        ],
       ),
-      bottomNavigationBar: PulsantiDiNavigazione(),
     );
   }
 }
