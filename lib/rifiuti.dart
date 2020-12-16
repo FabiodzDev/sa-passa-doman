@@ -89,7 +89,42 @@ class ElencoRifiuti {
     generaElencoRifiuti(descrizioneRifiuto: 'Vaschette in polistirolo', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica)),
     generaElencoRifiuti(descrizioneRifiuto: 'Vasetti di yogurt in plastica ', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica)),
 
-
+    generaElencoRifiuti(descrizioneRifiuto: 'Accendini', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
+    generaElencoRifiuti(descrizioneRifiuto: 'Astucci', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
+    generaElencoRifiuti(descrizioneRifiuto: 'Bacinelle', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
+    generaElencoRifiuti(descrizioneRifiuto: 'Calze in nylon', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
+    generaElencoRifiuti(descrizioneRifiuto: 'Cancelleria', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
+    generaElencoRifiuti(descrizioneRifiuto: 'Carta oleata per alimenti', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
+    generaElencoRifiuti(descrizioneRifiuto: 'Carta plastificata', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
+    generaElencoRifiuti(descrizioneRifiuto: 'Carta sporca da solventi', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
+    generaElencoRifiuti(descrizioneRifiuto: 'Carta sporca da vernici', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
+    generaElencoRifiuti(descrizioneRifiuto: 'Cartelle', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
+    generaElencoRifiuti(descrizioneRifiuto: 'CD, cassette musicali, videocassette e floppy', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
+    generaElencoRifiuti(descrizioneRifiuto: 'Cosmetici', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
+    generaElencoRifiuti(descrizioneRifiuto: 'Cotton Fioc', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
+    generaElencoRifiuti(descrizioneRifiuto: 'Cover telefonini', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
+    generaElencoRifiuti(descrizioneRifiuto: 'Giocattoli', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
+    generaElencoRifiuti(descrizioneRifiuto: 'Guarnizioni uso familiare', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
+    generaElencoRifiuti(descrizioneRifiuto: 'Lamette usa e getta', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
+    generaElencoRifiuti(descrizioneRifiuto: 'Lastre RX', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
+    generaElencoRifiuti(descrizioneRifiuto: 'Mozziconi di sigaretta', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
+    generaElencoRifiuti(descrizioneRifiuto: 'Nastri adesivi', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
+    generaElencoRifiuti(descrizioneRifiuto: 'Oggetti multimateriali', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
+    generaElencoRifiuti(descrizioneRifiuto: 'Negativi di fotografie', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
+    generaElencoRifiuti(descrizioneRifiuto: 'Pagliette abrasive', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
+    generaElencoRifiuti(descrizioneRifiuto: 'Pannolini', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
+    generaElencoRifiuti(descrizioneRifiuto: 'Pennarelli consumati', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
+    generaElencoRifiuti(descrizioneRifiuto: 'Penne', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
+    generaElencoRifiuti(descrizioneRifiuto: 'Polvere da aspirapolvere', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
+    generaElencoRifiuti(descrizioneRifiuto: 'Posate in plastica', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
+    generaElencoRifiuti(descrizioneRifiuto: 'Scarpe', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
+    generaElencoRifiuti(descrizioneRifiuto: 'Secchi', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
+    generaElencoRifiuti(descrizioneRifiuto: 'Stracci', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
+    generaElencoRifiuti(descrizioneRifiuto: 'Spazzole', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
+    generaElencoRifiuti(descrizioneRifiuto: 'Spazzolini da denti', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
+    generaElencoRifiuti(descrizioneRifiuto: 'Spugne', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
+    generaElencoRifiuti(descrizioneRifiuto: 'Stoviglie rotte', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
+    generaElencoRifiuti(descrizioneRifiuto: 'Tubetti di colla', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
 
 
   ];
@@ -105,14 +140,22 @@ class ElencoRifiuti {
       Color coloreIcona = Colors.blue[200];
 
       if (tuttiIRifiuti[i].tipoRifiuto == nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta) ) {
-        icona = Icons.nature;
+        icona = Icons.play_arrow;
         coloreIcona = Colors.brown.shade700;
       }
 
       if (tuttiIRifiuti[i].tipoRifiuto == nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica) ) {
-        icona = Icons.adjust;
-        coloreIcona = Colors.blueGrey.shade700;
+        icona = Icons.play_arrow;
+        coloreIcona = Colors.deepOrange.shade700;
       }
+
+      if (tuttiIRifiuti[i].tipoRifiuto == nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)) {
+        icona = Icons.play_arrow;
+        coloreIcona = Colors.black;
+
+
+      }
+
 
       elenco.add(
         Container(
