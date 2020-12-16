@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sapassadoman/giornirifiutiblu.dart';
+import 'package:sapassadoman/rifiuti.dart';
 import 'package:sapassadoman/tipoicone.dart';
 import 'home.dart';
 import 'info.dart';
@@ -52,7 +53,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
 
-  List <Widget> myPages = [Homex(), paginaZonaGialla(), paginaZonaBlu(), paginaZonaBlu(),paginaZonaBlu()];
+  List <Widget> myPages = [Homex(), paginaZonaGialla(), paginaZonaBlu(), rifiuti(),paginaZonaBlu()];
   int selectedIndex = 0;
 
   @override
