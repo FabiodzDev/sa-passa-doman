@@ -126,6 +126,31 @@ class ElencoRifiuti {
     generaElencoRifiuti(descrizioneRifiuto: 'Stoviglie rotte', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
     generaElencoRifiuti(descrizioneRifiuto: 'Tubetti di colla', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
 
+    generaElencoRifiuti(descrizioneRifiuto: 'Bicchieri di vetro', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.vetro)),
+    generaElencoRifiuti(descrizioneRifiuto: 'Bottiglie di vetro', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.vetro)),
+    generaElencoRifiuti(descrizioneRifiuto: 'Contenitori di vetro', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.vetro)),
+    generaElencoRifiuti(descrizioneRifiuto: 'Vasetti di vetro', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.vetro)),
+
+    generaElencoRifiuti(descrizioneRifiuto: 'Fiori recisi', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.verde)),
+    generaElencoRifiuti(descrizioneRifiuto: 'Foglie e sfalci d\'erba', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.verde)),
+    generaElencoRifiuti(descrizioneRifiuto: 'Ramaglie', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.verde)),
+    generaElencoRifiuti(descrizioneRifiuto: 'Residui dell\'orto', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.verde)),
+    generaElencoRifiuti(descrizioneRifiuto: 'Potatura di siepi ed alberi', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.verde)),
+
+    generaElencoRifiuti(descrizioneRifiuto: 'Avanzi di cibo', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+    generaElencoRifiuti(descrizioneRifiuto: 'Bucce di frutta', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+    generaElencoRifiuti(descrizioneRifiuto: 'Carne', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+    generaElencoRifiuti(descrizioneRifiuto: 'Ceneri spente da stufa o camino', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+    generaElencoRifiuti(descrizioneRifiuto: 'Filtri di te\'', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+    generaElencoRifiuti(descrizioneRifiuto: 'Fondi di caffè', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+    generaElencoRifiuti(descrizioneRifiuto: 'Gusci di uova', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+    generaElencoRifiuti(descrizioneRifiuto: 'Frutta secca', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+    generaElencoRifiuti(descrizioneRifiuto: 'Lettiera di piccoli animali domestici', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+    generaElencoRifiuti(descrizioneRifiuto: 'Ossa', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+    generaElencoRifiuti(descrizioneRifiuto: 'Pane', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+    generaElencoRifiuti(descrizioneRifiuto: 'Pesce e farinacei vari', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+    generaElencoRifiuti(descrizioneRifiuto: 'Scarti di verdura e fiori recisi', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+    generaElencoRifiuti(descrizioneRifiuto: 'Tovaglioli usati di carta', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
 
   ];
 
@@ -152,9 +177,26 @@ class ElencoRifiuti {
       if (tuttiIRifiuti[i].tipoRifiuto == nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)) {
         icona = Icons.play_arrow;
         coloreIcona = Colors.black;
-
-
       }
+
+      if (tuttiIRifiuti[i].tipoRifiuto == nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.vetro)) {
+        icona = Icons.play_arrow;
+        coloreIcona = Colors.lightBlueAccent;
+      }
+
+      if (tuttiIRifiuti[i].tipoRifiuto == nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.verde)) {
+        icona = Icons.play_arrow;
+        coloreIcona = Colors.green;
+      }
+
+      if (tuttiIRifiuti[i].tipoRifiuto == nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)) {
+        icona = Icons.play_arrow;
+        coloreIcona = Colors.deepOrange;
+      }
+
+
+
+
 
 
       elenco.add(
