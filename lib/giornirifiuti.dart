@@ -20,7 +20,16 @@ class AbbinamentoGiorniRifiuti {    // LISTA RIFIUTI GIALLO
     GiornoRifiuti(giorno: "2020-12-10 00:00:00.000", rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco) + " e " + rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta)),
     GiornoRifiuti(giorno: "2020-12-13 00:00:00.000", rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
     GiornoRifiuti(giorno: "2020-12-15 00:00:00.000", rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
-    GiornoRifiuti(giorno: "2020-12-16 00:00:00.000", rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta)),
+    GiornoRifiuti(giorno: "2020-12-20 00:00:00.000", rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta)),
+    GiornoRifiuti(giorno: "2020-12-21 00:00:00.000", rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.verde)),
+    GiornoRifiuti(giorno: "2020-12-22 00:00:00.000", rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.vetro)),
+    GiornoRifiuti(giorno: "2020-12-23 00:00:00.000", rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+    GiornoRifiuti(giorno: "2020-12-24 00:00:00.000", rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
+    GiornoRifiuti(giorno: "2020-12-25 00:00:00.000", rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta)),
+    GiornoRifiuti(giorno: "2020-12-26 00:00:00.000", rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica)),
+    GiornoRifiuti(giorno: "2020-12-27 00:00:00.000", rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.vetro)),
+    GiornoRifiuti(giorno: "2020-12-28 00:00:00.000", rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.verde)),
+    GiornoRifiuti(giorno: "2020-12-29 00:00:00.000", rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
 
     GiornoRifiuti(giorno: "2999-12-31 00:00:00.000", rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco))      // LASCIARE QUESTA LUNGHISSIMA DATA
 
@@ -60,7 +69,7 @@ class AbbinamentoGiorniRifiuti {    // LISTA RIFIUTI GIALLO
           continue;
         } else {
 
-         return "NESSUN RIFIUTO";
+         return "NULLA";
 
         }
 

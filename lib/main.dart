@@ -3,7 +3,7 @@ import 'package:sapassadoman/giornirifiutiblu.dart';
 import 'package:sapassadoman/rifiuti.dart';
 import 'package:sapassadoman/tipoicone.dart';
 import 'home.dart';
-import 'info.dart';
+import 'informazioni.dart';
 import 'recuperaData.dart';
 import 'giornirifiuti.dart';
 import 'zonaGialla.dart';
@@ -53,7 +53,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
 
-  List <Widget> myPages = [Homex(), paginaZonaGialla(), paginaZonaBlu(), rifiuti(),paginaZonaBlu()];
+  List <Widget> myPages = [Homex(), paginaZonaGialla(), paginaZonaBlu(), rifiuti(), Informazioni()];
   int selectedIndex = 0;
 
   @override
@@ -63,6 +63,7 @@ class _MyHomePageState extends State<MyHomePage> {
     // String rifiutodidomaniblu = rifiutoblu.verifica();
 
     return Scaffold(
+      resizeToAvoidBottomPadding: false,  // DOVREBBE NON MANDARE IN OVERFLOW I BOTTONI
       backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text('SA PASSA DOMAN'),
@@ -107,12 +108,12 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.settings,
+              Icons.account_tree,
             ),
             label: "RIFIUTI",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.call),
+            icon: Icon(Icons.info),
             label: "INFO",
           ),
         ],

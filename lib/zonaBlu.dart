@@ -75,7 +75,7 @@ class paginaZonaBlu extends StatelessWidget {
                     'https://www.google.com/maps/place/Via+Capitello,+37040+Arcole+VR/@45.3818487,11.3157104,17z/data=!3m1!4b1!4m5!3m4!1s0x477f40f4d118bbb9:0x919ec8a598b554ea!8m2!3d45.381845!4d11.3178991');
               },
               child: testoZona(testo: 'Capitello')),
-          testoZona(testo: '*** Carrarola'),
+          testoZona(testo: 'Carrarola'),
           GestureDetector(
               onTap: () {
                 mappa.launchURL(
@@ -190,27 +190,122 @@ class paginaZonaBlu extends StatelessWidget {
                     'https://www.google.com/maps/@45.3679847,11.3158844,17z');
               },
               child: testoZona(testo: 'Motte Crosaron')),
-          GestureDetector(onTap: (){mappa.launchURL('https://www.google.com/maps/@45.3679847,11.3158844,17z');},
+          GestureDetector(
+              onTap: () {
+                mappa.launchURL(
+                    'https://www.google.com/maps/@45.3679847,11.3158844,17z');
+              },
               child: testoZona(testo: 'Motte Godi')),
-          testoZona(testo: 'Motte'),
-          testoZona(testo: 'Motte di sopra'),
-          testoZona(testo: 'Motte Rossini'),
-          testoZona(testo: 'Orionda'),
-          testoZona(testo: 'Padre Mario Boggiani'),
-          testoZona(testo: 'Pausella'),
-          testoZona(testo: 'Piazza del Donatore'),
-          testoZona(testo: 'Piazza Gazzolo'),
+          GestureDetector(
+              onTap: () {
+                mappa.launchURL(
+                    'https://www.google.com/maps/place/Via+Motte,+37040+Arcole+VR/@45.3720212,11.3170147,17z/data=!3m1!4b1!4m5!3m4!1s0x477f40668225a399:0xd1e3732de5a8a830!8m2!3d45.3720212!4d11.3192034');
+              },
+              child: testoZona(testo: 'Motte')),
+          GestureDetector(
+              onTap: () {
+                mappa.launchURL(
+                    'https://www.google.com/maps/place/Via+Motte+di+Sopra,+37040+Gazzolo+VR/@45.374493,11.3104649,17z/data=!3m1!4b1!4m5!3m4!1s0x477f406757f796dd:0x499ac1aa45fcbe27!8m2!3d45.374493!4d11.3126536');
+              },
+              child: testoZona(testo: 'Motte di sopra')),
+          GestureDetector(
+              onTap: () {
+                mappa.launchURL(
+                    'https://www.google.com/maps/place/Via+Motte+Rossini,+37040+Gazzolo+VR/@45.3754198,11.3120151,17z/data=!3m1!4b1!4m5!3m4!1s0x477f4060d22cee99:0x88a649130ae93037!8m2!3d45.3754198!4d11.3142038');
+              },
+              child: testoZona(testo: 'Motte Rossini')),
+          GestureDetector(
+              onTap: () {
+                mappa.launchURL(
+                    'https://www.google.com/maps/place/Via+Orionda,+37040+Volpino+VR/@45.3768855,11.3273532,17z/data=!3m1!4b1!4m5!3m4!1s0x477f40877a3528d1:0x28cebd04b981f988!8m2!3d45.3768855!4d11.3295419');
+              },
+              child: testoZona(testo: 'Orionda')),
+          GestureDetector(
+              onTap: () {
+                mappa.launchURL(
+                    'https://www.google.com/maps/place/Via+Padre+Mario+Boggiani,+37040+Arcole+VR/@45.3770587,11.3134428,17z/data=!3m1!4b1!4m5!3m4!1s0x477f4060edccffa9:0x9c63519d9b920cac!8m2!3d45.3770587!4d11.3156315');
+              },
+              child: testoZona(testo: 'Padre Mario Boggiani')),
+          GestureDetector(
+              onTap: () {
+                mappa.launchURL(
+                    'https://www.google.com/maps/place/Via+Pausella,+37040+Arcole+VR/@45.3708894,11.3112299,17z/data=!3m1!4b1!4m5!3m4!1s0x477f4067b57136c1:0x3a157627887a1026!8m2!3d45.3708894!4d11.3134186');
+              },
+              child: testoZona(testo: 'Pausella')),
+          GestureDetector(
+              onTap: () {
+                mappa.launchURL(
+                    'https://www.google.com/maps/place/Piazza+Del+Donatore/@45.3766356,11.3096604,17z/data=!3m1!4b1!4m5!3m4!1s0x477f405e427a111b:0x63b440ffd76afeed!8m2!3d45.3766356!4d11.3118491');
+              },
+              child: testoZona(testo: 'Piazza del Donatore')),
+          GestureDetector(
+              onTap: () {
+                mappa.launchURL(
+                    'https://www.google.com/maps/place/Piazza+Gazzolo,+37040+Gazzolo+VR/@45.3779623,11.3103602,17z/data=!3m1!4b1!4m5!3m4!1s0x477f405e48ea2951:0x9dacd134e4e9ecbb!8m2!3d45.3779623!4d11.3125489');
+              },
+              child: testoZona(testo: 'Piazza Gazzolo')),
           testoZona(testo: 'Rovere'),
-          testoZona(testo: 'Ruffo Gianni Augusto'),
-          testoZona(testo: 'Salvarolo'),
-          testoZona(testo: 'Salvo d’Acquisto'),
-          testoZona(testo: 'San Giuseppe Lavoratore ex G. Mansoldo'),
-          testoZona(testo: 'San Marco'),
-          testoZona(testo: 'Selva'),
-          testoZona(testo: 'Trento'),
-          testoZona(testo: 'Valle'),
-          testoZona(testo: 'Verdi'),
-          testoZona(testo: 'XIII Maggio'),
+          GestureDetector(
+              onTap: () {
+                mappa.launchURL(
+                    'https://www.google.com/maps/place/Via+Avv.+Gianni+Augusto+Ruffo,+37040+Arcole+VR/@45.3727132,11.2887034,17z/data=!3m1!4b1!4m5!3m4!1s0x477f404dbe36032b:0xe72a207a36af68c4!8m2!3d45.3727132!4d11.2908921');
+              },
+              child: testoZona(testo: 'Ruffo Gianni Augusto')),
+          GestureDetector(
+              onTap: () {
+                mappa.launchURL(
+                    'https://www.google.com/maps/place/Via+Salvarolo,+37040+Arcole+VR/@45.3590589,11.2994373,17z/data=!3m1!4b1!4m5!3m4!1s0x477f4039d108c86b:0x4c4653e987412513!8m2!3d45.3590589!4d11.301626');
+              },
+              child: testoZona(testo: 'Salvarolo')),
+          GestureDetector(
+              onTap: () {
+                mappa.launchURL(
+                    'https://www.google.com/maps/place/Via+Salvo+D\'Acquisto,+37040+Arcole+VR/@45.3828192,11.3091323,17z/data=!3m1!4b1!4m5!3m4!1s0x477f40f4354053c1:0x161b4177e94e5bb0!8m2!3d45.3828192!4d11.311321');
+              },
+              child: testoZona(testo: 'Salvo d’Acquisto')),
+          GestureDetector(
+              onTap: () {
+                mappa.launchURL(
+                    'https://www.google.com/maps/place/Via+S.+Giuseppe+Lavoratore,+37040+Arcole+VR/@45.3715792,11.2884012,17z/data=!3m1!4b1!4m5!3m4!1s0x477f404d6ab4caf7:0xb95e855d3f838a7b!8m2!3d45.3715792!4d11.2905899');
+              },
+              child:
+                  testoZona(testo: 'San Giuseppe Lavoratore ex G. Mansoldo')),
+          GestureDetector(
+              onTap: () {
+                mappa.launchURL(
+                    'https://www.google.com/maps/place/Via+San+Marco,+37040+Arcole+VR/@45.375896,11.3143233,17z/data=!3m1!4b1!4m5!3m4!1s0x477f406146d5427d:0xbcedf7e38b747ab!8m2!3d45.375896!4d11.316512');
+              },
+              child: testoZona(testo: 'San Marco')),
+          GestureDetector(
+              onTap: () {
+                mappa.launchURL(
+                    'https://www.google.com/maps/place/Via+Selva,+Gazzolo+VR/@45.3850369,11.3130753,17z/data=!3m1!4b1!4m5!3m4!1s0x477f40f320d270ed:0xff59beaf03a5739e!8m2!3d45.3850369!4d11.315264');
+              },
+              child: testoZona(testo: 'Selva')),
+          GestureDetector(
+              onTap: () {
+                mappa.launchURL(
+                    'https://www.google.com/maps/place/Via+Trento,+37040+Gazzolo+VR/@45.3837444,11.3082793,17z/data=!3m1!4b1!4m5!3m4!1s0x477f40f68f91bc55:0xe9017ea5858e4257!8m2!3d45.3837444!4d11.310468');
+              },
+              child: testoZona(testo: 'Trento')),
+          GestureDetector(
+              onTap: () {
+                mappa.launchURL(
+                    'https://www.google.com/maps/place/Via+Valle,+37040+Arcole+VR/@45.352779,11.307047,17z/data=!3m1!4b1!4m5!3m4!1s0x477f4017cb41813d:0xfcbc8c291103fb4a!8m2!3d45.352779!4d11.3092357');
+              },
+              child: testoZona(testo: 'Valle')),
+          GestureDetector(
+              onTap: () {
+                mappa.launchURL(
+                    'https://www.google.com/maps/place/Via+Giuseppe+Verdi,+37040+Arcole+VR/@45.3809597,11.3234375,17z/data=!3m1!4b1!4m5!3m4!1s0x477f40885eb23dcf:0xafd8d8db9607b8d7!8m2!3d45.3809597!4d11.3256262');
+              },
+              child: testoZona(testo: 'Verdi')),
+          GestureDetector(
+              onTap: () {
+                mappa.launchURL(
+                    'https://www.google.com/maps/place/Via+XIII+Maggio,+37040+Volpino+VR/@45.381434,11.3249618,17z/data=!3m1!4b1!4m5!3m4!1s0x477f40886efbf2cf:0xbdeeda272b0b2a6b!8m2!3d45.381434!4d11.3271505');
+              },
+              child: testoZona(testo: 'XIII Maggio')),
         ],
       ),
     );

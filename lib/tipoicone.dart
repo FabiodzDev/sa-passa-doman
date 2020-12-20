@@ -32,11 +32,11 @@ class ElencoIcone {
       return "images/verde.png";
     }
 
-    if (rifiuto == "NESSUN RIFIUTO") {
+    if (rifiuto == "NULLA") {
       return "images/relax.jpg";
     }
 
-    if (rifiuto != "VETRO" && rifiuto != "PLASTICA" && rifiuto != "UMIDO" && rifiuto != "SECCO" && rifiuto != "CARTA" && rifiuto != "VERDE" && rifiuto != "NESSUN RIFIUTO"){
+    if (rifiuto != "VETRO" && rifiuto != "PLASTICA" && rifiuto != "UMIDO" && rifiuto != "SECCO" && rifiuto != "CARTA" && rifiuto != "VERDE" && rifiuto != "NULLA"){
 
       return "images/altro.png";
     }

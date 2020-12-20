@@ -57,11 +57,39 @@ class AbbinamentoGiorniRifiutiBLU {
 
     GiornoRifiuti(
         giorno: "2020-12-22 00:00:00.000",
-        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.verde)),
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
 
     GiornoRifiuti(
         giorno: "2020-12-23 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica)),
+
+    GiornoRifiuti(
+        giorno: "2020-12-24 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta)),
+
+    GiornoRifiuti(
+        giorno: "2020-12-25 00:00:00.000",
         rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.verde)),
+
+
+    GiornoRifiuti(
+        giorno: "2020-12-26 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.vetro)),
+
+
+    GiornoRifiuti(
+        giorno: "2020-12-27 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2020-12-28 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta)),
+
+    GiornoRifiuti(
+        giorno: "2020-12-29 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.verde)),
+
+
 
     GiornoRifiuti(
         giorno: "2021-12-31 00:00:00.000",
@@ -96,7 +124,7 @@ class AbbinamentoGiorniRifiutiBLU {
       } else if (difference < 0) {
         continue;
       } else {
-        return "NESSUN RIFIUTO";
+        return "NULLA";
       }
     }
   }
