@@ -12,7 +12,7 @@ class ElencoIcone {
       return "images/vetro.png";
     }
 
-    if (rifiuto == "PLASTICA") {
+    if (rifiuto == "PLASTICA, LATTINE") {
       return "images/plastica.png";
     }
 

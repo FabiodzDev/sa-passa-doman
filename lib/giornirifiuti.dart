@@ -23,7 +23,7 @@ class AbbinamentoGiorniRifiuti {    // LISTA RIFIUTI GIALLO
     GiornoRifiuti(giorno: "2020-12-20 00:00:00.000", rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta)),
     GiornoRifiuti(giorno: "2020-12-21 00:00:00.000", rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.verde)),
     GiornoRifiuti(giorno: "2020-12-22 00:00:00.000", rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.vetro)),
-    GiornoRifiuti(giorno: "2020-12-23 00:00:00.000", rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+    GiornoRifiuti(giorno: "2020-12-23 00:00:00.000", rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido) + " e " + rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta)),
     GiornoRifiuti(giorno: "2020-12-24 00:00:00.000", rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
     GiornoRifiuti(giorno: "2020-12-25 00:00:00.000", rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta)),
     GiornoRifiuti(giorno: "2020-12-26 00:00:00.000", rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica)),
