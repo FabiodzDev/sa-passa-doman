@@ -3,224 +3,457 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:sapassadoman/tiporifiuti.dart';
 
-
-class rifiuti extends StatefulWidget {
+class Rifiuti extends StatefulWidget {
   @override
-  _rifiutiState createState() => _rifiutiState();
+  _RifiutiState createState() => _RifiutiState();
 }
 
-class _rifiutiState extends State<rifiuti> {
+class _RifiutiState extends State<Rifiuti> {
 
   ElencoRifiuti elencoRifiutx = ElencoRifiuti();
+  String parolaDaCercare;
+  String parolaScritta;
+
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-
-      child:  Container(
-        child: ListView(
-          children: [
-            elencoRifiutx.mostraTuttiRifiuti()
-
-          ],
-        )
-      ),
+      child: Container(
+          child: ListView(
+        children: [
+          SizedBox(
+            height: 10,
+          ),
+          TextField(
+            textAlign: TextAlign.center,
+            decoration: InputDecoration(
+              prefixIcon: Icon(Icons.search),
+              hintText: 'Scrivi il rifiuto',
+              labelText: 'Casella di ricerca',
+              border: const OutlineInputBorder(),
+            ),
+            onChanged: (parolaDaCercare) {
+              print(parolaDaCercare);
+              setState(() {
+                parolaScritta = parolaDaCercare;
+              });
+            },
+          ),
+          elencoRifiutx.mostraTuttiRifiuti(parolaScritta)
+        ],
+      )),
     );
-
   }
 }
-
 
 NomeRifiuto nomeRifiuto = NomeRifiuto();
 
 class generaElencoRifiuti {
-
   String descrizioneRifiuto;
   String tipoRifiuto;
 
-  generaElencoRifiuti ({@required this.descrizioneRifiuto, @required this.tipoRifiuto});
-
+  generaElencoRifiuti(
+      {@required this.descrizioneRifiuto, @required this.tipoRifiuto});
 }
 
 class ElencoRifiuti {
-
-  List <generaElencoRifiuti> tuttiIRifiuti =  [
-
-    generaElencoRifiuti(descrizioneRifiuto: 'Agende', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Album da disegno', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Calendari', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Cartone in tetrapak per bevande (es. latte)', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Depliant', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Fogli', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Fotocopie', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Fumetti', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Giornali', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Imballaggi in cartone ondulato', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Libri', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Quaderni', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Riviste', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Sacchetti di carta puliti', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Scatole detersivi', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Scatole in carta per alimenti', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Scatole in cartoncino per pasta', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Scatola per scarpe', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Scatola pizza', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Tovaglioli di carta puliti', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Volantini pubblicitari', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta)),
-
-    generaElencoRifiuti(descrizioneRifiuto: 'Attaccapanni', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Bombolette spry no T/F', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Bottiglie in plastica (acqua e bibite varie)', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Coperchi barattoli yogurt', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Flaconi in plastica di detergenti/detersivi', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Foglio in alluminio per alimenti', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Lattine di bevande', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Moka per il caffè', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Pellicola in nylon', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Pentole e padelle', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Piatti e bicchieri in plastica monouso', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Sacchetti per il caffè', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Scatolette e barattoli per alimenti', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Tappi di bottiglie di olio', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Tubetti di dentrificio e similari', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Tubetti contenenti conserve', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Vaschette in alluminio', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Vaschette in plastica', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Vaschette in polistirolo', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Vasetti di yogurt in plastica ', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica)),
-
-    generaElencoRifiuti(descrizioneRifiuto: 'Accendini', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Astucci', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Bacinelle', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Calze in nylon', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Cancelleria', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Carta oleata per alimenti', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Carta plastificata', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Carta sporca da solventi', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Carta sporca da vernici', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Cartelle', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
-    generaElencoRifiuti(descrizioneRifiuto: 'CD, cassette musicali, videocassette e floppy', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Cosmetici', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Cotton Fioc', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Cover telefonini', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Giocattoli', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Guarnizioni uso familiare', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Lamette usa e getta', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Lastre RX', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Mozziconi di sigaretta', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Nastri adesivi', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Oggetti multimateriali', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Negativi di fotografie', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Pagliette abrasive', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Pannolini', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Pennarelli consumati', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Penne', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Polvere da aspirapolvere', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Posate in plastica', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Scarpe', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Secchi', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Stracci', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Spazzole', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Spazzolini da denti', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Spugne', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Stoviglie rotte', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Tubetti di colla', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
-
-    generaElencoRifiuti(descrizioneRifiuto: 'Bicchieri di vetro', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.vetro)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Bottiglie di vetro', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.vetro)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Contenitori di vetro', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.vetro)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Vasetti di vetro', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.vetro)),
-
-    generaElencoRifiuti(descrizioneRifiuto: 'Fiori recisi', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.verde)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Foglie e sfalci d\'erba', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.verde)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Ramaglie', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.verde)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Residui dell\'orto', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.verde)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Potatura di siepi ed alberi', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.verde)),
-
-    generaElencoRifiuti(descrizioneRifiuto: 'Avanzi di cibo', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Bucce di frutta', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Carne', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Ceneri spente da stufa o camino', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Filtri di te\'', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Fondi di caffè', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Gusci di uova', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Frutta secca', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Lettiera di piccoli animali domestici', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Ossa', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Pane', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Pesce e farinacei vari', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Scarti di verdura e fiori recisi', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
-    generaElencoRifiuti(descrizioneRifiuto: 'Tovaglioli usati di carta', tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
-
+  List<generaElencoRifiuti> tuttiIRifiuti = [
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Agende',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Album da disegno',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Calendari',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Cartone in tetrapak per bevande (es. latte)',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Depliant',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Fogli',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Fotocopie',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Fumetti',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Giornali',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Imballaggi in cartone ondulato',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Libri',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Quaderni',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Riviste',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Sacchetti di carta puliti',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Scatole detersivi',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Scatole in carta per alimenti',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Scatole in cartoncino per pasta',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Scatola per scarpe',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Scatola pizza',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Tovaglioli di carta puliti',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Volantini pubblicitari',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Attaccapanni',
+        tipoRifiuto:
+            nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Bombolette spry no T/F',
+        tipoRifiuto:
+            nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Bottiglie in plastica (acqua e bibite varie)',
+        tipoRifiuto:
+            nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Coperchi barattoli yogurt',
+        tipoRifiuto:
+            nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Flaconi in plastica di detergenti/detersivi',
+        tipoRifiuto:
+            nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Foglio in alluminio per alimenti',
+        tipoRifiuto:
+            nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Lattine di bevande',
+        tipoRifiuto:
+            nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Moka per il caffè',
+        tipoRifiuto:
+            nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Pellicola in nylon',
+        tipoRifiuto:
+            nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Pentole e padelle',
+        tipoRifiuto:
+            nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Piatti e bicchieri in plastica monouso',
+        tipoRifiuto:
+            nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Sacchetti per il caffè',
+        tipoRifiuto:
+            nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Scatolette e barattoli per alimenti',
+        tipoRifiuto:
+            nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Tappi di bottiglie di olio',
+        tipoRifiuto:
+            nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Tubetti di dentrificio e similari',
+        tipoRifiuto:
+            nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Tubetti contenenti conserve',
+        tipoRifiuto:
+            nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Vaschette in alluminio',
+        tipoRifiuto:
+            nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Vaschette in plastica',
+        tipoRifiuto:
+            nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Vaschette in polistirolo',
+        tipoRifiuto:
+            nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Vasetti di yogurt in plastica ',
+        tipoRifiuto:
+            nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Accendini',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Astucci',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Bacinelle',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Calze in nylon',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Cancelleria',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Carta oleata per alimenti',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Carta plastificata',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Carta sporca da solventi',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Carta sporca da vernici',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Cartelle',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'CD, cassette musicali, videocassette e floppy',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Cosmetici',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Cotton Fioc',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Cover telefonini',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Giocattoli',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Guarnizioni uso familiare',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Lamette usa e getta',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Lastre RX',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Mozziconi di sigaretta',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Nastri adesivi',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Oggetti multimateriali',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Negativi di fotografie',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Pagliette abrasive',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Pannolini',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Pennarelli consumati',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Penne',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Polvere da aspirapolvere',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Posate in plastica',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Scarpe',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Secchi',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Stracci',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Spazzole',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Spazzolini da denti',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Spugne',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Stoviglie rotte',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Tubetti di colla',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Bicchieri di vetro',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.vetro)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Bottiglie di vetro',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.vetro)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Contenitori di vetro',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.vetro)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Vasetti di vetro',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.vetro)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Fiori recisi',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.verde)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Foglie e sfalci d\'erba',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.verde)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Ramaglie',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.verde)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Residui dell\'orto',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.verde)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Potatura di siepi ed alberi',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.verde)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Avanzi di cibo',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Bucce di frutta',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Carne',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Ceneri spente da stufa o camino',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Filtri di te\'',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Fondi di caffè',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Gusci di uova',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Frutta secca',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Lettiera di piccoli animali domestici',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Ossa',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Pane',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Pesce e farinacei vari',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Scarti di verdura e fiori recisi',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Tovaglioli usati di carta',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
   ];
 
-  Widget mostraTuttiRifiuti () {
+  String testoDaCercare;
+
+
+  Widget mostraTuttiRifiuti(String testoDaCercare) {
 
     List<Widget> elenco = List<Widget>();
 
-
     for (var i = 0; i < tuttiIRifiuti.length; i++) {
-
       IconData icona = Icons.add;
       Color coloreIcona = Colors.blue[200];
 
-      if (tuttiIRifiuti[i].tipoRifiuto == nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta) ) {
+      if (tuttiIRifiuti[i].tipoRifiuto ==
+          nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta)) {
         icona = Icons.play_arrow;
         coloreIcona = Colors.brown.shade700;
       }
 
-      if (tuttiIRifiuti[i].tipoRifiuto == nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica) ) {
+      if (tuttiIRifiuti[i].tipoRifiuto ==
+          nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica)) {
         icona = Icons.play_arrow;
         coloreIcona = Colors.deepOrange.shade700;
       }
 
-      if (tuttiIRifiuti[i].tipoRifiuto == nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)) {
+      if (tuttiIRifiuti[i].tipoRifiuto ==
+          nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)) {
         icona = Icons.play_arrow;
         coloreIcona = Colors.black;
       }
 
-      if (tuttiIRifiuti[i].tipoRifiuto == nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.vetro)) {
+      if (tuttiIRifiuti[i].tipoRifiuto ==
+          nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.vetro)) {
         icona = Icons.play_arrow;
         coloreIcona = Colors.lightBlueAccent;
       }
 
-      if (tuttiIRifiuti[i].tipoRifiuto == nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.verde)) {
+      if (tuttiIRifiuti[i].tipoRifiuto ==
+          nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.verde)) {
         icona = Icons.play_arrow;
         coloreIcona = Colors.green;
       }
 
-      if (tuttiIRifiuti[i].tipoRifiuto == nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)) {
+      if (tuttiIRifiuti[i].tipoRifiuto ==
+          nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)) {
         icona = Icons.play_arrow;
         coloreIcona = Colors.deepOrange;
       }
 
+      if (testoDaCercare == null) { testoDaCercare = "";}  // La prima volta che avvio l'app è vuoto
+      testoDaCercare = testoDaCercare.toLowerCase();      // il valore che scrive l'utente lo rendo tutto minuscolo
+      String rifiutiDaCercare = tuttiIRifiuti[i].descrizioneRifiuto.toLowerCase();  // la stringa che ricevo dall'elenco rifiuti la rendo tutta minuscola, cosi da poter fare la comparazione con il dato passato dall'utente
 
-
-
-
-
-      elenco.add(
-        Container(
-          child: ListTile(
-            leading: Icon(
-              icona,
-              size: 30,
-              color: coloreIcona,
+      if (rifiutiDaCercare.contains(testoDaCercare)) {    //  se la stringa scritta dall'utende è contenuta in una stringa presente nell'elenco, mostro il dato
+        elenco.add(
+          Container(
+            child: ListTile(
+              leading: Icon(
+                icona,
+                size: 30,
+                color: coloreIcona,
+              ),
+              title: Text(
+                tuttiIRifiuti[i].descrizioneRifiuto,
+                style: TextStyle(fontSize: 18),
+              ),
+              subtitle: Text(
+                tuttiIRifiuti[i].tipoRifiuto,
+                style: TextStyle(fontSize: 17),
+              ),
             ),
-            title: Text(
-              tuttiIRifiuti[i].descrizioneRifiuto,
-              style: TextStyle(fontSize: 18),
-            ),
-            subtitle: Text(tuttiIRifiuti[i].tipoRifiuto, style: TextStyle(fontSize: 17),),
           ),
-        ),
-      );
-
+        );
+      }
     }
 
     return Column(children: elenco);
   }
-
-
 }
-

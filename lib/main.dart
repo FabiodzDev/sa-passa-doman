@@ -53,7 +53,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
 
-  List <Widget> myPages = [Homex(), paginaZonaGialla(), paginaZonaBlu(), rifiuti(), Informazioni()];
+  List <Widget> myPages = [Homex(), paginaZonaGialla(), paginaZonaBlu(), Rifiuti(), Informazioni()];
   int selectedIndex = 0;
 
   @override
