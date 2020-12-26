@@ -2,8 +2,6 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:sapassadoman/pulsantiDiNavigazione.dart';
-import 'menuDrawer.dart';
 import 'classeTestoZona.dart';
 import 'package:url_launcher/url_launcher.dart';
 

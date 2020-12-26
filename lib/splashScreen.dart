@@ -12,6 +12,7 @@ Widget paginacorrente = MyHomePage();
 
 class _SplashState extends State<Splash> {
   @override
+
   Widget build(BuildContext context) {
     return SplashScreen(
         seconds: 4,

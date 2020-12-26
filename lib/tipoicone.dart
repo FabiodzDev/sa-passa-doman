@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'package:sapassadoman/tiporifiuti.dart';
-
 class ElencoIcone {
 
   String rifiuto;

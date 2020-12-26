@@ -54,7 +54,7 @@ class AbbinamentoGiorniRifiuti {    // LISTA RIFIUTI GIALLO
         String strDt = rilevagiorno(i);
         DateTime parseDt = DateTime.parse(strDt);
 
-        // facciamo la differenza tra oggi e la data della lista che sto analizzando
+        // facciamo la differenza tra data domani e la data della lista che sto analizzando
         final difference = parseDt.difference(datadioggi.dataDomaniFormatoDateTime()).inDays;
 
 
@@ -73,8 +73,6 @@ class AbbinamentoGiorniRifiuti {    // LISTA RIFIUTI GIALLO
 
         }
 
-
-
       }
 
     }
@@ -91,6 +89,9 @@ class AbbinamentoGiorniRifiuti {    // LISTA RIFIUTI GIALLO
 
       // facciamo la differenza tra oggi e la data della lista che sto analizzando
       final int differenceX = giornoconvertito.difference(datadioggi.dataDomaniFormatoDateTime()).inDays;
+
+
+      // X IL DRAWER, CREO UNA LISTA DEI PROSSIMI 5 GIORNI
 
       if (list.length < 5) {
         // LIMITO I VALORI DELLA LISTA A 5
