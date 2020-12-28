@@ -6,7 +6,14 @@ enum tipoRifiuti {      // elenco di possibilità al tipoRifiuti, accessibile tr
     umido,
     secco,
     plastica,
-    verde
+    verde,
+    benidurevoli,
+    ferro,
+    ingombranti,
+    legno,
+    medicinali,
+    pile,
+    tfepericolosi
   }
 
 class NomeRifiuto {
@@ -37,6 +44,34 @@ class NomeRifiuto {
 
     if (tipoRifiuto == tipoRifiuti.verde ) {
       return "VERDE";
+    }
+
+    if (tipoRifiuto == tipoRifiuti.benidurevoli ) {
+      return "BENI DUREVOLI";
+    }
+
+    if (tipoRifiuto == tipoRifiuti.ferro ) {
+      return "FERRO";
+    }
+
+    if (tipoRifiuto == tipoRifiuti.ingombranti ) {
+      return "INGOMBRANTI";
+    }
+
+    if (tipoRifiuto == tipoRifiuti.legno ) {
+      return "LEGNO";
+    }
+
+    if (tipoRifiuto == tipoRifiuti.medicinali ) {
+      return "MEDICINALI";
+    }
+
+    if (tipoRifiuto == tipoRifiuti.pile ) {
+      return "PILE";
+    }
+
+      if (tipoRifiuto == tipoRifiuti.tfepericolosi ) {
+      return "T/F E PERICOLOSI";
     }
 
   }

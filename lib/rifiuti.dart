@@ -378,6 +378,232 @@ class ElencoRifiuti {
     generaElencoRifiuti(
         descrizioneRifiuto: 'Tovaglioli usati di carta',
         tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Calcolatrici',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.benidurevoli)),
+
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Telecomandi',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.benidurevoli)),
+
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Congelatori',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.benidurevoli)),
+
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Frigoriferi',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.benidurevoli)),
+
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Condizionatori',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.benidurevoli)),
+
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Lampade a neon',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.benidurevoli)),
+
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Lampade a risparmio energetivo',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.benidurevoli)),
+
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Lavastovile',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.benidurevoli)),
+
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Lavatrice',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.benidurevoli)),
+
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Lettori DVD',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.benidurevoli)),
+
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Celllari',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.benidurevoli)),
+
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'PC',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.benidurevoli)),
+
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Piccoli elettrodomestici',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.benidurevoli)),
+
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Televisore',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.benidurevoli)),
+
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Monitor PC',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.benidurevoli)),
+
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Biciclette',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.ferro)),
+
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Caffettiere',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.ferro)),
+
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Pentole',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.ferro)),
+
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Cerchi per ruote',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.ferro)),
+
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Forni',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.ferro)),
+
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Fornelli',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.ferro)),
+
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Reti la letto',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.ferro)),
+
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Reti per recinzione',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.ferro)),
+
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Scaffali metallici',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.ferro)),
+
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Attrezzi voluminosi',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.ingombranti)),
+
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Divani',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.ingombranti)),
+
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Poltrone',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.ingombranti)),
+
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Materassi',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.ingombranti)),
+
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Secchi grossi',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.ingombranti)),
+
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Mobilio da giardino in resina',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.ingombranti)),
+
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Onduline in vetroresina',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.ingombranti)),
+
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Stendini in resina',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.ingombranti)),
+
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Tapparelle',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.ingombranti)),
+
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Tubi in PVC',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.ingombranti)),
+
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Assi di legno',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.legno)),
+
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Legname',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.legno)),
+
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Tronchi',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.legno)),
+
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Bancali di legno',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.legno)),
+
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Cassette in legno',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.legno)),
+
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Infissi senza vetro',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.legno)),
+
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Mobili',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.legno)),
+
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Porte senza vetro',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.legno)),
+
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Finestre senza vetro',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.legno)),
+
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Disinfettanti',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.medicinali)),
+
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Pomate',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.medicinali)),
+
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Farmaci scaduti',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.medicinali)),
+
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Fiale per iniezioni',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.medicinali)),
+
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Pile a bottone',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.pile)),
+
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Pile a stilo',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.pile)),
+
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Pile rettangolari',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.pile)),
+
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Contenitori con simboli T/F',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.tfepericolosi)),
+
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Contenitori con trielina',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.tfepericolosi)),
+
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Contenitori con solventi',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.tfepericolosi)),
+
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Contenitori con smacchiatori',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.tfepericolosi)),
+
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Contenitori con insetticidi',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.tfepericolosi)),
+
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Spry con simboli di pericolosità',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.tfepericolosi)),
+
+
   ];
 
   String testoDaCercare;
@@ -425,6 +651,48 @@ class ElencoRifiuti {
           nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)) {
         icona = Icons.play_arrow;
         coloreIcona = Colors.deepOrange;
+      }
+
+      if (tuttiIRifiuti[i].tipoRifiuto ==
+          nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.benidurevoli)) {
+        icona = Icons.play_arrow;
+        coloreIcona = Colors.yellow;
+      }
+
+      if (tuttiIRifiuti[i].tipoRifiuto ==
+          nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.ferro)) {
+        icona = Icons.play_arrow;
+        coloreIcona = Colors.grey;
+      }
+
+      if (tuttiIRifiuti[i].tipoRifiuto ==
+          nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.ingombranti)) {
+        icona = Icons.play_arrow;
+        coloreIcona = Colors.deepPurple;
+      }
+
+      if (tuttiIRifiuti[i].tipoRifiuto ==
+          nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.legno)) {
+        icona = Icons.play_arrow;
+        coloreIcona = Colors.pink;
+      }
+
+      if (tuttiIRifiuti[i].tipoRifiuto ==
+          nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.medicinali)) {
+        icona = Icons.play_arrow;
+        coloreIcona = Colors.tealAccent;
+      }
+
+      if (tuttiIRifiuti[i].tipoRifiuto ==
+          nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.pile)) {
+        icona = Icons.play_arrow;
+        coloreIcona = Colors.lightGreenAccent;
+      }
+
+      if (tuttiIRifiuti[i].tipoRifiuto ==
+          nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.tfepericolosi)) {
+        icona = Icons.play_arrow;
+        coloreIcona = Colors.brown.shade100;
       }
 
       if (testoDaCercare == null) { testoDaCercare = "";}  // La prima volta che avvio l'app è vuoto
