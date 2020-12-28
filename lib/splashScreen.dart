@@ -20,9 +20,9 @@ class _SplashState extends State<Splash> {
         title: new Text(
           'ARCOLE',
           style:
-          new TextStyle(fontWeight: FontWeight.bold, fontSize: 50.0),
+          new TextStyle(fontWeight: FontWeight.bold, fontSize: 40.0, color: Colors.blue.shade800),
         ),
-        image: new Image.asset('images/logo.png'),
+        image: new Image.asset('images/180.png'),
         backgroundColor: Colors.white,
         styleTextUnderTheLoader: new TextStyle(),
         photoSize: 100.0,
