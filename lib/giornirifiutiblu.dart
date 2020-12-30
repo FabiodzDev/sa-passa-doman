@@ -89,10 +89,57 @@ class AbbinamentoGiorniRifiutiBLU {
         giorno: "2020-12-29 00:00:00.000",
         rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.verde)),
 
+    GiornoRifiuti(
+        giorno: "2021-01-04 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-01-07 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.vetro) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-01-11 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-01-14 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)+
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-01-18 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-01-21 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.vetro) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-01-25 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-01-28 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
 
 
     GiornoRifiuti(
-        giorno: "2021-12-31 00:00:00.000",
+        giorno: "2099-12-31 00:00:00.000",
         rifiuto: rifiuto.ilnomerifiuto(
             tipoRifiuto:
                 tipoRifiuti.umido)) // LASCIARE QUESTA DATA LUNGHISSIMA.
