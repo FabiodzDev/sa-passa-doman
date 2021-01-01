@@ -15,14 +15,14 @@ class _SplashState extends State<Splash> {
 
   Widget build(BuildContext context) {
     return SplashScreen(
-        seconds: 4,
+        seconds: 5,
         navigateAfterSeconds: paginacorrente,
         title: new Text(
-          'ARCOLE',
+          'BENVENUTO',
           style:
           new TextStyle(fontWeight: FontWeight.bold, fontSize: 40.0, color: Colors.blue.shade800),
         ),
-        image: new Image.asset('images/180.png'),
+        image: new Image.asset('images/1024.png'),
         backgroundColor: Colors.white,
         styleTextUnderTheLoader: new TextStyle(),
         photoSize: 100.0,

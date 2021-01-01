@@ -4,13 +4,15 @@ class ElencoIcone {
 
   String rifiuto;
 
+  // ESSENDOCI SEMPRE NEL CALENDARIO 2 RIFIUTI, DI CUI IL SECONDO UMIDO, HO USATO IL CONTIENE..TRANNE PER L'UMIDO SE DOVESSE PASSARE DA SOLO
+
   String percorsoDaUtilizzare ({@required String rifiuto}){
 
-    if (rifiuto == "VETRO") {
+    if (rifiuto.contains("VETRO")) {
       return "images/vetro.png";
     }
 
-    if (rifiuto == "PLASTICA, LATTINE") {
+    if (rifiuto.contains("PLASTICA, LATTINE")) {
       return "images/plastica.png";
     }
 
@@ -18,15 +20,15 @@ class ElencoIcone {
       return "images/umido.png";
     }
 
-    if (rifiuto == "SECCO") {
+    if (rifiuto.contains("SECCO")) {
       return "images/secco.png";
     }
 
-    if (rifiuto == "CARTA") {
+    if (rifiuto.contains("CARTA")) {
       return "images/scatola.png";
     }
 
-    if (rifiuto == "VERDE") {
+    if (rifiuto.contains("VERDE")) {
       return "images/verde.png";
     }
 
@@ -34,7 +36,7 @@ class ElencoIcone {
       return "images/relax.jpg";
     }
 
-    if (rifiuto != "VETRO" && rifiuto != "PLASTICA" && rifiuto != "UMIDO" && rifiuto != "SECCO" && rifiuto != "CARTA" && rifiuto != "VERDE" && rifiuto != "NULLA"){
+    if (rifiuto != "VETRO" && rifiuto != "PLASTICA, LATTINE" && rifiuto != "UMIDO" && rifiuto != "SECCO" && rifiuto != "CARTA" && rifiuto != "VERDE" && rifiuto != "NULLA"){
 
       return "images/altro.png";
     }

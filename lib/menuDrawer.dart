@@ -24,29 +24,31 @@ class _menuDrawerState extends State<menuDrawer> {
         //padding: EdgeInsets.zero,
         children: <Widget>[
           DrawerHeader(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: [
-                Text(
-                  'ARCOLE',
-                  textAlign: TextAlign.left,
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 40,
-                    letterSpacing: 2,
+            child: SafeArea(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  Text(
+                    'ARCOLE',
+                    textAlign: TextAlign.left,
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 40,
+                      letterSpacing: 2,
+                    ),
                   ),
-                ),
-                Text(
-                  "PROSSIMI GIORNI",
-                  textAlign: TextAlign.left,
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 15,
-                    letterSpacing: 2,
+                  Text(
+                    "PROSSIMI GIORNI",
+                    textAlign: TextAlign.left,
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 15,
+                      letterSpacing: 2,
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
             decoration: BoxDecoration(
               color: Colors.blue[700],

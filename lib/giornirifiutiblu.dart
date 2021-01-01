@@ -85,9 +85,11 @@ class AbbinamentoGiorniRifiutiBLU {
         giorno: "2020-12-28 00:00:00.000",
         rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta)),
 
-    GiornoRifiuti(
-        giorno: "2020-12-29 00:00:00.000",
-        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.verde)),
+  GiornoRifiuti(
+  giorno: "2021-01-02 00:00:00.000",
+  rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.verde) +
+  " e " +
+  rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
 
     GiornoRifiuti(
         giorno: "2021-01-04 00:00:00.000",
