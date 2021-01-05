@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:sapassadoman/calendarioCompletoBlu.dart';
+import 'package:sapassadoman/calendarioCompletoGiallo.dart';
 import 'giornirifiutiblu.dart';
 import 'giornirifiuti.dart';
 
@@ -39,11 +41,11 @@ class _menuDrawerState extends State<menuDrawer> {
                     ),
                   ),
                   Text(
-                    "PROSSIMI GIORNI",
+                    "PROSSIMI 5 GIORNI",
                     textAlign: TextAlign.left,
                     style: TextStyle(
                       color: Colors.white,
-                      fontSize: 15,
+                      fontSize: 20,
                       letterSpacing: 2,
                     ),
                   ),
@@ -54,8 +56,24 @@ class _menuDrawerState extends State<menuDrawer> {
               color: Colors.blue[700],
             ),
           ),
-          giornorifiutogiallo.listOfWidgets(),
-          giornorifiutoblu.listOfWidgets(),
+          GestureDetector(
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => CalendarioCompletoGiallo()));
+            },
+            child: giornorifiutogiallo.listOfWidgets(),
+          ),
+          GestureDetector(
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => CalendarioCompletoBlu()));
+            },
+            child: giornorifiutoblu.listOfWidgets(),
+          ),
         ],
       ),
     );

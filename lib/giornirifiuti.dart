@@ -1,3 +1,5 @@
+
+
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:sapassadoman/classegiornirifiuti.dart';
@@ -10,8 +12,9 @@ NomeRifiuto rifiuto = NomeRifiuto();
 
 final datadioggi = Dataoggi();  // ISTANZO LA CLASSE Dataoggi, che mi servirà per recuperare le funzioni della data di domani...
 
-class AbbinamentoGiorniRifiuti {    // LISTA RIFIUTI GIALLO
-  
+class AbbinamentoGiorniRifiuti  {    // LISTA RIFIUTI GIALLO
+
+
 
   List <GiornoRifiuti> elencoZonaGialla = [
 
@@ -122,4 +125,40 @@ class AbbinamentoGiorniRifiuti {    // LISTA RIFIUTI GIALLO
     }
     return Column(children: list);
   }
+
+
+  Widget calendarioCompletoGiallo() {
+    List<Widget> listcompletaGialla = List<Widget>();
+    for (var i = 0; i < elencoZonaGialla.length - 1; i++) {
+
+      String giorno = rilevagiorno(i);
+      DateTime giornoconvertito = DateTime.parse(giorno);  // DA STRINGA CON ORARIO A DATETIME
+      print (giornoconvertito);
+      String formattedDate = DateFormat('dd-MM-yyyy').format(giornoconvertito);   // DA DATETIME CON ORARIO A STRINGA SENZA ORARIO
+      print (formattedDate);
+
+      // facciamo la differenza tra oggi e la data della lista che sto analizzando
+      final int differenceX = giornoconvertito.difference(datadioggi.dataDomaniFormatoDateTime()).inDays;
+
+
+      // X IL DRAWER, CREO UNA LISTA DEI PROSSIMI 5 GIORNI
+
+        if (differenceX == 0 || differenceX > 1) {
+          // Se la data è uguale a domani oppure è maggiore aggiungi alla lista
+
+          listcompletaGialla.add(
+            Container(
+              child: ListTile(
+                leading: Icon(Icons.play_arrow , size: 30, color: Colors.yellow[600],),
+                title: Text(formattedDate, style: TextStyle(fontSize: 18),),
+                subtitle: Text(elencoZonaGialla[i].rifiuto, style: TextStyle(fontSize:  17),),
+              ),
+            ),
+          );
+        }
+
+    }
+    return Column(children: listcompletaGialla);
   }
+
+}
