@@ -20,7 +20,7 @@ class _SplashState extends State<Splash> {
         title: new Text(
           'BENVENUTO',
           style:
-          new TextStyle(fontWeight: FontWeight.bold, fontSize: 40.0, color: Colors.blue.shade800),
+          new TextStyle(fontWeight: FontWeight.bold, fontSize: 35.0, color: Colors.blue),
         ),
         image: new Image.asset('images/1024.png'),
         backgroundColor: Colors.white,

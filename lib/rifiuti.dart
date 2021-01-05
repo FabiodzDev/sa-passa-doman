@@ -19,6 +19,7 @@ class _RifiutiState extends State<Rifiuti> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Container(
+          padding: EdgeInsets.all(10),
           child: ListView(
         children: [
           SizedBox(
@@ -613,13 +614,13 @@ class ElencoRifiuti {
 
     List<Widget> elenco = List<Widget>();
 
-    for (var i = 0; i < tuttiIRifiuti.length; i++) {
+    for (var i = 0; i < tuttiIRifiuti.length; i++) {  // 05/01/2021 Sotto ho tolto la possibilità di vedere l'icona. Faccio più pulito
       IconData icona = Icons.add;
       Color coloreIcona = Colors.blue[200];
 
       if (tuttiIRifiuti[i].tipoRifiuto ==
           nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta)) {
-        icona = Icons.play_arrow;
+        icona = Icons.account_box_sharp;
         coloreIcona = Colors.brown.shade700;
       }
 
@@ -703,11 +704,11 @@ class ElencoRifiuti {
         elenco.add(
           Container(
             child: ListTile(
-              leading: Icon(
-                icona,
-                size: 30,
-                color: coloreIcona,
-              ),
+             // leading: Icon(
+                //icona,
+               // size: 30,
+               // color: coloreIcona,
+             // ),
               title: Text(
                 tuttiIRifiuti[i].descrizioneRifiuto,
                 style: TextStyle(fontSize: 18),
