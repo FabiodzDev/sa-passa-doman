@@ -3,7 +3,13 @@ import 'package:flutter/material.dart';
 class Informazioni extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
+    return Scaffold(
+        appBar: AppBar(
+          title: Text('INFORMAZIONI'),
+          centerTitle: true,
+          backgroundColor: Colors.blue[700],
+        ),
+      body: SafeArea(
       child: ListView(
         children: [
           Container(
@@ -48,6 +54,7 @@ class Informazioni extends StatelessWidget {
           )
         ],
       ),
+    )
     );
   }
 }

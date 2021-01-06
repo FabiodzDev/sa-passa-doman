@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sapassadoman/giornirifiutiblu.dart';
+import 'package:sapassadoman/modalita.dart';
 import 'package:sapassadoman/rifiuti.dart';
 import 'package:sapassadoman/tipoicone.dart';
 import 'home.dart';
@@ -53,7 +54,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
 
-  List <Widget> myPages = [Homex(), paginaZonaGialla(), paginaZonaBlu(), Rifiuti(), Informazioni()];
+  List <Widget> myPages = [Homex(), paginaZonaGialla(), paginaZonaBlu(), Rifiuti(), ModalitaDiRaccolta()];
   int selectedIndex = 0;
 
   @override
@@ -69,6 +70,25 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text('SA PASSA DOMAN'),
         centerTitle: true,
         backgroundColor: Colors.blue[700],
+        actions: [ Align(
+          alignment: Alignment.center,
+          child: IconButton(
+            color: Colors.white,
+            // alignment: Alignment.topRight,
+            iconSize: 30,
+            onPressed: (){
+
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => Informazioni()));
+
+            },
+            icon: Icon(
+              Icons.info,
+            ),
+          ),
+        )],
       ),
       drawer: menuDrawer(),
       body: myPages[selectedIndex],
@@ -113,8 +133,8 @@ class _MyHomePageState extends State<MyHomePage> {
             label: "RIFIUTI",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.info),
-            label: "INFO",
+            icon: Icon(Icons.inbox_sharp),
+            label: "MOD.",
           ),
         ],
       ),
