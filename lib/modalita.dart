@@ -457,7 +457,7 @@ class _ModalitaDiRaccoltaState extends State<ModalitaDiRaccolta> {
               Container(
                 padding: EdgeInsets.all(15),
                 child: Text(
-                  '- PER IL RITIRO INGOMBRANTI E\' NECESSARIA LA PRENOTAZIONE CHIAMANDO IL NUMERO VERDE 800734989 .',
+                  '- PER IL RITIRO DEGLI INGOMBRANTI E\' NECESSARIA LA PRENOTAZIONE CHIAMANDO IL NUMERO VERDE 800734989 .',
                   style: TextStyle(
                     fontSize: 16,
                   ),
