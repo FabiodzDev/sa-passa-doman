@@ -46,14 +46,46 @@ class _ModalitaDiRaccoltaState extends State<ModalitaDiRaccolta> {
                       padding: EdgeInsets.all(13),
                       width: 180,
                       color: Colors.brown.shade300,
-                      child: Center(
-                          child: Text(
-                        'CARTA E CARTONE',
-                        style: TextStyle(
-                          fontSize: 15,
-                          color: Colors.white,
-                        ),
-                      )),
+                      child: Column(
+                        children: [
+                          Container(
+                            height: 40,
+                            child: Center(
+                                child: Text(
+                              'CARTA E CARTONE',
+                              style: TextStyle(
+                                fontSize: 15,
+                                color: Colors.white,
+                              ),
+                            )),
+                          ),
+                          Container(
+                            padding: EdgeInsets.only(top: 20),
+
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.end,
+
+                              children: [
+                                Container(
+                                  height: 50,
+                                  width: 40,
+                                  decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                      image: AssetImage(
+                                        'images/nuovafreccia.png',
+                                      ),
+                                      fit: BoxFit.contain,
+                                    ),
+                                    //color: Colors.white,
+                                  ),
+                                ),
+
+
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                     Container(
                       padding: EdgeInsets.all(13),
@@ -395,9 +427,59 @@ class _ModalitaDiRaccoltaState extends State<ModalitaDiRaccolta> {
                       color: Colors.black,
                       child: Center(child: Text('Da conferire negli appositi contenitori che si trovano nel territorio e presso il centro di raccolta comunale', textAlign: TextAlign.justify, style: TextStyle(fontSize: 15, color: Colors.white,))),
                     ),
+
                   ],
                 ),
               ),
+              SizedBox(
+                height: 30,
+              ),
+              Container(
+                padding: EdgeInsets.only(right: 15, left: 15),
+
+                child: Text('ALTRE INFO:', style: TextStyle(fontWeight: FontWeight.w700, fontSize: 20),),
+              ),
+
+              Container(
+                padding: EdgeInsets.all(15),
+                child: Text(
+                  '- IL CENTRO DI RACCOLTA RIFIUTI URBANI PER UTENZE DOMESTICHE SI TROVA IN VIA PAUSELLA A GAZZOLO D\' ARCOLE.',
+                  style: TextStyle(
+                    fontSize: 16,
+                  ),
+                  textAlign: TextAlign.justify,
+                ),
+
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Container(
+                padding: EdgeInsets.all(15),
+                child: Text(
+                  '- PER IL RITIRO INGOMBRANTI E\' NECESSARIA LA PRENOTAZIONE CHIAMANDO IL NUMERO VERDE 800734989 .',
+                  style: TextStyle(
+                    fontSize: 16,
+                  ),
+                  textAlign: TextAlign.justify,
+                ),
+
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Container(
+                padding: EdgeInsets.all(15),
+                child: Text(
+                  '- NON UTILIZZARE MAI SACCHETTI NERI.',
+                  style: TextStyle(
+                    fontSize: 16,
+                  ),
+                  textAlign: TextAlign.justify,
+                ),
+
+              ),
+
 
 
 
