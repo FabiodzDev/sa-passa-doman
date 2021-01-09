@@ -51,7 +51,16 @@ class Informazioni extends StatelessWidget {
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.w800 ),
             ),
+          ),
+          Container(
+            child: Text(
+              "www.comunediarcole.it",
+              textAlign: TextAlign.center,
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.w800 ),
+            ),
           )
+
+
         ],
       ),
     )
