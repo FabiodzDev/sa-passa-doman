@@ -72,6 +72,9 @@ class ElencoRifiuti {
         descrizioneRifiuto: 'Cartone in tetrapak per bevande (es. latte)',
         tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta)),
     generaElencoRifiuti(
+        descrizioneRifiuto: 'Cartoncini',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta)),
+    generaElencoRifiuti(
         descrizioneRifiuto: 'Depliant',
         tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta)),
     generaElencoRifiuti(
@@ -96,6 +99,12 @@ class ElencoRifiuti {
         descrizioneRifiuto: 'Quaderni',
         tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta)),
     generaElencoRifiuti(
+        descrizioneRifiuto: 'Pieghevoli pubblicitari',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Poster',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta)),
+    generaElencoRifiuti(
         descrizioneRifiuto: 'Riviste',
         tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta)),
     generaElencoRifiuti(
@@ -108,7 +117,7 @@ class ElencoRifiuti {
         descrizioneRifiuto: 'Scatole in carta per alimenti',
         tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta)),
     generaElencoRifiuti(
-        descrizioneRifiuto: 'Scatole in cartoncino per pasta',
+        descrizioneRifiuto: 'Scatole in cartoncino per pasta, ecc.',
         tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta)),
     generaElencoRifiuti(
         descrizioneRifiuto: 'Scatola per scarpe',
@@ -123,7 +132,7 @@ class ElencoRifiuti {
         descrizioneRifiuto: 'Volantini pubblicitari',
         tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta)),
     generaElencoRifiuti(
-        descrizioneRifiuto: 'Attaccapanni',
+        descrizioneRifiuto: 'Attaccapanni in plastica',
         tipoRifiuto:
             nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica)),
     generaElencoRifiuti(
@@ -135,7 +144,7 @@ class ElencoRifiuti {
         tipoRifiuto:
             nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica)),
     generaElencoRifiuti(
-        descrizioneRifiuto: 'Coperchi barattoli yogurt',
+        descrizioneRifiuto: 'Coperchi dello yogurt',
         tipoRifiuto:
             nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica)),
     generaElencoRifiuti(
@@ -143,7 +152,7 @@ class ElencoRifiuti {
         tipoRifiuto:
             nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica)),
     generaElencoRifiuti(
-        descrizioneRifiuto: 'Foglio in alluminio per alimenti',
+        descrizioneRifiuto: 'Foglio di alluminio per alimenti',
         tipoRifiuto:
             nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica)),
     generaElencoRifiuti(
@@ -159,7 +168,7 @@ class ElencoRifiuti {
         tipoRifiuto:
             nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica)),
     generaElencoRifiuti(
-        descrizioneRifiuto: 'Pentole e padelle',
+        descrizioneRifiuto: 'Pentole, pentolini e padelle',
         tipoRifiuto:
             nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica)),
     generaElencoRifiuti(
@@ -167,7 +176,7 @@ class ElencoRifiuti {
         tipoRifiuto:
             nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica)),
     generaElencoRifiuti(
-        descrizioneRifiuto: 'Sacchetti per il caffè',
+        descrizioneRifiuto: 'Sacchetti per caffè',
         tipoRifiuto:
             nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica)),
     generaElencoRifiuti(
@@ -179,11 +188,11 @@ class ElencoRifiuti {
         tipoRifiuto:
             nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica)),
     generaElencoRifiuti(
-        descrizioneRifiuto: 'Tubetti di dentrificio e similari',
+        descrizioneRifiuto: 'Tubetti di dentifricio e similari',
         tipoRifiuto:
             nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica)),
     generaElencoRifiuti(
-        descrizioneRifiuto: 'Tubetti contenenti conserve',
+        descrizioneRifiuto: 'Tubetti in alluminio per conserve',
         tipoRifiuto:
             nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica)),
     generaElencoRifiuti(
@@ -230,7 +239,7 @@ class ElencoRifiuti {
         descrizioneRifiuto: 'Carta sporca da vernici',
         tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
     generaElencoRifiuti(
-        descrizioneRifiuto: 'Cartelle',
+        descrizioneRifiuto: 'Cartelle (cancelleria)',
         tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
     generaElencoRifiuti(
         descrizioneRifiuto: 'CD, cassette musicali, videocassette e floppy',
@@ -266,7 +275,7 @@ class ElencoRifiuti {
         descrizioneRifiuto: 'Oggetti multimateriali',
         tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
     generaElencoRifiuti(
-        descrizioneRifiuto: 'Negativi di fotografie',
+        descrizioneRifiuto: 'Negativi fotografici',
         tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco)),
     generaElencoRifiuti(
         descrizioneRifiuto: 'Pagliette abrasive',
@@ -326,7 +335,10 @@ class ElencoRifiuti {
         descrizioneRifiuto: 'Fiori recisi',
         tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.verde)),
     generaElencoRifiuti(
-        descrizioneRifiuto: 'Foglie e sfalci d\'erba',
+        descrizioneRifiuto: 'Fogliame',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.verde)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Sfalci d\'erba',
         tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.verde)),
     generaElencoRifiuti(
         descrizioneRifiuto: 'Ramaglie',
@@ -335,7 +347,7 @@ class ElencoRifiuti {
         descrizioneRifiuto: 'Residui dell\'orto',
         tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.verde)),
     generaElencoRifiuti(
-        descrizioneRifiuto: 'Potatura di siepi ed alberi',
+        descrizioneRifiuto: 'Potature di siepi ed alberi',
         tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.verde)),
     generaElencoRifiuti(
         descrizioneRifiuto: 'Avanzi di cibo',
@@ -371,7 +383,10 @@ class ElencoRifiuti {
         descrizioneRifiuto: 'Pane',
         tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
     generaElencoRifiuti(
-        descrizioneRifiuto: 'Pesce e farinacei vari',
+        descrizioneRifiuto: 'Farinacei vari',
+        tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+    generaElencoRifiuti(
+        descrizioneRifiuto: 'Pesce',
         tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
     generaElencoRifiuti(
         descrizioneRifiuto: 'Scarti di verdura e fiori recisi',
@@ -421,7 +436,7 @@ class ElencoRifiuti {
         tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.benidurevoli)),
 
     generaElencoRifiuti(
-        descrizioneRifiuto: 'Celllari',
+        descrizioneRifiuto: 'Cellulari',
         tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.benidurevoli)),
 
     generaElencoRifiuti(
@@ -465,7 +480,7 @@ class ElencoRifiuti {
         tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.ferro)),
 
     generaElencoRifiuti(
-        descrizioneRifiuto: 'Reti la letto',
+        descrizioneRifiuto: 'Reti da letto',
         tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.ferro)),
 
     generaElencoRifiuti(
@@ -493,7 +508,7 @@ class ElencoRifiuti {
         tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.ingombranti)),
 
     generaElencoRifiuti(
-        descrizioneRifiuto: 'Secchi grossi',
+        descrizioneRifiuto: 'Grossi secchi, mastelli in plastica',
         tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.ingombranti)),
 
     generaElencoRifiuti(
@@ -529,7 +544,7 @@ class ElencoRifiuti {
         tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.legno)),
 
     generaElencoRifiuti(
-        descrizioneRifiuto: 'Bancali di legno',
+        descrizioneRifiuto: 'Bancali in legno',
         tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.legno)),
 
     generaElencoRifiuti(
@@ -541,7 +556,7 @@ class ElencoRifiuti {
         tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.legno)),
 
     generaElencoRifiuti(
-        descrizioneRifiuto: 'Mobili',
+        descrizioneRifiuto: 'Mobili in genere',
         tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.legno)),
 
     generaElencoRifiuti(
@@ -601,7 +616,7 @@ class ElencoRifiuti {
         tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.tfepericolosi)),
 
     generaElencoRifiuti(
-        descrizioneRifiuto: 'Spry con simboli di pericolosità',
+        descrizioneRifiuto: 'Spray con simboli di pericolosità',
         tipoRifiuto: nomeRifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.tfepericolosi)),
 
 

@@ -24,6 +24,7 @@ dependencies:
   flutter:
     sdk: flutter
   intl: ^0.16.1
+  like_button: ^1.0.4
 
 
 

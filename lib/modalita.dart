@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:like_button/like_button.dart';
 
 class ModalitaDiRaccolta extends StatefulWidget {
   @override
@@ -48,8 +49,9 @@ class _ModalitaDiRaccoltaState extends State<ModalitaDiRaccolta> {
                       color: Colors.brown.shade300,
                       child: Column(
                         children: [
-                          Container(
-                            height: 40,
+                          Expanded(
+//                            padding: EdgeInsets.only(bottom: 10),
+//                            height: 17,
                             child: Center(
                                 child: Text(
                               'CARTA E CARTONE',
@@ -59,31 +61,40 @@ class _ModalitaDiRaccoltaState extends State<ModalitaDiRaccolta> {
                               ),
                             )),
                           ),
-                          Container(
-                            padding: EdgeInsets.only(top: 20),
 
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.end,
-
-                              children: [
-                                Container(
-                                  height: 50,
-                                  width: 40,
-                                  decoration: BoxDecoration(
-                                    image: DecorationImage(
-                                      image: AssetImage(
-                                        'images/nuovafreccia.png',
-                                      ),
-                                      fit: BoxFit.contain,
-                                    ),
-                                    //color: Colors.white,
-                                  ),
-                                ),
-
-
-                              ],
+                          LikeButton(
+                            size: 30,
+                            circleColor:
+                            CircleColor(start: Color(0xff00ddff), end: Color(0xff0099cc)),
+                            bubblesColor: BubblesColor(
+                              dotPrimaryColor: Color(0xff33b5e5),
+                              dotSecondaryColor: Color(0xff0099cc),
                             ),
+                            likeBuilder: (bool isLiked) {
+                              return Icon(
+                                Icons.arrow_back,
+                                color: isLiked ? Colors.white : Colors.white,
+                                size: 30,
+                              );
+                            },
+                            likeCount: 0,
+                            countBuilder: (int count, bool isLiked, String text) {
+                              var color = isLiked ? Colors.white : Colors.white;
+                              Widget result;
+                              if (count == 0) {
+                                result = Text(
+                                  " Scorrimi",
+                                  style: TextStyle(color: color, fontSize: 20, fontStyle: FontStyle.italic, fontWeight: FontWeight.w800 ),
+                                );
+                              } else
+                                result = Text(
+                                  " Scorrimi",
+                                  style: TextStyle(color: color, fontSize: 20, fontStyle: FontStyle.italic, fontWeight: FontWeight.w800 ),
+                                );
+                              return result;
+                            },
                           ),
+
                         ],
                       ),
                     ),
@@ -95,7 +106,7 @@ class _ModalitaDiRaccoltaState extends State<ModalitaDiRaccolta> {
                     ),
                     Container(
                       padding: EdgeInsets.all(13),
-                      width: 250,
+                      width: 300,
                       color: Colors.brown.shade800,
                       child: Center(child: Text('Va conferito in scatole di cartone, sacchi di carta o legato in pacchi. NO IN SACCHI DI NYLON O ALTRI CONTENITORI.', textAlign: TextAlign.justify, style: TextStyle(fontSize: 15, color: Colors.white,))),
                     ),
@@ -196,7 +207,7 @@ class _ModalitaDiRaccoltaState extends State<ModalitaDiRaccolta> {
                           Text('Opzione 1: Consegna con proprio mezzo presso il Centro di Raccolta (max 1 mc al giorno).', textAlign: TextAlign.justify, style: TextStyle(fontSize: 15, color: Colors.white,)),
                           SizedBox(height: 5,),
 
-                          Text('Opzione 2: Ritiro porta a porta. Bidone da 240 lt. Ramaglie posso essere conferite anche fuori dal bidone ma raccolte in 3-4 fascine di max 50 cm. Questo servizio è a pagamento. Vedere dettagli nel sito del Comune. ', textAlign: TextAlign.justify, style: TextStyle(fontSize: 15, color: Colors.white,)),
+                          Text('Opzione 2: Ritiro porta a porta. Bidone da 240 lt. Ramaglie possono essere conferite anche fuori dal bidone ma raccolte in 3-4 fascine di max 50 cm. Questo servizio è a pagamento. Vedere dettagli nel sito del Comune. ', textAlign: TextAlign.justify, style: TextStyle(fontSize: 15, color: Colors.white,)),
 
 
                         ],
@@ -290,7 +301,7 @@ class _ModalitaDiRaccoltaState extends State<ModalitaDiRaccolta> {
                       padding: EdgeInsets.all(13),
                       width: 350,
                       color: Colors.blue.shade800,
-                      child: Center(child: Text('Solo con il servizio di porta a porta. Devono essere conferiti in sacchetti semistrasparenti di max 15 kg di peso.  col porta a porta utilizzando sacchi semitrasparenti (escluso contenitori scarrabili)', textAlign: TextAlign.justify, style: TextStyle(fontSize: 15, color: Colors.white,))),
+                      child: Center(child: Text('Solo con il servizio di porta a porta. Devono essere conferiti in sacchetti semistrasparenti di max 15 kg di peso (escluso contenitori scarrabili)', textAlign: TextAlign.justify, style: TextStyle(fontSize: 15, color: Colors.white,))),
                     ),
                   ],
                 ),
@@ -479,6 +490,11 @@ class _ModalitaDiRaccoltaState extends State<ModalitaDiRaccolta> {
                 ),
 
               ),
+
+
+
+
+
 
 
 
