@@ -8,11 +8,22 @@ class ElencoIcone {
 
   String percorsoDaUtilizzare ({@required String rifiuto}){
 
-    if (rifiuto.contains("VETRO")) {
+    if (rifiuto.contains("VETRO") && rifiuto.contains("UMIDO")) {
+
+      return "images/vetroeumido.png";
+
+    } else if (rifiuto.contains("VETRO")) {
+
       return "images/vetro.png";
+
     }
 
-    if (rifiuto.contains("PLASTICA, LATTINE")) {
+    if (rifiuto.contains("PLASTICA, LATTINE") && rifiuto.contains("UMIDO"))
+      {
+        return "images/plasticaeumido.png";
+
+      } else if (rifiuto.contains("PLASTICA, LATTINE")) {
+
       return "images/plastica.png";
     }
 
@@ -20,16 +31,35 @@ class ElencoIcone {
       return "images/umido.png";
     }
 
-    if (rifiuto.contains("SECCO")) {
+
+    if (rifiuto.contains("SECCO") && rifiuto.contains("UMIDO")) {
+
+      return "images/seccoeumido.png";
+
+    } else if (rifiuto.contains("SECCO")) {
+
       return "images/secco.png";
+
     }
 
-    if (rifiuto.contains("CARTA")) {
+    if (rifiuto.contains("CARTA") && rifiuto.contains("UMIDO")){
+
+      return "images/scatolaeumido.png";
+
+    } else if (rifiuto.contains("CARTA")) {
+
       return "images/scatola.png";
+
     }
 
-    if (rifiuto.contains("VERDE")) {
+    if (rifiuto.contains("VERDE") && rifiuto.contains("UMIDO")){
+
+      return "images/verdeeumido.png";
+
+    } else if (rifiuto.contains("VERDE")) {
+
       return "images/verde.png";
+
     }
 
     if (rifiuto == "NULLA") {
