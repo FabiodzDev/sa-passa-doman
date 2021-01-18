@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:sapassadoman/home.dart';
-import 'package:sapassadoman/zonaGialla.dart';
-import 'package:sapassadoman/zonaBlu.dart';
 
 import 'main.dart';
 

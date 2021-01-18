@@ -2,9 +2,10 @@
 
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:sapassadoman/classegiornirifiuti.dart';
-import 'package:sapassadoman/recuperaData.dart';
-import 'package:sapassadoman/tiporifiuti.dart';
+import 'package:sapassadomantter/recuperaData.dart';
+import 'package:sapassadomantter/tiporifiuti.dart';
+
+import 'classegiornirifiuti.dart';
 
 // R I F I U T I        G I A L L O
 

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:sapassadoman/giornirifiutiblu.dart';
-import 'package:sapassadoman/tipoicone.dart';
+import 'package:sapassadomantter/tipoicone.dart';
+import 'giornirifiutiblu.dart';
 import 'recuperaData.dart';
 import 'giornirifiuti.dart';
 

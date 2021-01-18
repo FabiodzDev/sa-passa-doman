@@ -1,4 +1,4 @@
-package com.example.sapassadoman
+package com.sanoegustoso.sapassadoman
 
 import io.flutter.embedding.android.FlutterActivity
 

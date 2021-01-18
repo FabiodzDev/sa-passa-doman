@@ -32,7 +32,7 @@ class _ModalitaDiRaccoltaState extends State<ModalitaDiRaccolta> {
                   scrollDirection: Axis.horizontal,
                   children: [
                     Container(
-                      width: 180,
+                      width: 100,
                       decoration: BoxDecoration(
                         image: DecorationImage(
                           image: AssetImage(
@@ -43,10 +43,19 @@ class _ModalitaDiRaccoltaState extends State<ModalitaDiRaccolta> {
                         color: Colors.white,
                       ),
                     ),
+                    SizedBox(
+                      width: 10,
+                    ),
                     Container(
                       padding: EdgeInsets.all(13),
-                      width: 180,
-                      color: Colors.brown.shade300,
+                      width: 200,
+                      //color: Colors.white,
+                        decoration: BoxDecoration(
+                          color: Colors.brown.shade200,
+                          border: Border.all(
+                            color: Colors.grey,
+                            width: 0,
+                          ),),
                       child: Column(
                         children: [
                           Expanded(
@@ -56,43 +65,52 @@ class _ModalitaDiRaccoltaState extends State<ModalitaDiRaccolta> {
                                 child: Text(
                               'CARTA E CARTONE',
                               style: TextStyle(
-                                fontSize: 15,
+                                fontSize: 17,
                                 color: Colors.white,
+                                fontWeight: FontWeight.w600,
+
                               ),
                             )),
                           ),
 
-                          LikeButton(
-                            size: 30,
-                            circleColor:
-                            CircleColor(start: Color(0xff00ddff), end: Color(0xff0099cc)),
-                            bubblesColor: BubblesColor(
-                              dotPrimaryColor: Color(0xff33b5e5),
-                              dotSecondaryColor: Color(0xff0099cc),
+                          Container(
+                            child: Row(
+                              children: [
+                                Expanded(child: Container()),
+                                LikeButton(
+                                  size: 30,
+                                  circleColor:
+                                  CircleColor(start: Color(0xff00ddff), end: Color(0xff0099cc)),
+                                  bubblesColor: BubblesColor(
+                                    dotPrimaryColor: Color(0xff33b5e5),
+                                    dotSecondaryColor: Color(0xff0099cc),
+                                  ),
+                                  likeBuilder: (bool isLiked) {
+                                    return Icon(
+                                      Icons.arrow_back,
+                                      color: isLiked ? Colors.brown : Colors.brown,
+                                      size: 20,
+                                    );
+                                  },
+                                  likeCount: 0,
+                                  countBuilder: (int count, bool isLiked, String text) {
+                                    var color = isLiked ? Colors.brown : Colors.brown;
+                                    Widget result;
+                                    if (count == 0) {
+                                      result = Text(
+                                        "Scorrimi",
+                                        style: TextStyle(color: color, fontSize: 15, fontStyle: FontStyle.italic, fontWeight: FontWeight.w800 ),
+                                      );
+                                    } else
+                                      result = Text(
+                                        "Scorrimi",
+                                        style: TextStyle(color: color, fontSize: 15, fontStyle: FontStyle.italic, fontWeight: FontWeight.w800 ),
+                                      );
+                                    return result;
+                                  },
+                                ),
+                              ],
                             ),
-                            likeBuilder: (bool isLiked) {
-                              return Icon(
-                                Icons.arrow_back,
-                                color: isLiked ? Colors.white : Colors.white,
-                                size: 30,
-                              );
-                            },
-                            likeCount: 0,
-                            countBuilder: (int count, bool isLiked, String text) {
-                              var color = isLiked ? Colors.white : Colors.white;
-                              Widget result;
-                              if (count == 0) {
-                                result = Text(
-                                  " Scorrimi",
-                                  style: TextStyle(color: color, fontSize: 20, fontStyle: FontStyle.italic, fontWeight: FontWeight.w800 ),
-                                );
-                              } else
-                                result = Text(
-                                  " Scorrimi",
-                                  style: TextStyle(color: color, fontSize: 20, fontStyle: FontStyle.italic, fontWeight: FontWeight.w800 ),
-                                );
-                              return result;
-                            },
                           ),
 
                         ],
@@ -101,13 +119,13 @@ class _ModalitaDiRaccoltaState extends State<ModalitaDiRaccolta> {
                     Container(
                       padding: EdgeInsets.all(13),
                       width: 180,
-                      color: Colors.brown.shade500,
+                      color: Colors.brown.shade600,
                       child: Center(child: Text('Qualsiasi tipologia di carta.', textAlign: TextAlign.justify, style: TextStyle(fontSize: 15, color: Colors.white,),)),
                     ),
                     Container(
                       padding: EdgeInsets.all(13),
                       width: 300,
-                      color: Colors.brown.shade800,
+                      color: Colors.brown.shade900,
                       child: Center(child: Text('Va conferito in scatole di cartone, sacchi di carta o legato in pacchi. NO IN SACCHI DI NYLON O ALTRI CONTENITORI.', textAlign: TextAlign.justify, style: TextStyle(fontSize: 15, color: Colors.white,))),
                     ),
                   ],
@@ -119,7 +137,7 @@ class _ModalitaDiRaccoltaState extends State<ModalitaDiRaccolta> {
                   scrollDirection: Axis.horizontal,
                   children: [
                     Container(
-                      width: 180,
+                      width: 100,
                       decoration: BoxDecoration(
                         image: DecorationImage(
                           image: AssetImage(
@@ -130,18 +148,69 @@ class _ModalitaDiRaccoltaState extends State<ModalitaDiRaccolta> {
                         color: Colors.white,
                       ),
                     ),
+                    SizedBox(
+                      width: 10,
+                    ),
                     Container(
                       padding: EdgeInsets.all(13),
-                      width: 180,
+                      width: 200,
                       color: Colors.blueGrey.shade400,
-                      child: Center(
-                          child: Text(
-                            'VETRO',
-                            style: TextStyle(
-                              fontSize: 15,
-                              color: Colors.white,
+                      child: Column(
+                        children: [
+                          Expanded(
+                            child: Center(
+                              child: Text(
+                                'VETRO',
+                                style: TextStyle(
+                                  fontSize: 17,
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w600,
+
+                                ),
+                              )),
+                          ),
+                          Container(
+                            child: Row(
+                              children: [
+                                Expanded(child: Container()),
+                                LikeButton(
+                                  size: 30,
+                                  circleColor:
+                                  CircleColor(start: Color(0xff00ddff), end: Color(0xff0099cc)),
+                                  bubblesColor: BubblesColor(
+                                    dotPrimaryColor: Color(0xff33b5e5),
+                                    dotSecondaryColor: Color(0xff0099cc),
+                                  ),
+                                  likeBuilder: (bool isLiked) {
+                                    return Icon(
+                                      Icons.arrow_back,
+                                      color: isLiked ? Colors.blueGrey.shade800 : Colors.blueGrey.shade800,
+                                      size: 20,
+                                    );
+                                  },
+                                  likeCount: 0,
+                                  countBuilder: (int count, bool isLiked, String text) {
+                                    var color = isLiked ? Colors.blueGrey.shade800 : Colors.blueGrey.shade800;
+                                    Widget result;
+                                    if (count == 0) {
+                                      result = Text(
+                                        "Scorrimi",
+                                        style: TextStyle(color: color, fontSize: 15, fontStyle: FontStyle.italic, fontWeight: FontWeight.w800 ),
+                                      );
+                                    } else
+                                      result = Text(
+                                        "Scorrimi",
+                                        style: TextStyle(color: color, fontSize: 15, fontStyle: FontStyle.italic, fontWeight: FontWeight.w800 ),
+                                      );
+                                    return result;
+                                  },
+                                ),
+                              ],
                             ),
-                          )),
+                          ),
+
+                        ]
+                      ),
                     ),
                     Container(
                       padding: EdgeInsets.all(13),
@@ -164,7 +233,7 @@ class _ModalitaDiRaccoltaState extends State<ModalitaDiRaccolta> {
                   scrollDirection: Axis.horizontal,
                   children: [
                     Container(
-                      width: 180,
+                      width: 100,
                       decoration: BoxDecoration(
                         image: DecorationImage(
                           image: AssetImage(
@@ -175,18 +244,68 @@ class _ModalitaDiRaccoltaState extends State<ModalitaDiRaccolta> {
                         color: Colors.white,
                       ),
                     ),
+                    SizedBox(
+                      width: 10,
+                    ),
                     Container(
                       padding: EdgeInsets.all(13),
-                      width: 180,
+                      width: 200,
                       color: Colors.green.shade300,
-                      child: Center(
-                          child: Text(
-                            'VERDE E RAMAGLIE',
-                            style: TextStyle(
-                              fontSize: 15,
-                              color: Colors.white,
+                      child: Column(
+                        children: [
+                          Expanded(
+                            child: Center(
+                                child: Text(
+                                  'VERDE E RAMAGLIE',
+                                  style: TextStyle(
+                                    fontSize: 17,
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.w600,
+                                  ),
+                                )),
+                          ),
+                          Container(
+                            child: Row(
+                              children: [
+                                Expanded(child: Container()),
+                                LikeButton(
+                                  size: 30,
+                                  circleColor:
+                                  CircleColor(start: Color(0xff00ddff), end: Color(0xff0099cc)),
+                                  bubblesColor: BubblesColor(
+                                    dotPrimaryColor: Color(0xff33b5e5),
+                                    dotSecondaryColor: Color(0xff0099cc),
+                                  ),
+                                  likeBuilder: (bool isLiked) {
+                                    return Icon(
+                                      Icons.arrow_back,
+                                      color: isLiked ? Colors.green.shade800 : Colors.green.shade800,
+                                      size: 20,
+                                    );
+                                  },
+                                  likeCount: 0,
+                                  countBuilder: (int count, bool isLiked, String text) {
+                                    var color = isLiked ? Colors.green.shade800 : Colors.green.shade800;
+                                    Widget result;
+                                    if (count == 0) {
+                                      result = Text(
+                                        "Scorrimi",
+                                        style: TextStyle(color: color, fontSize: 15, fontStyle: FontStyle.italic, fontWeight: FontWeight.w800 ),
+                                      );
+                                    } else
+                                      result = Text(
+                                        "Scorrimi",
+                                        style: TextStyle(color: color, fontSize: 15, fontStyle: FontStyle.italic, fontWeight: FontWeight.w800 ),
+                                      );
+                                    return result;
+                                  },
+                                ),
+                              ],
                             ),
-                          )),
+                          ),
+
+                        ],
+                      ),
                     ),
                     Container(
                       padding: EdgeInsets.all(13),
@@ -222,7 +341,7 @@ class _ModalitaDiRaccoltaState extends State<ModalitaDiRaccolta> {
                   scrollDirection: Axis.horizontal,
                   children: [
                     Container(
-                      width: 180,
+                      width: 100,
                       decoration: BoxDecoration(
                         image: DecorationImage(
                           image: AssetImage(
@@ -233,18 +352,70 @@ class _ModalitaDiRaccoltaState extends State<ModalitaDiRaccolta> {
                         color: Colors.white,
                       ),
                     ),
+                    SizedBox(
+                      width: 10,
+                    ),
                     Container(
                       padding: EdgeInsets.all(13),
-                      width: 180,
+                      width: 200,
                       color: Colors.red.shade300,
-                      child: Center(
-                          child: Text(
-                            'PLASTICA E LATTINE',
-                            style: TextStyle(
-                              fontSize: 15,
-                              color: Colors.white,
+                      child: Column(
+                        children: [
+                          Expanded(
+                            child: Center(
+                                child: Text(
+                                  'PLASTICA E LATTINE',
+                                  style: TextStyle(
+                                    fontSize: 16,
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.w600,
+
+
+                                  ),
+                                )),
+                          ),
+                          Container(
+                            child: Row(
+                              children: [
+                                Expanded(child: Container()),
+                                LikeButton(
+                                  size: 30,
+                                  circleColor:
+                                  CircleColor(start: Color(0xff00ddff), end: Color(0xff0099cc)),
+                                  bubblesColor: BubblesColor(
+                                    dotPrimaryColor: Color(0xff33b5e5),
+                                    dotSecondaryColor: Color(0xff0099cc),
+                                  ),
+                                  likeBuilder: (bool isLiked) {
+                                    return Icon(
+                                      Icons.arrow_back,
+                                      color: isLiked ? Colors.red.shade800 : Colors.red.shade800,
+                                      size: 20,
+                                    );
+                                  },
+                                  likeCount: 0,
+                                  countBuilder: (int count, bool isLiked, String text) {
+                                    var color = isLiked ? Colors.red.shade800 : Colors.red.shade800;
+                                    Widget result;
+                                    if (count == 0) {
+                                      result = Text(
+                                        "Scorrimi",
+                                        style: TextStyle(color: color, fontSize: 15, fontStyle: FontStyle.italic, fontWeight: FontWeight.w800 ),
+                                      );
+                                    } else
+                                      result = Text(
+                                        "Scorrimi",
+                                        style: TextStyle(color: color, fontSize: 15, fontStyle: FontStyle.italic, fontWeight: FontWeight.w800 ),
+                                      );
+                                    return result;
+                                  },
+                                ),
+                              ],
                             ),
-                          )),
+                          ),
+
+                        ],
+                      ),
                     ),
                     Container(
                       padding: EdgeInsets.all(13),
@@ -267,7 +438,7 @@ class _ModalitaDiRaccoltaState extends State<ModalitaDiRaccolta> {
                   scrollDirection: Axis.horizontal,
                   children: [
                     Container(
-                      width: 180,
+                      width: 100,
                       decoration: BoxDecoration(
                         image: DecorationImage(
                           image: AssetImage(
@@ -278,18 +449,69 @@ class _ModalitaDiRaccoltaState extends State<ModalitaDiRaccolta> {
                         color: Colors.white,
                       ),
                     ),
+                    SizedBox(
+                      width: 10,
+                    ),
                     Container(
                       padding: EdgeInsets.all(13),
-                      width: 180,
+                      width: 200,
                       color: Colors.blue.shade300,
-                      child: Center(
-                          child: Text(
-                            'SECCO',
-                            style: TextStyle(
-                              fontSize: 15,
-                              color: Colors.white,
+                      child: Column(
+                        children: [
+                          Expanded(
+                            child: Center(
+                                child: Text(
+                                  'SECCO',
+                                  style: TextStyle(
+                                    fontSize: 17,
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.w600,
+
+                                  ),
+                                )),
+                          ),
+                          Container(
+                            child: Row(
+                              children: [
+                                Expanded(child: Container()),
+                                LikeButton(
+                                  size: 30,
+                                  circleColor:
+                                  CircleColor(start: Color(0xff00ddff), end: Color(0xff0099cc)),
+                                  bubblesColor: BubblesColor(
+                                    dotPrimaryColor: Color(0xff33b5e5),
+                                    dotSecondaryColor: Color(0xff0099cc),
+                                  ),
+                                  likeBuilder: (bool isLiked) {
+                                    return Icon(
+                                      Icons.arrow_back,
+                                      color: isLiked ? Colors.blue.shade800 : Colors.blue.shade800,
+                                      size: 20,
+                                    );
+                                  },
+                                  likeCount: 0,
+                                  countBuilder: (int count, bool isLiked, String text) {
+                                    var color = isLiked ? Colors.blue.shade800 : Colors.blue.shade800;
+                                    Widget result;
+                                    if (count == 0) {
+                                      result = Text(
+                                        "Scorrimi",
+                                        style: TextStyle(color: color, fontSize: 15, fontStyle: FontStyle.italic, fontWeight: FontWeight.w800 ),
+                                      );
+                                    } else
+                                      result = Text(
+                                        "Scorrimi",
+                                        style: TextStyle(color: color, fontSize: 15, fontStyle: FontStyle.italic, fontWeight: FontWeight.w800 ),
+                                      );
+                                    return result;
+                                  },
+                                ),
+                              ],
                             ),
-                          )),
+                          ),
+
+                        ],
+                      ),
                     ),
                     Container(
                       padding: EdgeInsets.all(13),
@@ -312,7 +534,7 @@ class _ModalitaDiRaccoltaState extends State<ModalitaDiRaccolta> {
                   scrollDirection: Axis.horizontal,
                   children: [
                     Container(
-                      width: 180,
+                      width: 100,
                       decoration: BoxDecoration(
                         image: DecorationImage(
                           image: AssetImage(
@@ -323,18 +545,69 @@ class _ModalitaDiRaccoltaState extends State<ModalitaDiRaccolta> {
                         color: Colors.white,
                       ),
                     ),
+                    SizedBox(
+                      width: 10,
+                    ),
                     Container(
                       padding: EdgeInsets.all(13),
-                      width: 180,
+                      width: 200,
                       color: Colors.deepOrange.shade300,
-                      child: Center(
-                          child: Text(
-                            'PANNOLINI',
-                            style: TextStyle(
-                              fontSize: 15,
-                              color: Colors.white,
+                      child: Column(
+                        children: [
+                          Expanded(
+                            child: Center(
+                                child: Text(
+                                  'PANNOLINI',
+                                  style: TextStyle(
+                                    fontSize: 17,
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.w600,
+
+                                  ),
+                                )),
+                          ),
+                          Container(
+                            child: Row(
+                              children: [
+                                Expanded(child: Container()),
+                                LikeButton(
+                                  size: 30,
+                                  circleColor:
+                                  CircleColor(start: Color(0xff00ddff), end: Color(0xff0099cc)),
+                                  bubblesColor: BubblesColor(
+                                    dotPrimaryColor: Color(0xff33b5e5),
+                                    dotSecondaryColor: Color(0xff0099cc),
+                                  ),
+                                  likeBuilder: (bool isLiked) {
+                                    return Icon(
+                                      Icons.arrow_back,
+                                      color: isLiked ? Colors.deepOrange.shade800 : Colors.deepOrange.shade800,
+                                      size: 20,
+                                    );
+                                  },
+                                  likeCount: 0,
+                                  countBuilder: (int count, bool isLiked, String text) {
+                                    var color = isLiked ? Colors.deepOrange.shade800 : Colors.deepOrange.shade800;
+                                    Widget result;
+                                    if (count == 0) {
+                                      result = Text(
+                                        "Scorrimi",
+                                        style: TextStyle(color: color, fontSize: 15, fontStyle: FontStyle.italic, fontWeight: FontWeight.w800 ),
+                                      );
+                                    } else
+                                      result = Text(
+                                        "Scorrimi",
+                                        style: TextStyle(color: color, fontSize: 15, fontStyle: FontStyle.italic, fontWeight: FontWeight.w800 ),
+                                      );
+                                    return result;
+                                  },
+                                ),
+                              ],
                             ),
-                          )),
+                          ),
+
+                        ],
+                      ),
                     ),
                     Container(
                       padding: EdgeInsets.all(13),
@@ -357,7 +630,7 @@ class _ModalitaDiRaccoltaState extends State<ModalitaDiRaccolta> {
                   scrollDirection: Axis.horizontal,
                   children: [
                     Container(
-                      width: 180,
+                      width: 100,
                       decoration: BoxDecoration(
                         image: DecorationImage(
                           image: AssetImage(
@@ -368,18 +641,69 @@ class _ModalitaDiRaccoltaState extends State<ModalitaDiRaccolta> {
                         color: Colors.white,
                       ),
                     ),
+                    SizedBox(
+                      width: 10,
+                    ),
                     Container(
                       padding: EdgeInsets.all(13),
-                      width: 180,
+                      width: 200,
                       color: Colors.deepPurple.shade300,
-                      child: Center(
-                          child: Text(
-                            'UMIDO',
-                            style: TextStyle(
-                              fontSize: 15,
-                              color: Colors.white,
+                      child: Column(
+                        children: [
+                          Expanded(
+                            child: Center(
+                                child: Text(
+                                  'UMIDO',
+                                  style: TextStyle(
+                                    fontSize: 17,
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.w600,
+
+                                  ),
+                                )),
+                          ),
+                          Container(
+                            child: Row(
+                              children: [
+                                Expanded(child: Container()),
+                                LikeButton(
+                                  size: 30,
+                                  circleColor:
+                                  CircleColor(start: Color(0xff00ddff), end: Color(0xff0099cc)),
+                                  bubblesColor: BubblesColor(
+                                    dotPrimaryColor: Color(0xff33b5e5),
+                                    dotSecondaryColor: Color(0xff0099cc),
+                                  ),
+                                  likeBuilder: (bool isLiked) {
+                                    return Icon(
+                                      Icons.arrow_back,
+                                      color: isLiked ? Colors.deepPurple.shade800 : Colors.deepPurple.shade800,
+                                      size: 20,
+                                    );
+                                  },
+                                  likeCount: 0,
+                                  countBuilder: (int count, bool isLiked, String text) {
+                                    var color = isLiked ? Colors.deepPurple.shade800 : Colors.deepPurple.shade800;
+                                    Widget result;
+                                    if (count == 0) {
+                                      result = Text(
+                                        "Scorrimi",
+                                        style: TextStyle(color: color, fontSize: 15, fontStyle: FontStyle.italic, fontWeight: FontWeight.w800 ),
+                                      );
+                                    } else
+                                      result = Text(
+                                        "Scorrimi",
+                                        style: TextStyle(color: color, fontSize: 15, fontStyle: FontStyle.italic, fontWeight: FontWeight.w800 ),
+                                      );
+                                    return result;
+                                  },
+                                ),
+                              ],
                             ),
-                          )),
+                          ),
+
+                        ],
+                      ),
                     ),
                     Container(
                       padding: EdgeInsets.all(13),
@@ -402,7 +726,7 @@ class _ModalitaDiRaccoltaState extends State<ModalitaDiRaccolta> {
                   scrollDirection: Axis.horizontal,
                   children: [
                     Container(
-                      width: 180,
+                      width: 100,
                       decoration: BoxDecoration(
                         image: DecorationImage(
                           image: AssetImage(
@@ -413,18 +737,45 @@ class _ModalitaDiRaccoltaState extends State<ModalitaDiRaccolta> {
                         color: Colors.white,
                       ),
                     ),
-                    Container(
-                      padding: EdgeInsets.all(13),
-                      width: 180,
-                      color: Colors.black45,
-                      child: Center(
-                          child: Text(
-                            'RIFIUTI URBANI PERICOLOSI',
-                            style: TextStyle(
-                              fontSize: 15,
-                              color: Colors.white,
-                            ),
-                          )),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Column(
+                      children: [
+                        Expanded(
+                          child: Container(
+                            width: 200,
+                            color: Colors.black45,
+                            child: Center(
+                                child: Text(
+                                  'RIFIUTI URBANI ',
+                                  style: TextStyle(
+                                    fontSize: 17,
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.w600,
+
+                                  ),
+                                )),
+                          ),
+                        ),
+                        Expanded(
+                          child: Container(
+                            width: 200,
+                            color: Colors.black45,
+                            child: Center(
+                                child: Text(
+                                  'PERICOLOSI ',
+                                  style: TextStyle(
+                                    fontSize: 17,
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.w600,
+
+                                  ),
+                                )),
+                          ),
+                        ),
+
+                      ],
                     ),
                     Container(
                       padding: EdgeInsets.all(13),
@@ -491,6 +842,7 @@ class _ModalitaDiRaccoltaState extends State<ModalitaDiRaccolta> {
 
               ),
 
+              Image.network("https://www.animatedimages.org/data/media/111/animated-arrow-image-0459.gif"),
 
 
 

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:sapassadoman/giornirifiutiblu.dart';
-import 'package:sapassadoman/modalita.dart';
-import 'package:sapassadoman/rifiuti.dart';
-import 'package:sapassadoman/tipoicone.dart';
+import 'modalita.dart';
+import 'rifiuti.dart';
+import 'package:sapassadomantter/tipoicone.dart';
+import 'giornirifiutiblu.dart';
 import 'home.dart';
 import 'informazioni.dart';
 import 'recuperaData.dart';

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:sapassadoman/classegiornirifiuti.dart';
-import 'package:sapassadoman/recuperaData.dart';
+import 'package:sapassadomantter/recuperaData.dart';
+import 'classegiornirifiuti.dart';
 import 'tiporifiuti.dart';
 
 // R I F I U T I     B L U

@@ -1,7 +1,7 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:sapassadoman/zonaBlu.dart';
+import 'package:sapassadomantter/zonaBlu.dart';
 import 'classeTestoZona.dart';
 
 MappaGoogle mappa = MappaGoogle();

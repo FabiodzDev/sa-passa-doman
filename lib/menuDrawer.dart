@@ -1,7 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:sapassadoman/calendarioCompletoBlu.dart';
-import 'package:sapassadoman/calendarioCompletoGiallo.dart';
+
+import 'calendarioCompletoBlu.dart';
+import 'calendarioCompletoGiallo.dart';
 import 'giornirifiutiblu.dart';
 import 'giornirifiuti.dart';
 
