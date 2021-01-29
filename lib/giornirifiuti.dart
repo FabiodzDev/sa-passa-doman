@@ -45,6 +45,788 @@ class AbbinamentoGiorniRifiuti  {    // LISTA RIFIUTI GIALLO
 
 
 
+
+
+
+
+    GiornoRifiuti(
+        giorno: "2021-02-02 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-02-05 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.vetro) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-02-09 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-02-12 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-02-16 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-02-19 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.vetro) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-02-23 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-02-24 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.verde)),
+
+    GiornoRifiuti(
+        giorno: "2021-02-26 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-03-02 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-03-05 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.vetro) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-03-09 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-03-10 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.verde)),
+
+
+    GiornoRifiuti(
+        giorno: "2021-03-12 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-03-16 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-03-19 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.vetro) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-03-23 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-03-24 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.verde)),
+
+
+    GiornoRifiuti(
+        giorno: "2021-03-26 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-03-30 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-04-02 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.vetro) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-04-06 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-04-07 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.verde)),
+
+
+    GiornoRifiuti(
+        giorno: "2021-04-09 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-04-13 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-04-16 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.vetro) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-04-20 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-04-21 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.verde)),
+
+
+    GiornoRifiuti(
+        giorno: "2021-04-23 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-04-27 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-04-30 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.vetro) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-05-04 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-05-05 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.verde)),
+
+
+    GiornoRifiuti(
+        giorno: "2021-05-07 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-05-11 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-05-14 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.vetro) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-05-18 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-05-19 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.verde)),
+
+
+    GiornoRifiuti(
+        giorno: "2021-05-21 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-05-25 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-05-28 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.vetro) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-06-01 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+
+    GiornoRifiuti(
+        giorno: "2021-06-04 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-06-08 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-06-09 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.verde)),
+
+    GiornoRifiuti(
+        giorno: "2021-06-11 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.vetro) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-06-15 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+
+    GiornoRifiuti(
+        giorno: "2021-06-18 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-06-22 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-06-23 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.verde)),
+
+    GiornoRifiuti(
+        giorno: "2021-06-25 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.vetro) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-06-29 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-07-01 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-07-02 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.verde)),
+
+    GiornoRifiuti(
+        giorno: "2021-07-03 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-07-06 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-07-08 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-07-10 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.vetro) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-07-13 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-07-14 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.verde)),
+
+    GiornoRifiuti(
+        giorno: "2021-07-16 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-07-20 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-07-22 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-07-24 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.vetro) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-07-27 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-07-29 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-07-30 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.verde)),
+
+    GiornoRifiuti(
+        giorno: "2021-07-31 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+
+    GiornoRifiuti(
+        giorno: "2021-08-03 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-08-05 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-08-07 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.vetro) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-08-10 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-08-12 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-08-13 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.verde)),
+
+    GiornoRifiuti(
+        giorno: "2021-08-14 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-08-17 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-08-18 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.verde)),
+
+    GiornoRifiuti(
+        giorno: "2021-08-19 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-08-21 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.vetro) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-08-24 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-08-26 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-08-27 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.verde)),
+
+    GiornoRifiuti(
+        giorno: "2021-08-28 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-08-31 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-09-03 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.vetro) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-09-07 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-09-08 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.verde)),
+
+    GiornoRifiuti(
+        giorno: "2021-09-10 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-09-14 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-09-15 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.verde)),
+
+    GiornoRifiuti(
+        giorno: "2021-09-17 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.vetro) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-09-21 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-09-24 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-09-28 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-09-29 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.verde)),
+
+    GiornoRifiuti(
+        giorno: "2021-10-01 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.vetro) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-10-05 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-10-06 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.verde)),
+
+    GiornoRifiuti(
+        giorno: "2021-10-08 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-10-12 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+
+    GiornoRifiuti(
+        giorno: "2021-10-15 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.vetro) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-10-19 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-10-20 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.verde)),
+
+    GiornoRifiuti(
+        giorno: "2021-10-22 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-10-26 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-10-29 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.vetro) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-11-02 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-11-03 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.verde)),
+
+    GiornoRifiuti(
+        giorno: "2021-11-05 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-11-09 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+
+    GiornoRifiuti(
+        giorno: "2021-11-12 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.vetro) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-11-16 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-11-17 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.verde)),
+
+    GiornoRifiuti(
+        giorno: "2021-11-19 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-11-23 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-11-26 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.vetro) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-11-30 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+
+    GiornoRifiuti(
+        giorno: "2021-12-03 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-12-07 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-12-10 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.vetro) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-12-14 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-12-15 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.verde)),
+
+
+    GiornoRifiuti(
+        giorno: "2021-12-17 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-12-21 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-12-24 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.vetro) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-12-28 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2021-12-31 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2022-01-04 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2022-01-07 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.vetro) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2022-01-11 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2022-01-14 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2022-01-18 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2022-01-21 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.vetro) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2022-01-25 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.plastica) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+    GiornoRifiuti(
+        giorno: "2022-01-26 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.verde)),
+
+
+    GiornoRifiuti(
+        giorno: "2022-01-28 00:00:00.000",
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco) +
+            " e " +
+            rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+
+
+
+
+
     GiornoRifiuti(giorno: "2099-12-31 00:00:00.000", rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.secco))      // LASCIARE QUESTA LUNGHISSIMA DATA
 
 
