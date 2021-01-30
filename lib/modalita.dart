@@ -263,11 +263,11 @@ class _ModalitaDiRaccoltaState extends State<ModalitaDiRaccolta> {
                     ),
                     Container(
                       padding: EdgeInsets.all(13),
-                      width: 350,
+                      width: 370,
                       color: Colors.blueGrey.shade900,
                       child: Center(
                           child: Text(
-                              'Vasetti, bottiglie, bicchieri e altri imballaggi in vetro bisogna conferirli in contenitori o bidoni per un peso massimo di 15 Kg. NO IN SACCHETTI DI PLASTICA. NO SPECCHI, OGGETTI IN CERAMICA, TERRACOTTA, PORCELLANA E LAMPADINE NEON.',
+                              'Vasetti, bottiglie, bicchieri e altri imballaggi in vetro bisogna conferirli in contenitori o bidoni per un peso massimo di 15 Kg (escluso contenitori scarrabili). NO IN SACCHETTI DI PLASTICA. NO SPECCHI, OGGETTI IN CERAMICA, TERRACOTTA, PORCELLANA E LAMPADINE NEON.',
                               textAlign: TextAlign.justify,
                               style: TextStyle(
                                 fontSize: 15,
@@ -386,7 +386,7 @@ class _ModalitaDiRaccoltaState extends State<ModalitaDiRaccolta> {
                     ),
                     Container(
                       padding: EdgeInsets.all(13),
-                      width: 700,
+                      width: 720,
                       color: Colors.green.shade800,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -412,7 +412,7 @@ class _ModalitaDiRaccoltaState extends State<ModalitaDiRaccolta> {
                             height: 5,
                           ),
                           Text(
-                              'Opzione 2: Ritiro porta a porta. Bidone da 240 lt. Ramaglie possono essere conferite anche fuori dal bidone ma raccolte in 3-4 fascine di max 50 cm. Questo servizio è a pagamento. Vedere dettagli nel sito del Comune. ',
+                              'Opzione 2: Ritiro porta a porta. Bidone da 240 lt. Le ramaglie possono essere conferite anche fuori dal bidone ma raccolte in 3-4 fascine di max 50 cm. Questo servizio è a pagamento. Per altri dettagli nel sito del Comune. ',
                               textAlign: TextAlign.justify,
                               style: TextStyle(
                                 fontSize: 15,
@@ -660,7 +660,7 @@ class _ModalitaDiRaccoltaState extends State<ModalitaDiRaccolta> {
                       color: Colors.blue.shade800,
                       child: Center(
                           child: Text(
-                              'Solo con il servizio di porta a porta. Devono essere conferiti in sacchetti semistrasparenti di max 15 kg di peso (escluso contenitori scarrabili)',
+                              'Solo con il servizio di porta a porta. Deve essere conferito in sacchetti semistrasparenti forniti dal Comune  di max 15 kg di peso (escluso contenitori scarrabili)',
                               textAlign: TextAlign.justify,
                               style: TextStyle(
                                 fontSize: 15,
@@ -1021,7 +1021,7 @@ class _ModalitaDiRaccoltaState extends State<ModalitaDiRaccolta> {
                     ),
                     Container(
                       padding: EdgeInsets.all(13),
-                      width: 250,
+                      width: 300,
                       color: Colors.black,
                       child: Center(
                           child: Text(
@@ -1059,6 +1059,37 @@ class _ModalitaDiRaccoltaState extends State<ModalitaDiRaccolta> {
                   textAlign: TextAlign.justify,
                 ),
               ),
+              Container(
+                padding: EdgeInsets.only(right: 15, left: 15, top: 5),
+                child: Text(
+                  'Orari d\'apertura:',
+                  style: TextStyle(
+                    fontSize: 15,
+                  ),
+                  textAlign: TextAlign.justify,
+                ),
+              ),
+              Container(
+                padding: EdgeInsets.only(right: 15, left: 15, top: 5),
+                child: Text(
+                  '- Mercoledì dalle 14.00 alle 17.00 (escluso giorni festivi)',
+                  style: TextStyle(
+                    fontSize: 15,
+                  ),
+                  textAlign: TextAlign.justify,
+                ),
+              ),
+              Container(
+                padding: EdgeInsets.only(right: 15, left: 15, top: 5, bottom: 15),
+                child: Text(
+                  '- Sabato dalle 09.00 alle 12.00 e dalle 14.00 alle 17.00 (escluso giorni festivi)',
+                  style: TextStyle(
+                    fontSize: 15,
+                  ),
+                  textAlign: TextAlign.justify,
+                ),
+              ),
+
               SizedBox(
                 height: 10,
               ),
@@ -1066,6 +1097,32 @@ class _ModalitaDiRaccoltaState extends State<ModalitaDiRaccolta> {
                 padding: EdgeInsets.all(15),
                 child: Text(
                   '- PER IL RITIRO DEGLI INGOMBRANTI E\' NECESSARIA LA PRENOTAZIONE CHIAMANDO IL NUMERO VERDE 800734989 .',
+                  style: TextStyle(
+                    fontSize: 16,
+                  ),
+                  textAlign: TextAlign.justify,
+                ),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Container(
+                padding: EdgeInsets.all(15),
+                child: Text(
+                  '- PER INFORMAZIONI E SEGNALAZIONI CHIAMARE IL NR. 045/7639611.',
+                  style: TextStyle(
+                    fontSize: 16,
+                  ),
+                  textAlign: TextAlign.justify,
+                ),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Container(
+                padding: EdgeInsets.all(15),
+                child: Text(
+                  '- L\'ESPOSIZIONE DEI RIFIUTI DOVRA\' ESSERE FATTA DI FRONTE ALLA PROPRIA ABITAZIONE A PARTIRE DALLE ORE 21.00 DEL GIORNO PRIMA RISPETTO AL GIORNO INDICATO NEL CALENDARIO.',
                   style: TextStyle(
                     fontSize: 16,
                   ),

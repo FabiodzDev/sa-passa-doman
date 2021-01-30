@@ -141,8 +141,6 @@ class AbbinamentoGiorniRifiutiBLU {
 
 
 
-
-
     GiornoRifiuti(
         giorno: "2021-02-01 00:00:00.000",
         rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.carta) +
@@ -485,7 +483,7 @@ class AbbinamentoGiorniRifiutiBLU {
 
     GiornoRifiuti(
         giorno: "2021-07-14 00:00:00.000",
-        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.umido)),
+        rifiuto: rifiuto.ilnomerifiuto(tipoRifiuto: tipoRifiuti.verde)),
 
     GiornoRifiuti(
         giorno: "2021-07-15 00:00:00.000",
@@ -970,10 +968,10 @@ class AbbinamentoGiorniRifiutiBLU {
       String giorno = rilevagiorno(i);
       DateTime giornoconvertito =
           DateTime.parse(giorno); // DA STRINGA CON ORARIO A DATETIME
-      print(giornoconvertito);
+      //print(giornoconvertito);
       String formattedDate = DateFormat('dd-MM-yyyy').format(
           giornoconvertito); // DA DATETIME CON ORARIO A STRINGA SENZA ORARIO
-      print(formattedDate);
+      //print(formattedDate);
 
       // facciamo la differenza tra data domani e la data della lista che sto analizzando
       final int differenceX = giornoconvertito
@@ -985,7 +983,7 @@ class AbbinamentoGiorniRifiutiBLU {
 
       if (list.length < 5) {
         // LIMITO I VALORI DELLA LISTA A 5
-        if (differenceX == 0 || differenceX > 1) {
+        if (differenceX == 0 || differenceX > 0) {
           // Se la data è uguale a domani oppure è maggiore aggiungi alla lista
 
           list.add(
@@ -1016,17 +1014,17 @@ class AbbinamentoGiorniRifiutiBLU {
 
       String giorno = rilevagiorno(i);
       DateTime giornoconvertito = DateTime.parse(giorno);  // DA STRINGA CON ORARIO A DATETIME
-      print (giornoconvertito);
+      //print (giornoconvertito);
       String formattedDate = DateFormat('dd-MM-yyyy').format(giornoconvertito);   // DA DATETIME CON ORARIO A STRINGA SENZA ORARIO
-      print (formattedDate);
+      //print (formattedDate);
 
       // facciamo la differenza tra oggi e la data della lista che sto analizzando
       final int differenceX = giornoconvertito.difference(datadioggi.dataDomaniFormatoDateTime()).inDays;
-
+      //print (differenceX);
 
       // X IL DRAWER, CREO UNA LISTA DEI PROSSIMI 5 GIORNI
 
-      if (differenceX == 0 || differenceX > 1) {
+      if (differenceX == 0 || differenceX > 0) {
         // Se la data è uguale a domani oppure è maggiore aggiungi alla lista
 
         listcompletaBlu.add(

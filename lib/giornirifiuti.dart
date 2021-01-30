@@ -879,9 +879,9 @@ class AbbinamentoGiorniRifiuti  {    // LISTA RIFIUTI GIALLO
 
       String giorno = rilevagiorno(i);
       DateTime giornoconvertito = DateTime.parse(giorno);  // DA STRINGA CON ORARIO A DATETIME
-      print (giornoconvertito);
+      //print (giornoconvertito);
       String formattedDate = DateFormat('dd-MM-yyyy').format(giornoconvertito);   // DA DATETIME CON ORARIO A STRINGA SENZA ORARIO
-      print (formattedDate);
+      //print (formattedDate);
 
       // facciamo la differenza tra oggi e la data della lista che sto analizzando
       final int differenceX = giornoconvertito.difference(datadioggi.dataDomaniFormatoDateTime()).inDays;
@@ -891,7 +891,7 @@ class AbbinamentoGiorniRifiuti  {    // LISTA RIFIUTI GIALLO
 
       if (list.length < 5) {
         // LIMITO I VALORI DELLA LISTA A 5
-        if (differenceX == 0 || differenceX > 1) {
+        if (differenceX == 0 || differenceX > 0) {
           // Se la data è uguale a domani oppure è maggiore aggiungi alla lista
 
           list.add(
@@ -916,9 +916,9 @@ class AbbinamentoGiorniRifiuti  {    // LISTA RIFIUTI GIALLO
 
       String giorno = rilevagiorno(i);
       DateTime giornoconvertito = DateTime.parse(giorno);  // DA STRINGA CON ORARIO A DATETIME
-      print (giornoconvertito);
+      //print (giornoconvertito);
       String formattedDate = DateFormat('dd-MM-yyyy').format(giornoconvertito);   // DA DATETIME CON ORARIO A STRINGA SENZA ORARIO
-      print (formattedDate);
+      //print (formattedDate);
 
       // facciamo la differenza tra oggi e la data della lista che sto analizzando
       final int differenceX = giornoconvertito.difference(datadioggi.dataDomaniFormatoDateTime()).inDays;
@@ -926,7 +926,7 @@ class AbbinamentoGiorniRifiuti  {    // LISTA RIFIUTI GIALLO
 
       // X IL DRAWER, CREO UNA LISTA DEI PROSSIMI 5 GIORNI
 
-        if (differenceX == 0 || differenceX > 1) {
+        if (differenceX == 0 || differenceX > 0) {
           // Se la data è uguale a domani oppure è maggiore aggiungi alla lista
 
           listcompletaGialla.add(
