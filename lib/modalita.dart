@@ -412,7 +412,7 @@ class _ModalitaDiRaccoltaState extends State<ModalitaDiRaccolta> {
                             height: 5,
                           ),
                           Text(
-                              'Opzione 2: Ritiro porta a porta. Bidone da 240 lt. Le ramaglie possono essere conferite anche fuori dal bidone ma raccolte in 3-4 fascine di max 50 cm. Questo servizio è a pagamento. Per altri dettagli nel sito del Comune. ',
+                              'Opzione 2: Ritiro porta a porta. Bidone da 240 lt. Le ramaglie possono essere conferite anche fuori dal bidone ma raccolte in 3-4 fascine di max 50 cm. Questo servizio è a pagamento. Per altri dettagli vedere nel sito del Comune. ',
                               textAlign: TextAlign.justify,
                               style: TextStyle(
                                 fontSize: 15,
@@ -519,11 +519,11 @@ class _ModalitaDiRaccoltaState extends State<ModalitaDiRaccolta> {
                     ),
                     Container(
                       padding: EdgeInsets.all(13),
-                      width: 200,
+                      width: 210,
                       color: Colors.red.shade500,
                       child: Center(
                           child: Text(
-                        'Qualsiasi imballaggio in plastica contenente bibite e alimenti.',
+                        'Qualsiasi imballaggio in plastica destinato a contenere bibite e alimenti.',
                         textAlign: TextAlign.justify,
                         style: TextStyle(
                           fontSize: 15,

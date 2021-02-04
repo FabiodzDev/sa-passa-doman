@@ -27,7 +27,7 @@ class Informazioni extends StatelessWidget {
           Container(
             padding: EdgeInsets.all(15),
             child: Text(
-              "SA PASSA DOMAN è un'applicazione creata a titolo gratuito, per offrire ai nostri compaesani di ARCOLE un servizio in più nella raccolta dei rifiuti, monitorando quindi anche tramite smartphone i giorni della raccolta differenziata. ",
+              "SA PASSA DOMAN è un'applicazione creata a titolo gratuito con lo scopo di offrire ai nostri compaesani di ARCOLE un servizio in più nella raccolta dei rifiuti, monitorando quindi anche tramite smartphone i giorni della raccolta differenziata. ",
               textAlign: TextAlign.justify,
               style: TextStyle(
                 fontSize: 17,
@@ -37,7 +37,7 @@ class Informazioni extends StatelessWidget {
           Container(
             padding: EdgeInsets.all(15),
             child: Text(
-              "Ci teniamo a precisare che non è l'applicazione ufficiale della raccolta differenziata e che quindi non ci sentiamo responsabili per eventuali errori, nonostante cercheremo di prestare sempre la massima attenzione.",
+              "Ci teniamo a precisare che non è l'applicazione ufficiale né della società che gestisce la raccolta differenziata né del Comune di Arcole e che quindi non ci teniamo responsabili per eventuali errori, nonostante cercheremo di prestare sempre la massima attenzione.",
               textAlign: TextAlign.justify,
               style: TextStyle(
                 fontSize: 17,
