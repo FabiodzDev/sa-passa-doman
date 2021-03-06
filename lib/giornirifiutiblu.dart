@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_icons/flutter_icons.dart';
 import 'package:intl/intl.dart';
 import 'package:sapassadomantter/recuperaData.dart';
 import 'classegiornirifiuti.dart';
@@ -990,7 +991,7 @@ class AbbinamentoGiorniRifiutiBLU {
             Container(
               child: ListTile(
                 leading: Icon(
-                  Icons.play_arrow,
+                  Entypo.location_pin,
                   size: 30,
                   color: Colors.blue[200],
                 ),
@@ -1030,7 +1031,7 @@ class AbbinamentoGiorniRifiutiBLU {
         listcompletaBlu.add(
           Container(
             child: ListTile(
-              leading: Icon(Icons.play_arrow , size: 30, color: Colors.blue[200],),
+              leading: Icon(Entypo.location_pin, size: 30, color: Colors.blue[200],),
               title: Text(formattedDate, style: TextStyle(fontSize: 18),),
               subtitle: Text(elencoZonaBlu[i].rifiuto, style: TextStyle(fontSize: 17),),
             ),

@@ -1,6 +1,7 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:flutter_icons/flutter_icons.dart';
 import 'package:intl/intl.dart';
 import 'package:sapassadomantter/recuperaData.dart';
 import 'package:sapassadomantter/tiporifiuti.dart';
@@ -897,7 +898,7 @@ class AbbinamentoGiorniRifiuti  {    // LISTA RIFIUTI GIALLO
           list.add(
             Container(
               child: ListTile(
-                leading: Icon(Icons.play_arrow , size: 30, color: Colors.yellow[600],),
+                leading: Icon(Entypo.location_pin , size: 30, color: Colors.yellow[600],),
                 title: Text(formattedDate, style: TextStyle(fontSize: 18),),
                 subtitle: Text(elencoZonaGialla[i].rifiuto, style: TextStyle(fontSize:  17),),
               ),
@@ -932,7 +933,7 @@ class AbbinamentoGiorniRifiuti  {    // LISTA RIFIUTI GIALLO
           listcompletaGialla.add(
             Container(
               child: ListTile(
-                leading: Icon(Icons.play_arrow , size: 30, color: Colors.yellow[600],),
+                leading: Icon(Entypo.location_pin , size: 30, color: Colors.yellow[600],),
                 title: Text(formattedDate, style: TextStyle(fontSize: 18),),
                 subtitle: Text(elencoZonaGialla[i].rifiuto, style: TextStyle(fontSize:  17),),
               ),

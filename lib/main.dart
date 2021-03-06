@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:sapassadomantter/paginaPopup.dart';
+import 'package:sapassadomantter/prossimecinquescadenze.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'homeblu.dart';
+import 'homegialla.dart';
 import 'modalita.dart';
 import 'rifiuti.dart';
 import 'package:sapassadomantter/tipoicone.dart';
@@ -11,6 +16,7 @@ import 'zonaGialla.dart';
 import 'zonaBlu.dart';
 import 'menuDrawer.dart';
 import 'splashScreen.dart';
+import 'package:flutter_icons/flutter_icons.dart';
 
 final datadomani = Dataoggi();
 final rifiutogiallo = AbbinamentoGiorniRifiuti(); // oggetto rifiuti giallo
@@ -54,11 +60,67 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
 
-  List <Widget> myPages = [Homex(), paginaZonaGialla(), paginaZonaBlu(), Rifiuti(), ModalitaDiRaccolta()];
-  int selectedIndex = 0;
+  bool selezionata;
+
+    List <Widget> myPages = [paginaZonaGialla(), paginaZonaBlu(), Rifiuti(), ModalitaDiRaccolta()];
+    int selectedIndex = 0;
+//  String zona = "blu";
+
+
+  Future<void> recuperaStatoZona() async {
+    final SharedPreferences sharedPref = await SharedPreferences.getInstance();
+    final bool recuperaZona= sharedPref.getBool('zona');
+    setState(() => selezionata = recuperaZona);
+
+    if (selezionata == true) {
+//      myPages.insert(0, HomeGialla());
+      setState(() {
+        myPages = [HomeGialla(), paginaZonaGialla(), paginaZonaBlu(), Rifiuti(), ModalitaDiRaccolta()];
+      });
+    } else if (selezionata == false) {
+//      myPages.insert(0, HomeBlu());
+    setState(() {
+      myPages = [HomeBlu(), paginaZonaGialla(), paginaZonaBlu(), Rifiuti(), ModalitaDiRaccolta()];
+
+    });
+
+    } else {
+      setState(() {
+        myPages = [Homex(), paginaZonaGialla(), paginaZonaBlu(), Rifiuti(), ModalitaDiRaccolta()];
+
+      });
+
+    }
+  }
+
+//  void impostaZona(){
+//    if (selezionata == true) {
+//      myPages.insert(0, HomeGialla());
+//    } else if (selezionata == false) {
+//      myPages.insert(0, HomeBlu());
+//    } else {
+//      myPages.insert(0, Homex());
+//    }
+//    print(myPages);
+//  }
+
+  Widget creaContainerPopup(BuildContext context){
+    return PaginaPopup();
+  }
+
+@override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    recuperaStatoZona();
+//    impostaZona();
+  }
 
   @override
   Widget build(BuildContext context) {
+
+    recuperaStatoZona();
+
 
    // String rifiutodidomanigiallo = rifiutogiallo.verifica();
     // String rifiutodidomaniblu = rifiutoblu.verifica();
@@ -75,23 +137,36 @@ class _MyHomePageState extends State<MyHomePage> {
           child: IconButton(
             color: Colors.white,
             // alignment: Alignment.topRight,
-            iconSize: 30,
+            iconSize: 26,
+            onPressed: (){
+              showModalBottomSheet(context: context, builder: creaContainerPopup);
+            },
+            icon: Icon(
+              Entypo.user,
+            ),
+          ),
+        ),Align(
+          alignment: Alignment.center,
+          child: IconButton(
+            color: Colors.white,
+            // alignment: Alignment.topRight,
+            iconSize: 26,
             onPressed: (){
 
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => Informazioni()));
+                      builder: (context) => ProssimeCinqueScadenze()));
 
             },
-            icon: Icon(
-              Icons.info,
+            icon: Icon(Entypo.calendar,
             ),
           ),
         )],
       ),
       drawer: menuDrawer(),
       body: myPages[selectedIndex],
+
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: selectedIndex,
         onTap: (index){
@@ -108,34 +183,34 @@ class _MyHomePageState extends State<MyHomePage> {
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.home,
+              Entypo.home,
             ),
             label: "HOME",
           ),
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.play_arrow,
+              Entypo.location_pin,
               color: Colors.yellowAccent,
             ),
             label: "VIE",
           ),
           BottomNavigationBarItem(
-            icon: Icon(
-              Icons.play_arrow,
+            icon: Icon(Entypo.location_pin,
               color: Colors.lightBlueAccent,
             ),
             label: "VIE",
           ),
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.account_tree,
+              Entypo.flow_tree,
             ),
             label: "RIFIUTI",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.inbox_sharp),
+            icon: Icon(Entypo.database),
             label: "MOD.",
           ),
+
         ],
       ),
     );

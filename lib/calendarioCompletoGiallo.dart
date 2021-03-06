@@ -11,7 +11,7 @@ class CalendarioCompletoGiallo extends StatelessWidget {
       appBar: AppBar(
         title: Text("CALENDARIO ZONA GIALLA"),
         centerTitle: true,
-        backgroundColor: Colors.yellow[700],
+        backgroundColor: Colors.blue[700],
       ),
       body: Container(
         color: Colors.white,
