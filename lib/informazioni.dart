@@ -34,6 +34,64 @@ class Informazioni extends StatelessWidget {
               ),
             ),
           ),
+          Center(child: Text("SVILUPPATA DA:", style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),)),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            crossAxisAlignment: CrossAxisAlignment.start,
+
+
+            children: [
+              Container(
+                margin: EdgeInsets.only(top: 15, bottom: 15, left: 10, right: 10,),
+                height: 120,
+                width: 120,
+                child: Image.asset('images/fotofabio.png'),
+              ),
+              Container(
+                margin: EdgeInsets.only(top: 20, bottom: 20),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text("FABIO DAL ZOVO", style: TextStyle(fontSize: 20),),
+                    SizedBox(height: 5,),
+                    Text("Impiegato amministrativo e per ",
+                      textAlign: TextAlign.justify,
+                    ),
+                    Text("passione sviluppatore di siti ",
+                      textAlign: TextAlign.justify,
+                    ),
+                    Text("web, app iOS, app Android e ",
+                      textAlign: TextAlign.justify,
+                    ),
+                    Text("programmi in VBA",
+                      textAlign: TextAlign.justify,
+                    ),
+
+
+                  ],
+                ),
+
+              ),
+            ],
+          ),
+          SizedBox(height: 15,),
+          Center(child: Text("UN RINGRAZIAMENTO A:", style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),)),
+          Container(
+            padding: EdgeInsets.all(15),
+            child: Text(
+              "Martina, Mia, Simone, Nicolo\', Nicola, Marcello, Manuel, Matteo, Alessandro e Layla per avermi dato idee importanti, consigli ed essersi applicati come tester.",
+              textAlign: TextAlign.justify,
+              style: TextStyle(
+                fontSize: 17,
+              ),
+            ),
+          ),
+          SizedBox(height: 15,),
+
+          Center(child: Text("DISCLAIMER", style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),)),
+
+
           Container(
             padding: EdgeInsets.all(15),
             child: Text(

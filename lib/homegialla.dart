@@ -86,12 +86,14 @@ class HomeGialla extends StatelessWidget {
                                       30) // da un arrotondamento agli spigoli
                               ),
 
-                              child: Text(
-                                rifiutodidomanigiallo,
-                                // textAlign: TextAlign.left,
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 25,
+                              child: Center(
+                                child: Text(
+                                  rifiutodidomanigiallo,
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 25,
+                                  ),
                                 ),
                               ),
                             ),

@@ -86,12 +86,14 @@ class HomeBlu extends StatelessWidget {
                                   borderRadius: BorderRadius.circular(
                                       30) // da un arrotondamento agli spigoli
                               ),
-                              child: Text(
-                                rifiutodidomaniblu,
-                                //textAlign: TextAlign.center,
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 25,
+                              child: Center(
+                                child: Text(
+                                  rifiutodidomaniblu,
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 25,
+                                  ),
                                 ),
                               ),
                             ),

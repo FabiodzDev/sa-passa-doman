@@ -1,10 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
+import 'package:sapassadomantter/centrorifiuti.dart';
+import 'package:sapassadomantter/facebookpage.dart';
+import 'package:sapassadomantter/numeriutili.dart';
 import 'package:sapassadomantter/tocati.dart';
 
 import 'calendarioCompletoBlu.dart';
 import 'calendarioCompletoGiallo.dart';
+import 'contatti.dart';
 import 'giornirifiutiblu.dart';
 import 'giornirifiuti.dart';
 import 'informazioni.dart';
@@ -66,7 +70,7 @@ class _menuDrawerState extends State<menuDrawer> {
           GestureDetector(
             child: ListTile(
               leading: Icon(Entypo.info),
-              title: Text("INFORMAZIONI", style: TextStyle(fontSize: 19),),
+              title: Text("INFORMAZIONI APP", style: TextStyle(fontSize: 18),),
               subtitle: Text("Chi siamo e Disclaimer"),
             ),
             onTap: (){
@@ -76,48 +80,88 @@ class _menuDrawerState extends State<menuDrawer> {
                       builder: (context) => Informazioni()));
             },
           ),
+          SizedBox(height: 3,),
+
           GestureDetector(
             child: ListTile(
               leading: Icon(Entypo.facebook),
-              title: Text("SOCIAL", style: TextStyle(fontSize: 19),),
+              title: Text("SOCIAL", style: TextStyle(fontSize: 18),),
               subtitle: Text("Seguici su Facebook"),
             ),
             onTap: (){
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => Informazioni()));
+                      builder: (context) => FacebookPage()));
             },
           ),
-          GestureDetector(
-            child: ListTile(
-              leading: Icon(FontAwesome5Solid.cog
+          SizedBox(height: 3,),
 
-              ),
-              title: Text("TOCATI", style: TextStyle(fontSize: 19),),
-              subtitle: Text("Chi porta fuori l'immondizia?"),
-            ),
-            onTap: (){
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => Tocati()));
-            },
-          ),
           GestureDetector(
             child: ListTile(
               leading: Icon(FontAwesome5Solid.mail_bulk
 
               ),
-              title: Text("CONTATTI", style: TextStyle(fontSize: 19),),
+              title: Text("CONTATTI APP", style: TextStyle(fontSize: 18),),
             ),
             onTap: (){
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => Informazioni()));
+                      builder: (context) => Contatti()));
             },
           ),
+          SizedBox(height: 3,),
+
+//          GestureDetector(
+//            child: ListTile(
+//              leading: Icon(FontAwesome5Solid.cog
+//
+//              ),
+//              title: Text("TOCATI", style: TextStyle(fontSize: 18),),
+//              subtitle: Text("Chi porta fuori l'immondizia?"),
+//            ),
+//            onTap: (){
+//              Navigator.push(
+//                  context,
+//                  MaterialPageRoute(
+//                      builder: (context) => Tocati()));
+//            },
+//          ),
+//          SizedBox(height: 3,),
+          GestureDetector(
+            child: ListTile(
+              leading: Icon(FontAwesome5Solid.phone
+
+              ),
+              title: Text("NUMERI UTILI", style: TextStyle(fontSize: 18),),
+              subtitle: Text("Comune e ritiro ingombranti"),
+            ),
+            onTap: (){
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => Numeriutili()));
+            },
+          ),
+          SizedBox(height: 3,),
+          GestureDetector(
+            child: ListTile(
+              leading: Icon(FontAwesome5Solid.location_arrow
+
+              ),
+              title: Text("CENTRO DI RACCOLTA RIFIUTI", style: TextStyle(fontSize: 18),),
+              subtitle: Text("Urbani per utenze domestiche"),
+            ),
+            onTap: (){
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => CentroRifiuti()));
+            },
+          ),
+
+
 
 
         ],
