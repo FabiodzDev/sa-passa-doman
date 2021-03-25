@@ -17,13 +17,18 @@ import 'zonaBlu.dart';
 import 'menuDrawer.dart';
 import 'splashScreen.dart';
 import 'package:flutter_icons/flutter_icons.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
+import 'package:firebase_core/firebase_core.dart';
+
 
 final datadomani = Dataoggi();
 final rifiutogiallo = AbbinamentoGiorniRifiuti(); // oggetto rifiuti giallo
 final rifiutoblu = AbbinamentoGiorniRifiutiBLU(); // oggetto rifiuti blu
 final iconaDaUtilizzare = ElencoIcone();
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(MyApp());
 }
 
@@ -93,27 +98,47 @@ class _MyHomePageState extends State<MyHomePage> {
     }
   }
 
-//  void impostaZona(){
-//    if (selezionata == true) {
-//      myPages.insert(0, HomeGialla());
-//    } else if (selezionata == false) {
-//      myPages.insert(0, HomeBlu());
+
+  void autorizzazioneNotificheIos() async {
+
+    FirebaseMessaging messaging = FirebaseMessaging.instance;
+
+    NotificationSettings settings = await messaging.requestPermission(
+      alert: true,
+      announcement: false,
+      badge: true,
+      carPlay: false,
+      criticalAlert: false,
+      provisional: false,
+      sound: true,
+    );
+
+//    if (settings.authorizationStatus == AuthorizationStatus.authorized) {
+//      print('L\'utente ha accettato la notifica');
+//    } else if (settings.authorizationStatus == AuthorizationStatus.provisional) {
+//      print('User granted provisional permission');
 //    } else {
-//      myPages.insert(0, Homex());
+//      print('L\'utente ha rifiutato la notifica');
 //    }
-//    print(myPages);
-//  }
+
+  }
+
+
+
+
 
   Widget creaContainerPopup(BuildContext context){
     return PaginaPopup();
   }
 
-@override
+
+  @override
   void initState() {
     // TODO: implement initState
     super.initState();
     recuperaStatoZona();
-//    impostaZona();
+
+
   }
 
   @override
@@ -121,12 +146,15 @@ class _MyHomePageState extends State<MyHomePage> {
 
     recuperaStatoZona();
 
+    autorizzazioneNotificheIos();
+
+
 
    // String rifiutodidomanigiallo = rifiutogiallo.verifica();
     // String rifiutodidomaniblu = rifiutoblu.verifica();
 
     return Scaffold(
-      resizeToAvoidBottomPadding: false,  // DOVREBBE NON MANDARE IN OVERFLOW I BOTTONI
+      //resizeToAvoidBottomPadding: false,  // DOVREBBE NON MANDARE IN OVERFLOW I BOTTONI
       backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text('SA PASSA DOMAN'),

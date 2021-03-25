@@ -1,6 +1,29 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_icons/flutter_icons.dart';
+import 'package:url_launcher/url_launcher.dart';
+
 
 class Contatti extends StatelessWidget {
+
+  launchURL() async {
+    const url = 'https://www.facebook.com/sapassadoman';
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
+
+  final Uri _emailLaunchUri = Uri(
+      scheme: 'mailto',
+      path: 'fabiodalzovo@gmail.com',
+      queryParameters: {
+        'subject': 'Segnalazione e suggerimenti SA PASSA DOMAN'
+      }
+  );
+
+
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,6 +46,47 @@ class Contatti extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 30,),
+              GestureDetector(
+                onTap: () => _emailLaunchUri,
+                child: Card(
+                  elevation: 30,
+                  color: Colors.white,
+                  child: Container(
+                    height: 100,
+                    width: double.infinity,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                          padding: EdgeInsets.all(10),
+                          child: Icon(Icons.email, size: 80, color: Colors.blueGrey,),
+
+                        ),
+                        Container(
+                          padding: EdgeInsets.only(top: 30, left: 10),
+                          child: Text("fabiodalzovo@gmail.com", style: TextStyle(fontSize: 17),),
+
+                        )
+                      ],
+                    ),
+                  ),
+
+                ),
+              ),
+              SizedBox(
+                height: 30,
+              ),
+              Text(
+                "oppure contattare la pagina Facebook:",
+                textAlign: TextAlign.justify,
+                style: TextStyle(
+                  fontSize: 17,
+                ),
+              ),
+              SizedBox(
+                height: 30,
+              ),
               Card(
                 elevation: 30,
                 color: Colors.white,
@@ -35,19 +99,24 @@ class Contatti extends StatelessWidget {
                     children: [
                       Container(
                         padding: EdgeInsets.all(10),
-                        child: Icon(Icons.email, size: 80, color: Colors.blueGrey,),
+                        child: Icon(Entypo.facebook, size: 80, color: Colors.blueGrey,),
 
                       ),
-                      Container(
-                        padding: EdgeInsets.only(top: 30, left: 10),
-                        child: Text("fabiodalzovo@gmail.com", style: TextStyle(fontSize: 17),),
+                      GestureDetector(
+                        onTap: launchURL,
+                        child: Container(
+                          padding: EdgeInsets.only(top: 30, left: 10),
+                          child: Text("@SaPassaDoman", style: TextStyle(fontSize: 17),),
 
+                        ),
                       )
                     ],
                   ),
                 ),
 
-              )
+              ),
+
+
 
             ],
           ),

@@ -1042,39 +1042,11 @@ class _ModalitaDiRaccoltaState extends State<ModalitaDiRaccolta> {
               SizedBox(
                 height: 30,
               ),
-              Container(
-                padding: EdgeInsets.only(right: 15, left: 15),
-                child: Text(
-                  'ALTRE INFO:',
-                  style: TextStyle(fontWeight: FontWeight.w700, fontSize: 20),
-                ),
-              ),
+
               SizedBox(
                 height: 10,
               ),
-              Container(
-                padding: EdgeInsets.all(15),
-                child: Text(
-                  '- L\'ESPOSIZIONE DEI RIFIUTI DOVRA\' ESSERE FATTA DI FRONTE ALLA PROPRIA ABITAZIONE A PARTIRE DALLE ORE 21.00 DEL GIORNO PRIMA RISPETTO AL GIORNO INDICATO NEL CALENDARIO.',
-                  style: TextStyle(
-                    fontSize: 16,
-                  ),
-                  textAlign: TextAlign.justify,
-                ),
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              Container(
-                padding: EdgeInsets.all(15),
-                child: Text(
-                  '- NON UTILIZZARE MAI SACCHETTI NERI.',
-                  style: TextStyle(
-                    fontSize: 16,
-                  ),
-                  textAlign: TextAlign.justify,
-                ),
-              ),
+
             ],
           )
         ],

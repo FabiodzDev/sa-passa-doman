@@ -6,6 +6,7 @@ import 'package:sapassadomantter/facebookpage.dart';
 import 'package:sapassadomantter/numeriutili.dart';
 import 'package:sapassadomantter/tocati.dart';
 
+import 'altreinfo.dart';
 import 'calendarioCompletoBlu.dart';
 import 'calendarioCompletoGiallo.dart';
 import 'contatti.dart';
@@ -158,6 +159,21 @@ class _menuDrawerState extends State<menuDrawer> {
                   context,
                   MaterialPageRoute(
                       builder: (context) => CentroRifiuti()));
+            },
+          ),
+          SizedBox(height: 3,),
+          GestureDetector(
+            child: ListTile(
+              leading: Icon(FontAwesome5Solid.book_open
+
+              ),
+              title: Text("ALTRE INFO", style: TextStyle(fontSize: 18),),
+            ),
+            onTap: (){
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => AltreInfo()));
             },
           ),
 
