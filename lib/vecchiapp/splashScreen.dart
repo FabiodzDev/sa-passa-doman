@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:splashscreen/splashscreen.dart';
-import 'main.dart';
+import '../main.dart';
 
 
 
@@ -8,7 +8,7 @@ class Splash extends StatefulWidget {
   @override
   _SplashState createState() => new _SplashState();
 }
-Widget paginacorrente = MyHomePage();
+//Widget paginacorrente = MyHomePage();
 
 class _SplashState extends State<Splash> {
   @override
@@ -16,7 +16,7 @@ class _SplashState extends State<Splash> {
   Widget build(BuildContext context) {
     return SplashScreen(
         seconds: 5,
-        navigateAfterSeconds: paginacorrente,
+//        navigateAfterSeconds: paginacorrente,
         title: new Text(
           'BENVENUTO',
           style:

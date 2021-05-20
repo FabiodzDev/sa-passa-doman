@@ -1,30 +1,54 @@
-import 'package:flutter/cupertino.dart';
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
-import 'package:sapassadomantter/centrorifiuti.dart';
-import 'package:sapassadomantter/facebookpage.dart';
-import 'package:sapassadomantter/numeriutili.dart';
-import 'package:sapassadomantter/tocati.dart';
+import 'package:sapassadomantter/main.dart';
+import 'package:sapassadomantter/screen/chisiamo.dart';
+import 'package:sapassadomantter/screen/contattiapp.dart';
+import 'package:sapassadomantter/screen/social.dart';
+import 'package:sapassadomantter/widget/widgetcentroraccolta.dart';
 
-import 'altreinfo.dart';
-import 'calendarioCompletoBlu.dart';
-import 'calendarioCompletoGiallo.dart';
+import '../sharedpreference.dart';
+import 'package:sapassadomantter/screen/altreinfo.dart';
+import 'centrodiraccolta.dart';
 import 'contatti.dart';
-import 'giornirifiutiblu.dart';
-import 'giornirifiuti.dart';
-import 'informazioni.dart';
 
-AbbinamentoGiorniRifiutiBLU giornorifiutoblu = AbbinamentoGiorniRifiutiBLU();
-AbbinamentoGiorniRifiuti giornorifiutogiallo = AbbinamentoGiorniRifiuti();
-
-class menuDrawer extends StatefulWidget {
+class MenuDrawer extends StatefulWidget {
   @override
-  _menuDrawerState createState() => _menuDrawerState();
+  _MenuDrawerState createState() => _MenuDrawerState();
 }
 
-class _menuDrawerState extends State<menuDrawer> {
+class _MenuDrawerState extends State<MenuDrawer> {
+
+  String codiceComune;
+  String nomeComune;
+
+  SharedPreference sharedpref = SharedPreference();
+
+  Future<Void> recuperaDatiComune() async {
+
+    codiceComune = await sharedpref.recuperaComuneFunz();
+    nomeComune = await sharedpref.recuperaNomeComuneFunz();
+
+    setState(() {
+      codiceComune = codiceComune;
+      nomeComune = nomeComune;
+    });
+
+}
+
+@override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    recuperaDatiComune();
+  }
+
   @override
   Widget build(BuildContext context) {
+
+
+
     return Drawer(
       // Add a ListView to the drawer. This ensures the user can scroll
       // through the options in the drawer if there isn't enough vertical
@@ -43,9 +67,9 @@ class _menuDrawerState extends State<menuDrawer> {
                     'SA PASSA DOMAN',
                     textAlign: TextAlign.left,
                     style: TextStyle(
-                      color: Colors.white,
+                      color: Colors.black,
                       fontWeight: FontWeight.bold,
-                      fontSize: 30,
+                      fontSize: 25,
                       letterSpacing: 2,
                     ),
                   ),
@@ -53,10 +77,10 @@ class _menuDrawerState extends State<menuDrawer> {
                     height: 20,
                   ),
                   Text(
-                    "ARCOLE E FRAZIONI",
+                    "$nomeComune E FRAZIONI",
                     textAlign: TextAlign.left,
                     style: TextStyle(
-                      color: Colors.white,
+                      color: Colors.black,
                       fontSize: 20,
                       letterSpacing: 2,
                     ),
@@ -65,7 +89,7 @@ class _menuDrawerState extends State<menuDrawer> {
               ),
             ),
             decoration: BoxDecoration(
-              color: Colors.blue[700],
+              color: Colors.lightBlue,
             ),
           ),
           GestureDetector(
@@ -75,10 +99,13 @@ class _menuDrawerState extends State<menuDrawer> {
               subtitle: Text("Chi siamo e Disclaimer"),
             ),
             onTap: (){
+
+              Navigator.pop(context);
+
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => Informazioni()));
+                      builder: (context) => ChiSiamo()));
             },
           ),
           SizedBox(height: 3,),
@@ -90,10 +117,13 @@ class _menuDrawerState extends State<menuDrawer> {
               subtitle: Text("Seguici su Facebook"),
             ),
             onTap: (){
+
+              Navigator.pop(context);
+
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => FacebookPage()));
+                      builder: (context) => Social()));
             },
           ),
           SizedBox(height: 3,),
@@ -106,30 +136,17 @@ class _menuDrawerState extends State<menuDrawer> {
               title: Text("CONTATTI APP", style: TextStyle(fontSize: 18),),
             ),
             onTap: (){
+
+              Navigator.pop(context);
+
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => Contatti()));
+                      builder: (context) => ContattiApp()));
             },
           ),
           SizedBox(height: 3,),
 
-//          GestureDetector(
-//            child: ListTile(
-//              leading: Icon(FontAwesome5Solid.cog
-//
-//              ),
-//              title: Text("TOCATI", style: TextStyle(fontSize: 18),),
-//              subtitle: Text("Chi porta fuori l'immondizia?"),
-//            ),
-//            onTap: (){
-//              Navigator.push(
-//                  context,
-//                  MaterialPageRoute(
-//                      builder: (context) => Tocati()));
-//            },
-//          ),
-//          SizedBox(height: 3,),
           GestureDetector(
             child: ListTile(
               leading: Icon(FontAwesome5Solid.phone
@@ -139,10 +156,12 @@ class _menuDrawerState extends State<menuDrawer> {
               subtitle: Text("Comune e ritiro ingombranti"),
             ),
             onTap: (){
+              Navigator.pop(context);
+
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => Numeriutili()));
+                      builder: (context) => Contatti(id_comune: codiceComune,)));
             },
           ),
           SizedBox(height: 3,),
@@ -155,10 +174,13 @@ class _menuDrawerState extends State<menuDrawer> {
               subtitle: Text("Urbani per utenze domestiche"),
             ),
             onTap: (){
+
+              Navigator.pop(context);
+
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => CentroRifiuti()));
+                      builder: (context) => CentroDiRaccolta(id_comune: codiceComune)));
             },
           ),
           SizedBox(height: 3,),
@@ -170,10 +192,13 @@ class _menuDrawerState extends State<menuDrawer> {
               title: Text("ALTRE INFO", style: TextStyle(fontSize: 18),),
             ),
             onTap: (){
+
+              Navigator.pop(context);
+
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => AltreInfo()));
+                      builder: (context) => AltreInfo(id_comune: codiceComune)));
             },
           ),
 

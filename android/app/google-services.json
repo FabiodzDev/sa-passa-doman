@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "997522393620",
+    "project_id": "sapassadoman",
+    "storage_bucket": "sapassadoman.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:997522393620:android:396317c54dea7ec448b501",
+        "android_client_info": {
+          "package_name": "com.sanoegustoso.sapassadoman"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "997522393620-dkiecc3krbpt3nsc17gjl06p38f6ulit.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBaa1unlv9xd3NkonNwmWl1iwD2-_t4vRU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "997522393620-dkiecc3krbpt3nsc17gjl06p38f6ulit.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -5,7 +5,7 @@ import 'calendarioCompletoBlu.dart';
 import 'calendarioCompletoGiallo.dart';
 import 'giornirifiuti.dart';
 import 'giornirifiutiblu.dart';
-import 'main.dart';
+import '../main.dart';
 
 
 AbbinamentoGiorniRifiutiBLU giornorifiutoblu = AbbinamentoGiorniRifiutiBLU();
