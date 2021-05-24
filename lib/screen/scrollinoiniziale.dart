@@ -1,5 +1,3 @@
-
-
 import 'dart:convert';
 import 'dart:ffi';
 
@@ -21,20 +19,14 @@ import 'elencocomuni.dart';
 
 import 'package:http/http.dart' as http;
 
+import 'ilmeteoit.dart';
 
 class ComplicatedImageDemo extends StatefulWidget {
-
-
-
-
-
-
   @override
   _ComplicatedImageDemoState createState() => _ComplicatedImageDemoState();
 }
 
 class _ComplicatedImageDemoState extends State<ComplicatedImageDemo> {
-
   String valoreComune = "999";
   String valoreZona = "999";
   String comuneRecuperato = " ";
@@ -43,14 +35,15 @@ class _ComplicatedImageDemoState extends State<ComplicatedImageDemo> {
   String nomeZona = " ";
   String valoreColoreZona = " ";
   String valoreColoreTestoZona = " ";
+  String nomeComuneIlMeteo = "";
   Color coloreDaPassare = Colors.white;
   Color coloreTestoDaPassare = Colors.black;
   List<Calendario> listaDati = [];
 
-
   // RECUPERIAMO IL COLORE SFONDO IN FORMATO #RRGGBB E LO CONVERTIAMO IN CLASSE COLOR
   Color convertiColoreSfondo(String code) {
-    Color colore = Color(int.parse(code.substring(1, 7), radix: 16) + 0xFF000000);
+    Color colore =
+        Color(int.parse(code.substring(1, 7), radix: 16) + 0xFF000000);
 
     setState(() {
       coloreDaPassare = colore;
@@ -60,15 +53,14 @@ class _ComplicatedImageDemoState extends State<ComplicatedImageDemo> {
 
   // RECUPERIAMO IL COLORE TESTO IN FORMATO #RRGGBB E LO CONVERTIAMO IN CLASSE COLOR
   Color convertiColoreTesto(String code) {
-    Color coloreText = Color(int.parse(code.substring(1, 7), radix: 16) + 0xFF000000);
+    Color coloreText =
+        Color(int.parse(code.substring(1, 7), radix: 16) + 0xFF000000);
 
     setState(() {
       coloreTestoDaPassare = coloreText;
     });
     return coloreText;
   }
-
-
 
 // RECUPERIAMO IL FILE JSON E SALVIAMO I DATI NELLA LISTA
 
@@ -98,7 +90,6 @@ class _ComplicatedImageDemoState extends State<ComplicatedImageDemo> {
           immagineRifiuto: dati['immagino_rifiuto'],
         ));
 
-
         setState(() {
           comuneRecuperato = dati['NomeComune'];
           zonaRecuperata = dati['NomeZona'];
@@ -113,12 +104,11 @@ class _ComplicatedImageDemoState extends State<ComplicatedImageDemo> {
 
   // RECUPERIAMO LE SHARED PREFERENCE
   Future<Void> ricerca() async {
-
     SharedPreference sharedpref = SharedPreference();
-
 
     valoreComune = await sharedpref.recuperaComuneFunz();
     nomeComune = await sharedpref.recuperaNomeComuneFunz();
+    nomeComuneIlMeteo = await sharedpref.recuperaComunePerIlMeteo();
 
     valoreZona = await sharedpref.recuperaZonaFunz();
     nomeZona = await sharedpref.recuperaNomeZonaFunz();
@@ -128,35 +118,34 @@ class _ComplicatedImageDemoState extends State<ComplicatedImageDemo> {
 
 // SE VALORE COMUNE E' NULLO MANDIAMO L'UTENTE A SELEZIONARE IL COMUNE, ESPLODENDO QUESTA PAGINA
     if (valoreComune == null) {
-
       Navigator.pop(context);
-      Navigator.push(context, MaterialPageRoute(builder: (context) => Comuni()));
-
-
-    } else if (valoreZona == null){
-
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => Comuni()));
+    } else if (valoreZona == null) {
       Navigator.pop(context);
-      Navigator.push(context,  MaterialPageRoute(builder: (context) => ZonePage(id_comune: valoreComune, nome_comune: nomeComune )));
-
+      Navigator.push(
+          context,
+          MaterialPageRoute(
+              builder: (context) =>
+                  ZonePage(id_comune: valoreComune, nome_comune: nomeComune)));
     } else {
-
       setState(() {
         valoreComune = valoreComune;
         nomeComune = nomeComune;
         nomeZona = nomeZona;
+        nomeComuneIlMeteo = nomeComuneIlMeteo;
         valoreZona = valoreZona;
         valoreColoreZona = valoreColoreZona;
         valoreColoreTestoZona = valoreColoreTestoZona;
-      });
 
+      });
 
       convertiColoreSfondo(valoreColoreZona);
       convertiColoreTesto(valoreColoreTestoZona);
 
       recuperaValore(valoreComune, valoreZona);
-
-    }}
-
+    }
+  }
 
   @override
   void initState() {
@@ -164,116 +153,147 @@ class _ComplicatedImageDemoState extends State<ComplicatedImageDemo> {
     super.initState();
 
     ricerca();
-
   }
+
   @override
   Widget build(BuildContext context) {
-
-
     final Map imgList = {
-      'https://viviarcole.it/aa_spd_immagini/ic_launcher-playstore.png' : [MyHomePage(valoreComune: valoreComune, valoreZona: valoreZona, comuneRecuperato: comuneRecuperato, zonaRecuperata: zonaRecuperata, nomeComune: nomeComune, nomeZona: nomeZona, valoreColoreZona: valoreColoreZona, valoreColoreTestoZona: valoreColoreTestoZona, coloreDaPassare: coloreDaPassare, coloreTestoDaPassare: coloreTestoDaPassare, listaDati: listaDati ), "  La gestione dei rifiuti"],
-      'https://www.viviarcole.it/aa_spd_immagini/farmacia.png' : [Farmaciediturno(), "Le farmacie di turno"],
+      'https://viviarcole.it/aa_spd_immagini/ic_launcher-playstore.png': [
+        MyHomePage(
+            valoreComune: valoreComune,
+            valoreZona: valoreZona,
+            comuneRecuperato: comuneRecuperato,
+            zonaRecuperata: zonaRecuperata,
+            nomeComune: nomeComune,
+            nomeZona: nomeZona,
+            valoreColoreZona: valoreColoreZona,
+            valoreColoreTestoZona: valoreColoreTestoZona,
+            coloreDaPassare: coloreDaPassare,
+            coloreTestoDaPassare: coloreTestoDaPassare,
+            listaDati: listaDati),
+        "La gestione dei rifiuti"
+      ],
+      'https://www.viviarcole.it/aa_spd_immagini/farmacia.png': [
+        Farmaciediturno(),
+        "Le farmacie di turno"
+      ],
+      'https://www.viviarcole.it/aa_spd_immagini/chetempofadoman.png': [
+        Ilmeteoit(nomeComune: nomeComune , idComune: valoreComune, nomeComunePerIlMeteo: nomeComuneIlMeteo,),
+        "Che tempo ghe?"
+      ],
 //      'https://images.unsplash.com/photo-1523205771623-e0faa4d2813d?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=89719a0d55dd05e2deae4120227e6efc&auto=format&fit=crop&w=1953&q=80' : Social(),
 //      'https://www.viviarcole.it/aa_spd_immagini/secco.png' : Social()
     };
 
+    final List<Widget> imageSliders = imgList.entries
+        .map((item) => Container(
+              child: Container(
+                margin: EdgeInsets.all(1.0),
+                child: ClipRRect(
+                    borderRadius: BorderRadius.all(Radius.circular(5.0)),
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.pop(context);
 
-
-    final List<Widget> imageSliders = imgList.entries.map((item) => Container(
-      child: Container(
-        margin: EdgeInsets.all(1.0),
-        child: ClipRRect(
-            borderRadius: BorderRadius.all(Radius.circular(5.0)),
-            child: GestureDetector(
-              onTap: ()  {
-                Navigator.pop(context);
-
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => item.value[0]));},
-              child: Stack(
-                children: <Widget>[
-                  Image.network(item.key, fit: BoxFit.cover, width: 1000,),
-                  Positioned(
-                    bottom: -7,
-                    left: 0.0,
-                    right: 0.0,
-                    child: Container(
-                      decoration: BoxDecoration(
-                        gradient: LinearGradient(
-                          colors: [
-                            Color.fromARGB(50, 0, 0, 0),
-                            Color.fromARGB(0, 0, 0, 0)
-                          ],
-                          begin: Alignment.bottomRight,
-                          end: Alignment.bottomCenter,
-                        ),
-                      ),
-                      padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
-                      child: Container(
-                        margin: EdgeInsets.only(top: 10),
-                        child: Text(
-                          item.value[1],
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 17.0,
-                            fontWeight: FontWeight.bold,
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => item.value[0]));
+                      },
+                      child: Stack(
+                        children: <Widget>[
+                          Image.network(
+                            item.key,
+                            fit: BoxFit.cover,
+                            width: 1000,
                           ),
-                        ),
+                          Positioned(
+                            bottom: -7,
+                            left: 0.0,
+                            right: 0.0,
+                            child: Container(
+                              decoration: BoxDecoration(
+                                gradient: LinearGradient(
+                                  colors: [
+                                    Color.fromARGB(0, 0, 0, 0),
+                                    Color.fromARGB(0, 0, 0, 0)
+                                  ],
+                                  begin: Alignment.bottomRight,
+                                  end: Alignment.bottomCenter,
+                                ),
+                              ),
+                              padding: EdgeInsets.symmetric(
+                                  vertical: 10.0, horizontal: 20.0),
+                              child: Container(
+                                margin: EdgeInsets.only(top: 10),
+                                child: Text(
+                                  item.value[1],
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 17.0,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
-                    ),
-                  ),
-                ],
+                    )),
               ),
-            )
-        ),
-      ),
-    )).toList();
-
-
+            ))
+        .toList();
 
     return Scaffold(
-      appBar: AppBar(title: Text('SA PASSA DOMAN'), centerTitle: true,),
-      body: Container(
-        padding: EdgeInsets.only(top: 50),
-          child: ListView(children: <Widget>[
-            CarouselSlider(
-              options: CarouselOptions(
-                autoPlay: true,
-                aspectRatio: 1.6,
-                enlargeCenterPage: true,
-                reverse: false,
-              ),
-              items: imageSliders,
-            ),
-            Container(
-              padding: EdgeInsets.only(top: 20),
-              child: Text(""),
-            )
-          ],
-          )
+      appBar: AppBar(
+        title: Text('SA PASSA DOMAN'),
+        centerTitle: true,
+        actions: [
+          IconButton(
+            icon: Icon(Icons.update),
+            onPressed: () {
+              Navigator.pop(context);
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => Comuni()));
+            },
+          ),
+        ],
       ),
+      body: Container(
+          padding: EdgeInsets.only(top: 30),
+          child: ListView(
+            children: <Widget>[
+              Center(
+                  child: Text(
+                nomeComune,
+                style: TextStyle(fontWeight: FontWeight.w700, fontSize: 25),
+              )),
+              SizedBox(
+                height: 30,
+              ),
+              CarouselSlider(
+                options: CarouselOptions(
+                  autoPlay: true,
+                  aspectRatio: 1.6,
+                  enlargeCenterPage: true,
+                  reverse: false,
+                ),
+                items: imageSliders,
+              ),
+              Container(
+                padding: EdgeInsets.only(top: 20),
+                child: Text(""),
+              )
+            ],
+          )),
     );
   }
 }
 
-
-class ListaOggetti {
-
-  String percorsofoto;
-  Object pagina;
-
-  ListaOggetti({@required this.percorsofoto, @required this.pagina});
-
-}
-
-
-
-
-
-
-
-
-
+//class ListaOggetti {
+//  String percorsofoto;
+//  Object pagina;
+//
+//  ListaOggetti({@required this.percorsofoto, @required this.pagina});
+//}

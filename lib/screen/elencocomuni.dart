@@ -38,11 +38,13 @@ class _ComuniState extends State<Comuni> {
         listaComuni.add(WidgetComuni(
           id: dati['id_spd_comuni'],
           nome: dati['nome'],
+          nomeIlMeteo: dati['ilmeteoit'],
 
         ));
 
         print(dati['id_spd_comuni']);
         print(dati['nome']);
+        print(dati['ilmeteoit']);
 
       });
 

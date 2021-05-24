@@ -8,8 +8,9 @@ class WidgetComuni extends StatelessWidget {
 
   String id;
   String nome;
+  String nomeIlMeteo;
 
-  WidgetComuni({@required this.id, @required this.nome});
+  WidgetComuni({@required this.id, @required this.nome, @required this.nomeIlMeteo});
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -27,7 +28,8 @@ class WidgetComuni extends StatelessWidget {
         ),
         onTap: () {
 
-            sharedpref.settaComune(id, nome);
+            sharedpref.settaComune(id, nome, nomeIlMeteo);
+            print ("Il meteo settato $nomeIlMeteo");
             Navigator.pop(context);
             Navigator.push(context,
             MaterialPageRoute(builder: (context) => ZonePage(id_comune: id, nome_comune: nome ,)));},

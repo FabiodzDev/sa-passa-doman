@@ -8,12 +8,15 @@ class SharedPreference {
   String recuperaNomeZona;
   String recuperaColoreZona;
   String recuperaColoreTestoZona;
+  String recuperaNomeComPerIlMeteo;
 
-  Future<void> settaComune(String comunex, String nomeComunex) async {
+  Future<void> settaComune(String comunex, String nomeComunex, String nomeComIlmeteox) async {
     final SharedPreferences sharedPref = await SharedPreferences.getInstance();
 
     sharedPref.setString('comune', comunex);
     sharedPref.setString('nomeComune', nomeComunex);
+    sharedPref.setString('nomeComIlmeteo', nomeComIlmeteox);
+
 
     print("Comune $nomeComunex settato");
   }
@@ -42,6 +45,8 @@ class SharedPreference {
 
     sharedPref.remove("comune");
     sharedPref.remove("nomeComune");
+    sharedPref.remove("nomeComIlmeteo");
+
 
     sharedPref.remove("zona");
     sharedPref.remove("nomeZona");
@@ -49,7 +54,7 @@ class SharedPreference {
     sharedPref.remove("coloreSfondoZona");
     sharedPref.remove("coloreTestoZona");
 
-    print("Comune e zona rimossi");
+    print("Comune, zona e nome Comune per il meteo rimossi");
   }
 
 
@@ -104,6 +109,16 @@ class SharedPreference {
     recuperaColoreTestoZona = await sharedPref.getString('coloreTestoZona');
     print("Il colore testo zona è $recuperaColoreTestoZona");
     return recuperaColoreTestoZona;
+
+  }
+
+
+  Future<String> recuperaComunePerIlMeteo() async {
+    final SharedPreferences sharedPref = await SharedPreferences.getInstance();
+
+    recuperaNomeComPerIlMeteo = await sharedPref.getString('nomeComIlmeteo');
+    print("Il nome comune per IL METEO è $recuperaNomeComPerIlMeteo");
+    return recuperaNomeComPerIlMeteo;
 
   }
 

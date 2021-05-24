@@ -1,5 +1,6 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
+import 'package:sapassadomantter/screen/scrollinoiniziale.dart';
 
 import 'package:webview_flutter/webview_flutter.dart';
 
@@ -19,8 +20,22 @@ class _FarmaciediturnoState extends State<Farmaciediturno> {
 
   @override
   Widget build(BuildContext context) {
-    return WebView(
-      initialUrl: 'http://mobile.farmacieverona.it',
+    return Scaffold(
+      appBar: AppBar(title: Text("FARMACIA DI TURNO"),
+        actions: [
+          IconButton(
+            icon: Icon(Icons.pages),
+            onPressed: () {
+
+              Navigator.pop(context);
+              Navigator.push(context, MaterialPageRoute(builder: (context) => ComplicatedImageDemo()));
+            },
+          )
+        ],),
+
+      body: WebView(
+        initialUrl: 'http://mobile.farmacieverona.it',
+      ),
     );
   }
 }
