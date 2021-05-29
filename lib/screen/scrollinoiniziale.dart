@@ -6,10 +6,13 @@ import 'package:carousel_slider/carousel_options.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:sapassadomantter/screen/farmaciediturno.dart';
+import 'package:sapassadomantter/screen/santodelgiorno.dart';
 import 'package:sapassadomantter/screen/social.dart';
+import 'package:sapassadomantter/screen/staseraintv.dart';
 import 'package:sapassadomantter/screen/zonepage.dart';
 import 'package:sapassadomantter/widget/calendario.dart';
 import 'package:sapassadomantter/widget/widgetcomuni.dart';
+import 'package:flutter_icons/flutter_icons.dart';
 
 import '../main.dart';
 import '../sharedpreference.dart';
@@ -179,7 +182,7 @@ class _ComplicatedImageDemoState extends State<ComplicatedImageDemo> {
       ],
       'https://www.viviarcole.it/aa_spd_immagini/chetempofadoman.png': [
         Ilmeteoit(nomeComune: nomeComune , idComune: valoreComune, nomeComunePerIlMeteo: nomeComuneIlMeteo,),
-        "Che tempo ghe?"
+        "Che tempo fa?"
       ],
 //      'https://images.unsplash.com/photo-1523205771623-e0faa4d2813d?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=89719a0d55dd05e2deae4120227e6efc&auto=format&fit=crop&w=1953&q=80' : Social(),
 //      'https://www.viviarcole.it/aa_spd_immagini/secco.png' : Social()
@@ -251,7 +254,7 @@ class _ComplicatedImageDemoState extends State<ComplicatedImageDemo> {
         centerTitle: true,
         actions: [
           IconButton(
-            icon: Icon(Icons.update),
+            icon: Icon(Icons.home),
             onPressed: () {
               Navigator.pop(context);
               Navigator.push(
@@ -260,33 +263,348 @@ class _ComplicatedImageDemoState extends State<ComplicatedImageDemo> {
           ),
         ],
       ),
-      body: Container(
-          padding: EdgeInsets.only(top: 30),
-          child: ListView(
-            children: <Widget>[
-              Center(
-                  child: Text(
-                nomeComune,
-                style: TextStyle(fontWeight: FontWeight.w700, fontSize: 25),
-              )),
-              SizedBox(
-                height: 30,
-              ),
-              CarouselSlider(
-                options: CarouselOptions(
-                  autoPlay: true,
-                  aspectRatio: 1.6,
-                  enlargeCenterPage: true,
-                  reverse: false,
+      body: SafeArea(
+        child: Container(
+            color: Colors.black,
+            padding: EdgeInsets.only(top: 30),
+            child: GridView.count(
+              crossAxisSpacing: 3,
+              mainAxisSpacing: 3,
+              primary: false,
+              crossAxisCount: 3,
+              children: <Widget>[
+                Container(
+                  padding: EdgeInsets.only(top: 30, left: 3, right: 3, ),
+                    child: Column(
+                      children: [
+                        Text("Il tuo Comune:", style: TextStyle(color: Colors.white), ),
+                        Text(
+                  nomeComune,
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontWeight: FontWeight.w700, fontSize: 15, color: Colors.white),
                 ),
-                items: imageSliders,
-              ),
-              Container(
-                padding: EdgeInsets.only(top: 20),
-                child: Text(""),
-              )
-            ],
-          )),
+                      ],
+                    )),
+
+                CarouselSlider(
+                  options: CarouselOptions(
+                    autoPlay: true,
+                    aspectRatio: 1.6,
+                    enlargeCenterPage: true,
+                    reverse: false,
+                  ),
+                  items: imageSliders,
+                ),
+
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pop(context);
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => MyHomePage(
+                                valoreComune: valoreComune,
+                                valoreZona: valoreZona,
+                                comuneRecuperato: comuneRecuperato,
+                                zonaRecuperata: zonaRecuperata,
+                                nomeComune: nomeComune,
+                                nomeZona: nomeZona,
+                                valoreColoreZona: valoreColoreZona,
+                                valoreColoreTestoZona: valoreColoreTestoZona,
+                                coloreDaPassare: coloreDaPassare,
+                                coloreTestoDaPassare: coloreTestoDaPassare,
+                                listaDati: listaDati)));
+
+
+                  },
+                  child: Container(
+                    height: 180,
+                    //width: 180,
+                    color: Colors.red.shade600,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+//                      Container(
+//                        height: 140,
+//                        width: double.infinity,
+//                        child: Icon(Icons.delete,
+//                          color: Colors.white,
+//                          size: 135,
+//
+//                        ),
+//                      ),
+                        Container(
+                          height: 115,
+                          width: double.infinity,
+                          padding: EdgeInsets.only(top: 15, left: 10, right: 5, bottom: 1),
+                          child: Text(
+                            "SA PASSA DOMAN",
+                            textAlign: TextAlign.left ,
+                            style: TextStyle(
+                                fontSize: 25,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
+
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pop(context);
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => Ilmeteoit(nomeComune: nomeComune , idComune: valoreComune, nomeComunePerIlMeteo: nomeComuneIlMeteo,),
+                        ));
+
+
+                  },
+                  child: Container(
+                    height: 180,
+                   // width: 180,
+                    color: Colors.blue.shade500,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Container(
+                          padding: EdgeInsets.only(top: 5),
+                          height: 50,
+                          width: double.infinity,
+                          child: Icon(MaterialCommunityIcons.weather_partly_cloudy,
+                            color: Colors.white,
+                            size: 70,
+
+                          ),
+                        ),
+                        Container(
+                          height: 50,
+                          width: double.infinity,
+                          padding: EdgeInsets.only(top: 30, left: 3),
+                          child: Text(
+                            "PIOVE UNCO' ?",
+                            textAlign: TextAlign.center ,
+                            style: TextStyle(
+                                fontSize: 15,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pop(context);
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => Farmaciediturno(),
+                        ));
+
+
+                  },
+                  child: Center(
+                    child: Container(
+                      height: 180,
+                      //width: 300,
+                      color: Colors.green.shade600,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Container(
+                            padding: EdgeInsets.only(top: 5),
+                            height: 50,
+                            width: double.infinity,
+                            child: Icon(MaterialIcons.local_pharmacy,
+                              color: Colors.white,
+                              size: 70,
+
+                            ),
+                          ),
+                          Container(
+                            height: 50,
+                            width: double.infinity,
+                            padding: EdgeInsets.only(top: 30, left: 3),
+                            child: Text(
+                              "FARMACIE H24",
+                              textAlign: TextAlign.center ,
+                              style: TextStyle(
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pop(context);
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => Farmaciediturno(),
+                        ));
+
+
+                  },
+                  child: Center(
+                    child: Container(
+                      height: 180,
+                      //width: 300,
+                      color: Colors.amber.shade600,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Container(
+                            height: 50,
+                            width: double.infinity,
+                            child: Icon(SimpleLineIcons.event,
+                              color: Colors.white,
+                              size: 70,
+
+                            ),
+                          ),
+                          Container(
+                            height: 50,
+                            width: double.infinity,
+                            padding: EdgeInsets.only(top: 30, left: 3),
+                            child: Text(
+                              "EVENTI IN ZONA",
+                              textAlign: TextAlign.center ,
+                              style: TextStyle(
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pop(context);
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => SantoDelGiorno(),
+                        ));
+
+
+                  },
+                  child: Center(
+                    child: Container(
+                      height: 180,
+                      //width: 300,
+                      color: Colors.purple.shade200,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Container(
+                            height: 50,
+                            width: double.infinity,
+                            child: Icon(Ionicons.ios_people,
+                              color: Colors.white,
+                              size: 70,
+
+                            ),
+                          ),
+                          Container(
+                            height: 60,
+                            width: double.infinity,
+                            padding: EdgeInsets.only(top: 20, left: 7, right: 7),
+                            child: Text(
+                              "SANTO DEL GIORNO",
+                              textAlign: TextAlign.center ,
+                              style: TextStyle(
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pop(context);
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => StaseraInTv(),
+                        ));
+
+
+                  },
+                  child: Center(
+                    child: Container(
+                      height: 180,
+                      //width: 300,
+                      color: Colors.brown,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Container(
+                            height: 50,
+                            width: double.infinity,
+                            child: Icon(Ionicons.ios_tv,
+                              color: Colors.white,
+                              size: 70,
+
+                            ),
+                          ),
+                          Container(
+                            height: 60,
+                            width: double.infinity,
+                            padding: EdgeInsets.only(top: 20, left: 7, right: 7),
+                            child: Text(
+                              "SA VARDEMO STASERA?",
+                              textAlign: TextAlign.center ,
+                              style: TextStyle(
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+
+
+
+
+
+
+
+
+              ],
+            )),
+      ),
     );
   }
 }
