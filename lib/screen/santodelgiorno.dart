@@ -72,20 +72,21 @@ class _SantoDelGiornoState extends State<SantoDelGiorno> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text("I SANTI DEL GIORNO"),
-        actions: [
-          IconButton(
-            icon: Icon(Icons.pages),
-            onPressed: () {
-
-              Navigator.pop(context);
-              Navigator.push(context, MaterialPageRoute(builder: (context) => ComplicatedImageDemo()));
-            },
-          )
-        ],),
+//        actions: [
+//          IconButton(
+//            icon: Icon(Icons.pages),
+//            onPressed: () {
+//
+//              Navigator.pop(context);
+//              Navigator.push(context, MaterialPageRoute(builder: (context) => ComplicatedImageDemo()));
+//            },
+//          )
+//        ],
+      ),
       body: Column(
         children: [
           Container(
-            height: 500,
+            height: MediaQuery.of(context).size.height * .85,  // altezza massima = 85% della dimensione dello schermo
             child: ListView(
               children: [
                 ...listaSantiDelGiorno, // INCLUDO UNA LISTA DI WIDGET IN UN CHILDREN

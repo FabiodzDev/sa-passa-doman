@@ -26,16 +26,17 @@ class _StaseraInTvState extends State<StaseraInTv> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text("SA VARDEMO STASERA ?"),
-        actions: [
-          IconButton(
-            icon: Icon(Icons.pages),
-            onPressed: () {
-
-              Navigator.pop(context);
-              Navigator.push(context, MaterialPageRoute(builder: (context) => ComplicatedImageDemo()));
-            },
-          )
-        ],),
+//        actions: [
+//          IconButton(
+//            icon: Icon(Icons.pages),
+//            onPressed: () {
+//
+//              Navigator.pop(context);
+//              Navigator.push(context, MaterialPageRoute(builder: (context) => ComplicatedImageDemo()));
+//            },
+//          )
+//        ],
+      ),
 
       body: WebView(
         initialUrl: "https://www.staseraintv.com/index.html",

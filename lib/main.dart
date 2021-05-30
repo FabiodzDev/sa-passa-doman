@@ -373,24 +373,25 @@ class _MyHomePageState extends State<MyHomePage> {
         centerTitle: true,
         title: Text("SA PASSA DOMAN"),
         actions: [
+//          IconButton(
+//            icon: Icon(Icons.update),
+//            onPressed: () {
+//              Navigator.pop(context);
+//              Navigator.push(context,
+//                  MaterialPageRoute(builder: (context) => Comuni()));},
+//          ),
+//          IconButton(
+//            icon: Icon(Icons.delete_forever),
+//            onPressed: () {
+//
+//              sharedpref.rimuoviComuneZona();
+//              Navigator.pop(context);
+//              Navigator.push(context, MaterialPageRoute(builder: (context) => ComplicatedImageDemo()));
+//            },
+//          ),
           IconButton(
-            icon: Icon(Icons.update),
-            onPressed: () {
-              Navigator.pop(context);
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => Comuni()));},
-          ),
-          IconButton(
-            icon: Icon(Icons.delete_forever),
-            onPressed: () {
+            icon: Icon(MaterialCommunityIcons.grid),
 
-              sharedpref.rimuoviComuneZona();
-              Navigator.pop(context);
-              Navigator.push(context, MaterialPageRoute(builder: (context) => ComplicatedImageDemo()));
-            },
-          ),
-          IconButton(
-            icon: Icon(Icons.pages),
             onPressed: () {
 
               Navigator.pop(context);

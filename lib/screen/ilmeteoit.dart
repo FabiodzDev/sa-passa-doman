@@ -69,16 +69,17 @@ class _IlmeteoitState extends State<Ilmeteoit> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text("IL METEO  ${widget.nomeComune} "),
-        actions: [
-          IconButton(
-            icon: Icon(Icons.pages),
-            onPressed: () {
-
-              Navigator.pop(context);
-              Navigator.push(context, MaterialPageRoute(builder: (context) => ComplicatedImageDemo()));
-            },
-          )
-        ],),
+//        actions: [
+//          IconButton(
+//            icon: Icon(Icons.pages),
+//            onPressed: () {
+//
+//              Navigator.pop(context);
+//              Navigator.push(context, MaterialPageRoute(builder: (context) => ComplicatedImageDemo()));
+//            },
+//          )
+//        ],
+        ),
 
       body: WebView(
         initialUrl: "https://www.ilmeteo.it/meteo/${widget.nomeComunePerIlMeteo}",

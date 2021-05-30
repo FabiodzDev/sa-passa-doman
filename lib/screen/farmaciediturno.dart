@@ -22,16 +22,17 @@ class _FarmaciediturnoState extends State<Farmaciediturno> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text("FARMACIA DI TURNO"),
-        actions: [
-          IconButton(
-            icon: Icon(Icons.pages),
-            onPressed: () {
-
-              Navigator.pop(context);
-              Navigator.push(context, MaterialPageRoute(builder: (context) => ComplicatedImageDemo()));
-            },
-          )
-        ],),
+//        actions: [
+//          IconButton(
+//            icon: Icon(Icons.pages),
+//            onPressed: () {
+//
+//              Navigator.pop(context);
+//              Navigator.push(context, MaterialPageRoute(builder: (context) => ComplicatedImageDemo()));
+//            },
+//          )
+//        ],
+      ),
 
       body: WebView(
         initialUrl: 'http://mobile.farmacieverona.it',
