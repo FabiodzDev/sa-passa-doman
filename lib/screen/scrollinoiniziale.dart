@@ -23,6 +23,7 @@ import 'elencocomuni.dart';
 
 import 'package:http/http.dart' as http;
 
+import 'eventi.dart';
 import 'ilmeteoit.dart';
 
 class ComplicatedImageDemo extends StatefulWidget {
@@ -342,7 +343,7 @@ class _ComplicatedImageDemoState extends State<ComplicatedImageDemo> {
                                   style: TextStyle(
                                       fontWeight: FontWeight.w700,
                                       fontSize: 15,
-                                      color: Colors.white),
+                                      color: Colors.pink),
                                 ),
                                 SizedBox(
                                   height: 3,
@@ -357,7 +358,7 @@ class _ComplicatedImageDemoState extends State<ComplicatedImageDemo> {
                                   style: TextStyle(
                                       fontWeight: FontWeight.w700,
                                       fontSize: 15,
-                                      color: Colors.white),
+                                      color: Colors.pink),
                                 ),
                               ],
                             )),
@@ -464,7 +465,7 @@ class _ComplicatedImageDemoState extends State<ComplicatedImageDemo> {
                                 width: double.infinity,
                                 padding: EdgeInsets.only(top: 30, left: 3),
                                 child: Text(
-                                  "PIOVE UNCO' ?",
+                                  "IL METEO",
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
                                       fontSize: 15,
@@ -528,7 +529,7 @@ class _ComplicatedImageDemoState extends State<ComplicatedImageDemo> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => Farmaciediturno(),
+                                builder: (context) => Eventi(),
                               ));
                         },
                         child: Center(
@@ -646,7 +647,7 @@ class _ComplicatedImageDemoState extends State<ComplicatedImageDemo> {
                                   padding: EdgeInsets.only(
                                       top: 20, left: 7, right: 7),
                                   child: Text(
-                                    "SA VARDEMO STASERA?",
+                                    "PROGRAMMI TV",
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
                                         fontSize: 15,
@@ -661,7 +662,7 @@ class _ComplicatedImageDemoState extends State<ComplicatedImageDemo> {
                       ),
                       GestureDetector(
                         onTap: () {
-                          Navigator.pop(context);
+                         // Navigator.pop(context);
                           Navigator.push(
                               context,
                               MaterialPageRoute(

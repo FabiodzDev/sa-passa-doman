@@ -67,7 +67,7 @@ class _MenuDrawerState extends State<MenuDrawer> {
                     'SA PASSA DOMAN',
                     textAlign: TextAlign.left,
                     style: TextStyle(
-                      color: Colors.black,
+                      color: Colors.white,
                       fontWeight: FontWeight.bold,
                       fontSize: 25,
                       letterSpacing: 2,
@@ -80,7 +80,7 @@ class _MenuDrawerState extends State<MenuDrawer> {
                     "$nomeComune E FRAZIONI",
                     textAlign: TextAlign.left,
                     style: TextStyle(
-                      color: Colors.black,
+                      color: Colors.white,
                       fontSize: 20,
                       letterSpacing: 2,
                     ),
@@ -89,63 +89,63 @@ class _MenuDrawerState extends State<MenuDrawer> {
               ),
             ),
             decoration: BoxDecoration(
-              color: Colors.lightBlue,
+              color: Colors.pink,
             ),
           ),
-          GestureDetector(
-            child: ListTile(
-              leading: Icon(Entypo.info),
-              title: Text("INFORMAZIONI APP", style: TextStyle(fontSize: 18),),
-              subtitle: Text("Chi siamo e Disclaimer"),
-            ),
-            onTap: (){
-
-              Navigator.pop(context);
-
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => ChiSiamo()));
-            },
-          ),
-          SizedBox(height: 3,),
-
-          GestureDetector(
-            child: ListTile(
-              leading: Icon(Entypo.facebook),
-              title: Text("SOCIAL", style: TextStyle(fontSize: 18),),
-              subtitle: Text("Seguici su Facebook"),
-            ),
-            onTap: (){
-
-              Navigator.pop(context);
-
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => Social()));
-            },
-          ),
-          SizedBox(height: 3,),
-
-          GestureDetector(
-            child: ListTile(
-              leading: Icon(FontAwesome5Solid.mail_bulk
-
-              ),
-              title: Text("CONTATTI APP", style: TextStyle(fontSize: 18),),
-            ),
-            onTap: (){
-
-              Navigator.pop(context);
-
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => ContattiApp()));
-            },
-          ),
-          SizedBox(height: 3,),
+//          GestureDetector(
+//            child: ListTile(
+//              leading: Icon(Entypo.info),
+//              title: Text("INFORMAZIONI APP", style: TextStyle(fontSize: 18),),
+//              subtitle: Text("Chi siamo e Disclaimer"),
+//            ),
+//            onTap: (){
+//
+//              Navigator.pop(context);
+//
+//              Navigator.push(
+//                  context,
+//                  MaterialPageRoute(
+//                      builder: (context) => ChiSiamo()));
+//            },
+//          ),
+//          SizedBox(height: 3,),
+//
+//          GestureDetector(
+//            child: ListTile(
+//              leading: Icon(Entypo.facebook),
+//              title: Text("SOCIAL", style: TextStyle(fontSize: 18),),
+//              subtitle: Text("Seguici su Facebook"),
+//            ),
+//            onTap: (){
+//
+//              Navigator.pop(context);
+//
+//              Navigator.push(
+//                  context,
+//                  MaterialPageRoute(
+//                      builder: (context) => Social()));
+//            },
+//          ),
+//          SizedBox(height: 3,),
+//
+//          GestureDetector(
+//            child: ListTile(
+//              leading: Icon(FontAwesome5Solid.mail_bulk
+//
+//              ),
+//              title: Text("CONTATTI APP", style: TextStyle(fontSize: 18),),
+//            ),
+//            onTap: (){
+//
+//              Navigator.pop(context);
+//
+//              Navigator.push(
+//                  context,
+//                  MaterialPageRoute(
+//                      builder: (context) => ContattiApp()));
+//            },
+//          ),
+//          SizedBox(height: 3,),
 
           GestureDetector(
             child: ListTile(

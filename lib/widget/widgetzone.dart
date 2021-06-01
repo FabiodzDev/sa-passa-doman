@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sapassadomantter/screen/draweranimated.dart';
 import 'package:sapassadomantter/screen/scrollinoiniziale.dart';
 
 import '../main.dart';
@@ -40,7 +41,7 @@ class WidgetZone extends StatelessWidget {
           sharedpref.settaColoreZona(coloreSfondo, coloreTesto);
           Navigator.pop(context);
 
-          Navigator.push(context, MaterialPageRoute(builder: (context) => ComplicatedImageDemo()));
+          Navigator.push(context, MaterialPageRoute(builder: (context) => DemoApp()));
           },
       ),
     );

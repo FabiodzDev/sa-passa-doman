@@ -233,7 +233,9 @@
 import 'dart:convert';
 import 'dart:ffi';
 
+import 'package:sapassadomantter/screen/draweranimated.dart';
 import 'package:sapassadomantter/screen/scrollinoiniziale.dart';
+import 'package:sapassadomantter/screen/splashscreen.dart';
 import 'package:sapassadomantter/sharedpreference.dart';
 import 'package:sapassadomantter/screen/Drawer.dart';
 import 'package:sapassadomantter/screen/elencocomuni.dart';
@@ -266,17 +268,18 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         accentColor: Colors.orange,
-        primarySwatch: Colors.lightBlue,
+        primarySwatch: Colors.pink,
         //fontFamily: 'OpenSans',
 //        textTheme: Theme.of(context).textTheme.apply(
 //            fontFamily: 'OpenSans',
 //            bodyColor: Colors.black,
 //            displayColor: Colors.red),
       ),
-      home: ComplicatedImageDemo(),
+      home: SplashScreen(),//DemoApp(),     // ComplicatedImageDemo(),
     );
   }
 }
+
 
 class MyHomePage extends StatefulWidget {
 
@@ -395,7 +398,7 @@ class _MyHomePageState extends State<MyHomePage> {
             onPressed: () {
 
               Navigator.pop(context);
-              Navigator.push(context, MaterialPageRoute(builder: (context) => ComplicatedImageDemo()));
+              Navigator.push(context, MaterialPageRoute(builder: (context) => DemoApp()));
             },
           )
         ],

@@ -21,7 +21,7 @@ class _FarmaciediturnoState extends State<Farmaciediturno> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("FARMACIA DI TURNO"),
+      appBar: AppBar(title: Text("FARMACIE DI TURNO"),
 //        actions: [
 //          IconButton(
 //            icon: Icon(Icons.pages),
