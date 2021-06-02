@@ -6,11 +6,12 @@ class WidgetEventiComunieLimitrofi extends StatefulWidget {
 
   String nomeEvento = " ";
   String luogoEvento = " ";
-  String dataInizio = " ";
-  String dataFine = " ";
+  String dataInizio = " - - ";
+  String dataFine = " - - ";
   String testoEvento = " ";
   String urlImmagine = "";
   String linkEvento = " ";
+  var arr;
 
   WidgetEventiComunieLimitrofi({@required this.nomeEvento, @required this.luogoEvento, @required this.dataInizio, @required this.dataFine, @required this.testoEvento, @required this.urlImmagine, @required this.linkEvento});
 
@@ -29,10 +30,10 @@ class _WidgetEventiComunieLimitrofiState extends State<WidgetEventiComunieLimitr
       widget.luogoEvento = "";
     }
     if(widget.dataInizio == null) {
-      widget.dataInizio = "";
+      widget.dataInizio = " - - ";
     }
     if(widget.dataFine == null) {
-      widget.dataFine = "";
+      widget.dataFine = " - - ";
     }
     if(widget.testoEvento == null) {
       widget.testoEvento = "";
@@ -44,6 +45,25 @@ class _WidgetEventiComunieLimitrofiState extends State<WidgetEventiComunieLimitr
       widget.linkEvento = "";
     }
 
+  }
+
+  String sistemaDataInizio(){
+
+    widget.arr = widget.dataInizio.split('-');
+    var dataInizioFormattata = widget.arr[2] + "-" + widget.arr[1] + "-" + widget.arr[0];
+
+    print(dataInizioFormattata);
+    return dataInizioFormattata;
+
+  }
+
+  String sistemaDataFine(){
+
+    widget.arr = widget.dataFine.split('-');
+    var dataFineFormattata = widget.arr[2] + "-" + widget.arr[1] + "-" + widget.arr[0];
+
+    print(dataFineFormattata);
+    return dataFineFormattata;
 
   }
 
@@ -79,7 +99,7 @@ class _WidgetEventiComunieLimitrofiState extends State<WidgetEventiComunieLimitr
                       width: MediaQuery.of(context).size.width * .40,
                       child: Center(child: Text("Data Inizio", style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600, color: Colors.white),))),
                   SizedBox(height: 5,),
-                  Text(widget.dataInizio, style: TextStyle(fontSize: 18),),
+                  Text(sistemaDataInizio(), style: TextStyle(fontSize: 18),),
                 ],
               ),
               Column(
@@ -89,7 +109,7 @@ class _WidgetEventiComunieLimitrofiState extends State<WidgetEventiComunieLimitr
                       width: MediaQuery.of(context).size.width * .40,
                       child: Center(child: Text("Data Fine", style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600, color: Colors.white),))),
                   SizedBox(height: 5,),
-                  Text(widget.dataFine, style: TextStyle(fontSize: 18),),
+                  Text(sistemaDataFine(), style: TextStyle(fontSize: 18),),
                 ],
               ),
 
