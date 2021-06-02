@@ -69,6 +69,8 @@ class _IlmeteoitState extends State<Ilmeteoit> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text("IL METEO  ${widget.nomeComune} "),
+        brightness: Brightness.dark, // orologio e wifi bianchi
+
 //        actions: [
 //          IconButton(
 //            icon: Icon(Icons.pages),

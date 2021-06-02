@@ -5,6 +5,7 @@ class ChiSiamo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+          brightness: Brightness.dark, // orologio e wifi bianchi
           title: Text('CHI SIAMO e DISCLAIMER'),
           centerTitle: true,
         ),

@@ -31,6 +31,8 @@ class _ContattiAppState extends State<ContattiApp> {
     return Scaffold(
       appBar: AppBar(
         title: Text("CONTATTI APP"),
+        brightness: Brightness.dark, // orologio e wifi bianchi
+
         centerTitle: true,
       ),
       body: SafeArea(

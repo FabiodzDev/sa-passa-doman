@@ -13,7 +13,7 @@ class Eventi extends StatefulWidget {
 
 class _EventiState extends State<Eventi> {
 
-  List<WidgetEventi> listaEventi = [];
+  List<Widget> listaEventi = [];
 
   Future<void> recuperaCittaEventi() async {
     var url = Uri.parse(
@@ -32,15 +32,76 @@ class _EventiState extends State<Eventi> {
       datiEstratti.forEach((dati) {
         listaEventi.add(WidgetEventi(
           citta: dati['citta_eventiinzona'],
+          descrizionecitta: dati['descrizione_eventiinzona'],
           link: dati['link_eventiinzona'],
           urlimmagine: dati['urlimmagine_eventiinzona'],
 
         ));
 
+
         print(dati['citta_eventiinzona']);
         print(dati['link_eventiinzona']);
         print(dati['urlimmagine_eventiinzona']);
       });
+
+      listaEventi.insert(0, Row(
+        children: [
+          GestureDetector(
+            onTap: () {
+
+            },
+            child: Container(
+              padding: EdgeInsets.all(15),
+              child: Row(
+                children: [
+                  Container(
+                    height: 100,
+                    width: 120,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                          image: NetworkImage(
+                              "https://www.viviarcole.it/aa_spd_immagini/fotoluoghiepersone/napoleon.jpg"),
+                          fit: BoxFit.cover),
+                      color: Colors.pink,
+                      border: Border.all(
+
+                        //color: Colors.pink[800], // Set border color
+                          width: 0.0), // Set border width
+                      borderRadius: BorderRadius.all(
+                          Radius.circular(10.0)), // Set rounded corner radius
+                    ),
+                  ),
+                  Container(
+                    padding: EdgeInsets.all(15),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                            child: Text(
+                              "VICINO A TE",
+                              textAlign: TextAlign.left,
+                              style: TextStyle(fontSize: 22),
+                            )),
+                        Container(
+                            child: Text(
+                              "Nel tuo comune o limitrofi",
+                              textAlign: TextAlign.left,
+                              style: TextStyle(fontSize: 13),
+                            )),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+
+        ],
+
+      ));
+
+
 
       print(listaEventi);
     } catch (error) {
@@ -60,9 +121,12 @@ class _EventiState extends State<Eventi> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+
         body: CustomScrollView(
           slivers: <Widget>[
             SliverAppBar(
+              brightness: Brightness.dark, // orologio e wifi bianchi
+
               leading: IconButton(
                   icon: Icon(Icons.arrow_back),
                   onPressed: () {
@@ -76,6 +140,7 @@ class _EventiState extends State<Eventi> {
               elevation: 50,
               backgroundColor: Colors.pink,
               flexibleSpace: FlexibleSpaceBar(
+
                   centerTitle: true,
                   title: Text('EVENTI IN ZONA',
                       style: TextStyle(
@@ -83,7 +148,7 @@ class _EventiState extends State<Eventi> {
                         fontSize: 16.0,
                       )),
                   background: Image.network(
-                    'https://images.pexels.com/photos/443356/pexels-photo-443356.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+                    'https://www.viviarcole.it/aa_spd_immagini/fotoluoghiepersone/veronacopertina.jpg',
                     fit: BoxFit.cover,
                   )
               ),

@@ -5,6 +5,7 @@ import 'package:carousel_slider/carousel_controller.dart';
 import 'package:carousel_slider/carousel_options.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:sapassadomantter/screen/farmaciediturno.dart';
 import 'package:sapassadomantter/screen/santodelgiorno.dart';
 import 'package:sapassadomantter/screen/social.dart';
@@ -293,6 +294,8 @@ class _ComplicatedImageDemoState extends State<ComplicatedImageDemo> {
     return Scaffold(
       appBar: AppBar(
         title: Text('SA PASSA DOMAN'),
+        brightness: Brightness.dark, // orologio e wifi bianchi
+
         centerTitle: true,
 //        actions: [
 //          IconButton(

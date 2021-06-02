@@ -19,6 +19,8 @@ class _LuoghiePersoneDettaglioState extends State<LuoghiePersoneDettaglio> {
     return Scaffold(
       appBar: AppBar(
         title: Text("LUOGHI E PERSONE"),
+        brightness: Brightness.dark, // orologio e wifi bianchi
+
       ),
       body: SafeArea(
         child: Container(

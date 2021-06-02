@@ -375,6 +375,8 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         centerTitle: true,
         title: Text("SA PASSA DOMAN"),
+        brightness: Brightness.dark, // orologio e wifi bianchi
+
         actions: [
 //          IconButton(
 //            icon: Icon(Icons.update),

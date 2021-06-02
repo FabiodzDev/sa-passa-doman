@@ -67,6 +67,8 @@ class _ContattiState extends State<Contatti> {
     return Scaffold(
       appBar: AppBar(
         title: Text("NUMERI UTILI"),
+        brightness: Brightness.dark, // orologio e wifi bianchi
+
       ),
       body: SafeArea(
         child: Container(

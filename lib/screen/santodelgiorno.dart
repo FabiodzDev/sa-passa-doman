@@ -72,6 +72,8 @@ class _SantoDelGiornoState extends State<SantoDelGiorno> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text("I SANTI DEL GIORNO"),
+        brightness: Brightness.dark, // orologio e wifi bianchi
+
 //        actions: [
 //          IconButton(
 //            icon: Icon(Icons.pages),

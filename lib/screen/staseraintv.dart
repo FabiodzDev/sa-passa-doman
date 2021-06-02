@@ -26,6 +26,8 @@ class _StaseraInTvState extends State<StaseraInTv> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text("SA VARDEMO STASERA ?"),
+        brightness: Brightness.dark, // orologio e wifi bianchi
+
 //        actions: [
 //          IconButton(
 //            icon: Icon(Icons.pages),
