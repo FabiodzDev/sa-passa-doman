@@ -3,12 +3,12 @@ import 'package:sapassadomantter/screen/santodelgiornodettaglio.dart';
 
 class WidgetSantiDelGiorno extends StatelessWidget {
 
-  String nomex;
-  String tipologiax;
-  String datax;
-  String permalinkx;
-  String urlimmaginex;
-  String descrizionex;
+  String nomex = " ";
+  String tipologiax = " ";
+  String datax = " ";
+  String permalinkx = " ";
+  String urlimmaginex = " ";
+  String descrizionex = " ";
 
   WidgetSantiDelGiorno({@required this.nomex, @required this.tipologiax, @required this.datax, @required this.permalinkx, @required this.urlimmaginex, @required this.descrizionex});
 

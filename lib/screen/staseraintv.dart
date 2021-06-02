@@ -25,7 +25,8 @@ class _StaseraInTvState extends State<StaseraInTv> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("SA VARDEMO STASERA ?"),
+      appBar: AppBar(title: Text("PROGRAMMI TV"),
+        centerTitle: true,
         brightness: Brightness.dark, // orologio e wifi bianchi
 
 //        actions: [

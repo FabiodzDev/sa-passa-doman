@@ -4,6 +4,8 @@ import 'dart:convert';
 
 import 'package:sapassadomantter/widget/widgeteventi.dart';
 
+import 'eventiincomuneelimitrofi.dart';
+
 
 
 class Eventi extends StatefulWidget {
@@ -48,6 +50,12 @@ class _EventiState extends State<Eventi> {
         children: [
           GestureDetector(
             onTap: () {
+
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => EventiInComuneELimitrofi(),
+                  ));
 
             },
             child: Container(
