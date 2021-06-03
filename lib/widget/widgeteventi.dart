@@ -37,7 +37,7 @@ class WidgetEventi extends StatelessWidget {
                     image: NetworkImage(
                         "https://www.viviarcole.it/aa_spd_immagini/fotoluoghiepersone/${urlimmagine}"),
                     fit: BoxFit.cover),
-                color: Colors.pink,
+                color: Colors.white,
                 border: Border.all(
 
                     //color: Colors.pink[800], // Set border color

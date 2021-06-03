@@ -15,6 +15,7 @@ import 'package:sapassadomantter/widget/calendario.dart';
 import 'package:sapassadomantter/widget/widgetcomuni.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:sapassadomantter/widget/widgetluoghiepersone.dart';
+import 'package:sapassadomantter/widget/widgetoffertespeciali.dart';
 
 import '../main.dart';
 import '../sharedpreference.dart';
@@ -26,6 +27,7 @@ import 'package:http/http.dart' as http;
 
 import 'eventi.dart';
 import 'ilmeteoit.dart';
+import 'offertespeciali.dart';
 
 class ComplicatedImageDemo extends StatefulWidget {
   @override
@@ -238,12 +240,12 @@ class _ComplicatedImageDemoState extends State<ComplicatedImageDemo> {
                     borderRadius: BorderRadius.all(Radius.circular(6.0)),
                     child: GestureDetector(
                       onTap: () {
-                        Navigator.pop(context);
+                        //Navigator.pop(context);
 
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => item.value[0]));
+                                builder: (context) => OfferteSpeciali()));
                       },
                       child: Stack(
                         children: <Widget>[
@@ -337,7 +339,7 @@ class _ComplicatedImageDemoState extends State<ComplicatedImageDemo> {
                             child: Column(
                               children: [
                                 Text(
-                                  "Il tuo Comune:",
+                                  "Il tuo comune:",
                                   style: TextStyle(color: Colors.white),
                                 ),
                                 Text(
@@ -454,7 +456,7 @@ class _ComplicatedImageDemoState extends State<ComplicatedImageDemo> {
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Container(
-                                padding: EdgeInsets.only(top: 5),
+                                padding: EdgeInsets.only(top: 10),
                                 height: 50,
                                 width: double.infinity,
                                 child: Icon(
@@ -466,7 +468,7 @@ class _ComplicatedImageDemoState extends State<ComplicatedImageDemo> {
                               Container(
                                 height: 50,
                                 width: double.infinity,
-                                padding: EdgeInsets.only(top: 30, left: 3),
+                                padding: EdgeInsets.only(top: 35, left: 3),
                                 child: Text(
                                   "IL METEO",
                                   textAlign: TextAlign.center,
@@ -499,7 +501,7 @@ class _ComplicatedImageDemoState extends State<ComplicatedImageDemo> {
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 Container(
-                                  padding: EdgeInsets.only(top: 5),
+                                  padding: EdgeInsets.only(top: 10),
                                   height: 50,
                                   width: double.infinity,
                                   child: Icon(
@@ -511,7 +513,7 @@ class _ComplicatedImageDemoState extends State<ComplicatedImageDemo> {
                                 Container(
                                   height: 50,
                                   width: double.infinity,
-                                  padding: EdgeInsets.only(top: 30, left: 3),
+                                  padding: EdgeInsets.only(top: 35, left: 3),
                                   child: Text(
                                     "FARMACIE H24",
                                     textAlign: TextAlign.center,
@@ -545,20 +547,21 @@ class _ComplicatedImageDemoState extends State<ComplicatedImageDemo> {
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 Container(
+                                  padding: EdgeInsets.only(top: 10),
                                   height: 50,
                                   width: double.infinity,
                                   child: Icon(
                                     SimpleLineIcons.event,
                                     color: Colors.white,
-                                    size: 70,
+                                    size: 60,
                                   ),
                                 ),
                                 Container(
                                   height: 50,
                                   width: double.infinity,
-                                  padding: EdgeInsets.only(top: 30, left: 3),
+                                  padding: EdgeInsets.only(top: 35, left: 3),
                                   child: Text(
-                                    "EVENTI IN ZONA",
+                                    "EVENTI",
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
                                         fontSize: 15,

@@ -19,7 +19,7 @@ class WidgetComuni extends StatelessWidget {
         child: Row(
           children: [
             Icon(Icons.home,
-                color: Colors.amber,
+                color: Colors.lightBlue,
                 size: 40.0,),
             // Container(child: Text(id)),
             SizedBox(width: 20,),
