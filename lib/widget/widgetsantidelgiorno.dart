@@ -49,7 +49,7 @@ class WidgetSantiDelGiorno extends StatelessWidget {
       child: Column(
         children: [
           Text(nomex, style: TextStyle(fontWeight: FontWeight.w600, fontSize: 20),),
-          Text(tipologiax),
+          Text(tipologiax, style: TextStyle(fontSize: 17),),
           //Text(datax),
           Container(
             width: 200,
@@ -70,7 +70,7 @@ class WidgetSantiDelGiorno extends StatelessWidget {
                     ));
 
               },
-              child: Text(descrizionex, textAlign: TextAlign.justify, style: TextStyle(),)),
+              child: Text(descrizionex, textAlign: TextAlign.justify, style: TextStyle(fontSize: 18),)),
         ],
       ),
 

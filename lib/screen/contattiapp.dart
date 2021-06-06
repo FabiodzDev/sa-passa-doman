@@ -45,7 +45,7 @@ class _ContattiAppState extends State<ContattiApp> {
                 "Per suggerimenti e segnalazioni inerenti al funzionamento dell'app scrivere a: ",
                 textAlign: TextAlign.justify,
                 style: TextStyle(
-                  fontSize: 17,
+                  fontSize: 18,
                 ),
               ),
               SizedBox(height: 30,),
@@ -67,8 +67,8 @@ class _ContattiAppState extends State<ContattiApp> {
 
                         ),
                         Container(
-                          padding: EdgeInsets.only(top: 30, left: 10),
-                          child: Text("fabiodalzovo@gmail.com", style: TextStyle(fontSize: 17),),
+                          padding: EdgeInsets.only(top: 30, left: 5),
+                          child: Text("sapassadoman@gmail.com", style: TextStyle(fontSize: 17),),
 
                         )
                       ],
@@ -84,7 +84,7 @@ class _ContattiAppState extends State<ContattiApp> {
                 "oppure contattare la pagina Facebook:",
                 textAlign: TextAlign.justify,
                 style: TextStyle(
-                  fontSize: 17,
+                  fontSize: 18,
                 ),
               ),
               SizedBox(

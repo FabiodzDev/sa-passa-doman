@@ -15,10 +15,12 @@ import 'package:sapassadomantter/widget/calendario.dart';
 import 'package:sapassadomantter/widget/widgetcomuni.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:sapassadomantter/widget/widgetluoghiepersone.dart';
+import 'package:sapassadomantter/widget/widgetnumeroavvisi.dart';
 import 'package:sapassadomantter/widget/widgetoffertespeciali.dart';
 
 import '../main.dart';
 import '../sharedpreference.dart';
+import 'avvisi.dart';
 import 'chisiamo.dart';
 import 'contatti.dart';
 import 'elencocomuni.dart';
@@ -188,6 +190,38 @@ class _ComplicatedImageDemoState extends State<ComplicatedImageDemo> {
     }
   }
 
+  List<WidgetNumeroAvvisi> numeroavvisi = [];
+
+  Future<void> recuperanumeroavvisi() async {
+    var url = Uri.parse(
+        "https://www.viviarcole.it/mysqljsonsapassadomanumeroavvisi.php"); // attenzione. Ho dovuto mettere https e non http..altrimenti non funzionava
+
+    try {
+      final response = await http.get(url);
+
+      print(json.decode(response.body));
+
+      setState(() {
+        numeroavvisi = [];
+      });
+      final datiEstratti = json.decode(response.body);
+
+      datiEstratti.forEach((dati) {
+        numeroavvisi.add(WidgetNumeroAvvisi(
+          numeroavvisi: dati['numerorighe'],
+
+        ));
+
+        //print(dati['numerorighe']);
+      });
+
+     // print(numeroavvisi);
+    } catch (error) {
+      throw (error);
+    }
+  }
+
+
 
 
   @override
@@ -197,6 +231,7 @@ class _ComplicatedImageDemoState extends State<ComplicatedImageDemo> {
 
     ricerca();
     recuperaluoghiepersone();
+    recuperanumeroavvisi();
   }
 
   @override
@@ -401,7 +436,7 @@ class _ComplicatedImageDemoState extends State<ComplicatedImageDemo> {
                         child: Container(
                           height: 180,
                           //width: 180,
-                          color: Colors.red.shade600,
+                          color: Colors.red,
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.start,
                             crossAxisAlignment: CrossAxisAlignment.center,
@@ -450,7 +485,7 @@ class _ComplicatedImageDemoState extends State<ComplicatedImageDemo> {
                         child: Container(
                           height: 180,
                           // width: 180,
-                          color: Colors.blue.shade500,
+                          color: Colors.lightBlue,
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.start,
                             crossAxisAlignment: CrossAxisAlignment.center,
@@ -541,7 +576,7 @@ class _ComplicatedImageDemoState extends State<ComplicatedImageDemo> {
                           child: Container(
                             height: 180,
                             //width: 300,
-                            color: Colors.amber.shade600,
+                            color: Colors.amber.shade400,
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.start,
                               crossAxisAlignment: CrossAxisAlignment.center,
@@ -672,34 +707,51 @@ class _ComplicatedImageDemoState extends State<ComplicatedImageDemo> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => StaseraInTv(),
+                                builder: (context) => Avvisi(),
                               ));
                         },
                         child: Center(
                           child: Container(
                             height: 180,
                             //width: 300,
-                            color: Colors.amberAccent,
+                            color: Colors.blue.shade900,
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.start,
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 Container(
                                   height: 50,
-                                  width: double.infinity,
-                                  child: Icon(
-                                    Ionicons.ios_arrow_round_down,
-                                    color: Colors.white,
-                                    size: 70,
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                                    children: [
+
+                                      Container(
+                                        padding: EdgeInsets.only(top: 5, left: 30),
+                                        height: 50,
+                                        child: Icon(
+                                          Ionicons.md_notifications,
+                                          color: Colors.white,
+                                          size: 60,
+                                        ),
+                                      ),
+                                      Column(
+                                        children: [
+                                          ...numeroavvisi,
+
+                                        ],
+                                      )
+                                    ],
                                   ),
                                 ),
+
                                 Container(
                                   height: 60,
                                   width: double.infinity,
                                   padding: EdgeInsets.only(
                                       top: 20, left: 7, right: 7),
                                   child: Text(
-                                    "ALTRO",
+                                    "AVVISI",
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
                                         fontSize: 15,

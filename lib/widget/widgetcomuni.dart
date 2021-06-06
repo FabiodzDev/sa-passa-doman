@@ -18,7 +18,7 @@ class WidgetComuni extends StatelessWidget {
       child: GestureDetector(
         child: Row(
           children: [
-            Icon(Icons.home,
+            Icon(Icons.location_city,
                 color: Colors.lightBlue,
                 size: 40.0,),
             // Container(child: Text(id)),

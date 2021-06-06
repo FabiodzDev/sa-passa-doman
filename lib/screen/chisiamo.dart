@@ -25,7 +25,7 @@ class ChiSiamo extends StatelessWidget {
                     "SA PASSA DOMAN è un'applicazione creata a titolo gratuito con lo scopo di offrire un servizio nella raccolta dei rifiuti, monitorando quindi anche tramite smartphone i giorni della raccolta differenziata. ",
                     textAlign: TextAlign.justify,
                     style: TextStyle(
-                      fontSize: 17,
+                      fontSize: 18,
                     ),
                   ),
                 ),
@@ -82,7 +82,7 @@ class ChiSiamo extends StatelessWidget {
                     "Ci teniamo a precisare che non è l'applicazione ufficiale né delle società che gestiscono la raccolta differenziata né dei vari Comuni e che quindi non ci teniamo responsabili per eventuali errori, nonostante cercheremo di prestare sempre la massima attenzione.",
                     textAlign: TextAlign.justify,
                     style: TextStyle(
-                      fontSize: 17,
+                      fontSize: 18,
                     ),
                   ),
                 ),

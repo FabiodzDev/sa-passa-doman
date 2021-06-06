@@ -28,7 +28,7 @@ class WidgetZone extends StatelessWidget {
 //            Text(id),
 //            Text(nome),
 
-            Icon(Icons.directions,
+            Icon(Icons.home,
               color: Colors.lightBlue,
               size: 40.0,),
             // Container(child: Text(id)),

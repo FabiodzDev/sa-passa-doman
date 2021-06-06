@@ -45,15 +45,15 @@ class WidgetHome extends StatelessWidget {
               Container(
                 margin: EdgeInsets.only(left: 15, right: 15),
                 padding: EdgeInsets.only(top: 2),
-                decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(10), // da un arrotondamento agli spigoli
-                    border: Border.all(
-                      color: Colors.blue.shade800,
-                      width: 2,
-                    )
-                ),
-                height: 430,
+//                decoration: BoxDecoration(
+//                    color: Colors.white,
+//                    borderRadius: BorderRadius.circular(10), // da un arrotondamento agli spigoli
+//                    border: Border.all(
+//                      color: Colors.blue.shade800,
+//                      width: 2,
+//                    )
+//                ),
+                height: MediaQuery.of(context).size.height * .85,
                 child: ListView(
                   children: [
                     ...listaDati, // INCLUDO UNA LISTA DI WIDGET IN UN CHILDREN

@@ -12,7 +12,7 @@ class WidgetAltreInfo extends StatelessWidget {
     return
         Container(
           padding: EdgeInsets.only(top: 5, bottom: 5),
-          child: Flexible(child: Text(info, overflow: TextOverflow.clip, style: TextStyle(fontSize: 15),),
+          child: Flexible(child: Text(info, overflow: TextOverflow.clip, textAlign: TextAlign.justify , style: TextStyle(fontSize: 18),),
     ),
         );
   }

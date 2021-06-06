@@ -30,7 +30,7 @@ class Social extends StatelessWidget {
                 "SA PASSA DOMAN è anche su Facebook.",
                 textAlign: TextAlign.justify,
                 style: TextStyle(
-                  fontSize: 17,
+                  fontSize: 18,
                 ),
               ),
             ),
@@ -47,7 +47,7 @@ class Social extends StatelessWidget {
                 "Lì verranno pubblicate tutte le notizie ufficiali, tra cui la disponibilità di aggiornamenti e il lancio di nuove funzionalità. Per questo motivo non dimenticarti di mettere il like e di seguire la pagina.",
                 textAlign: TextAlign.justify,
                 style: TextStyle(
-                  fontSize: 17,
+                  fontSize: 18,
                 ),
               ),
             ),
@@ -66,7 +66,7 @@ class Social extends StatelessWidget {
                 child: Text(
                   "Cerca su FB: @SaPassaDoman ",
                   textAlign: TextAlign.justify,
-                  style: TextStyle(fontSize: 17, fontWeight: FontWeight.w700),
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700),
                 ),
               ),
             ),
