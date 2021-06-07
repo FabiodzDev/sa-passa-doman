@@ -4,9 +4,9 @@ import 'package:url_launcher/url_launcher.dart';
 
 class WidgetContatti extends StatelessWidget {
 
-  String primadescrizione;
-  String secondadescrizione;
-  String numerotelefono;
+  String primadescrizione = " ";
+  String secondadescrizione = " ";
+  String numerotelefono = " ";
 
   WidgetContatti({@required this.primadescrizione, @required this.secondadescrizione, @required this.numerotelefono});
 

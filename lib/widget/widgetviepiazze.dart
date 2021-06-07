@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 
 class WidgetViePiazze extends StatelessWidget {
 
-  String nomeVia;
-  String nomeZona;
+  String nomeVia = " ";
+  String nomeZona = " ";
 
   WidgetViePiazze({@required this.nomeVia, @required this.nomeZona});
 

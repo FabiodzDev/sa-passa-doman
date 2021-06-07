@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:sapassadomantter/screen/evento_dettaglio.dart';
 
 class WidgetEventi extends StatelessWidget {
-  String citta;
-  String descrizionecitta;
-  String link;
-  String urlimmagine;
+  String citta = " ";
+  String descrizionecitta = " ";
+  String link = " ";
+  String urlimmagine = " ";
 
   WidgetEventi(
       {@required this.citta,

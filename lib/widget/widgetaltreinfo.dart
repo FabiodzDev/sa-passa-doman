@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class WidgetAltreInfo extends StatelessWidget {
 
-  String info;
+  String info = " ";
 
   WidgetAltreInfo({@required this.info});
 

@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 
 class WidgetHome extends StatelessWidget {
 
-  Color coloreDaPassare;
-  String nomeComune;
-  String nomeZona;
-  Color coloreTestoDaPassare;
-  List listaDati;
+  Color coloreDaPassare = Colors.black;
+  String nomeComune = " ";
+  String nomeZona = " ";
+  Color coloreTestoDaPassare = Colors.white;
+  List listaDati = [];
 
   WidgetHome({@required this.coloreDaPassare, @required this.nomeComune, @required this.nomeZona, @required this.coloreTestoDaPassare, @required this.listaDati});
 

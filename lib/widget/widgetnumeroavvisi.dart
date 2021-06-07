@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class WidgetNumeroAvvisi extends StatelessWidget {
 
-  String numeroavvisi;
+  String numeroavvisi = " ";
 
   WidgetNumeroAvvisi({@required this.numeroavvisi });
 

@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 
 class Calendario extends StatelessWidget {
 
-  String id;
-  String nomeComune;
-  String nomeZona;
-  String data;
-  String nomeRifiuto;
-  String immagineRifiuto;
+  String id = " ";
+  String nomeComune = " ";
+  String nomeZona = " ";
+  String data = " ";
+  String nomeRifiuto = " ";
+  String immagineRifiuto = " ";
 
   Calendario({@required this.id, @required this.nomeComune, @required this.nomeZona, @required this.data, @required this.nomeRifiuto, @required this.immagineRifiuto});
 

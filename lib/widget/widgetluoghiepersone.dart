@@ -3,10 +3,10 @@ import 'package:sapassadomantter/screen/luoghiepersone_dettaglio.dart';
 
 class WidgetLuoghiePersone extends StatefulWidget {
 
-  String titolox;
-  String urlimmagine;
-  String descrizione1luoghiepersone;
-  String descrizione2luoghiepersone;
+  String titolox = " ";
+  String urlimmagine = " ";
+  String descrizione1luoghiepersone = " ";
+  String descrizione2luoghiepersone = " ";
 
   WidgetLuoghiePersone({@required this.titolox, @required this.urlimmagine, @required this.descrizione1luoghiepersone, @required this.descrizione2luoghiepersone});
 

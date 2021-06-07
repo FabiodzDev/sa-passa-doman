@@ -5,14 +5,14 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 
 class WidgetOfferteSpeciali extends StatefulWidget {
-  String nomeazienda;
-  String luogoazienda;
-  String datainizioofferta;
-  String datafineofferta;
-  String testoofferta;
-  String parolamagica;
-  String link;
-  String urllogo;
+  String nomeazienda = " ";
+  String luogoazienda = " ";
+  String datainizioofferta = " - - ";
+  String datafineofferta = " - - ";
+  String testoofferta = " ";
+  String parolamagica = " ";
+  String link = " ";
+  String urllogo = " ";
   var arr;
 
 

@@ -2,12 +2,25 @@ import 'package:flutter/material.dart';
 
 class WidgetAvvisi extends StatelessWidget {
 
-  String data;
-  String testoavviso;
-  String datascadenzaavviso;
+  String data = " - - - ";
+  String testoavviso = " ";
+  String datascadenzaavviso = " - - - ";
+  var arr;
+
 
 
   WidgetAvvisi({@required this.data, @required this.testoavviso, @required this.datascadenzaavviso});
+
+  String sistemaData(){
+
+    arr = data.split('-');
+    var dataFormattata = arr[2] + "-" + arr[1] + "-" + arr[0];
+
+    print(dataFormattata);
+    return dataFormattata;
+
+  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -19,9 +32,22 @@ class WidgetAvvisi extends StatelessWidget {
           SizedBox(
             height: 10,
           ),
-          Text("Pubblicato il  ${data}", style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700),),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Icon(
+                Icons.notifications,
+                color: Colors.pink,
+                size: 30.0,
+                ),
+              Container(
+                padding: EdgeInsets.only(left: 10),
+                  child: Text("Pubblicato il  ${sistemaData()}" , style: TextStyle(fontSize: 18, color: Colors.black , fontWeight: FontWeight.w700),)),
+            ],
+          ),
           SizedBox(
-            height: 5,
+            height: 10,
           ),
           Text(testoavviso, textAlign: TextAlign.justify, style: TextStyle(fontSize: 18),),
 //          SizedBox(
@@ -32,7 +58,11 @@ class WidgetAvvisi extends StatelessWidget {
           SizedBox(
             height: 10,
           ),
-          Divider(),
+          Divider(
+            color: Colors.pink,
+            height: 15,
+            thickness: 1,
+          ),
 
       ],
       ),

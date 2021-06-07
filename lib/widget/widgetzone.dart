@@ -10,11 +10,11 @@ SharedPreference sharedpref = SharedPreference();
 
 class WidgetZone extends StatelessWidget {
 
-  String id;
-  String nome;
-  String nomeComune;
-  String coloreSfondo;
-  String coloreTesto;
+  String id = " ";
+  String nome = " ";
+  String nomeComune = " ";
+  String coloreSfondo = " ";
+  String coloreTesto = " ";
 
 
   WidgetZone({@required this.id, @required this.nome, @required this.nomeComune, @required this.coloreSfondo, @required this.coloreTesto});

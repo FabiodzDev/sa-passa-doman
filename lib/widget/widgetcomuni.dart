@@ -6,9 +6,9 @@ SharedPreference sharedpref = SharedPreference();
 
 class WidgetComuni extends StatelessWidget {
 
-  String id;
-  String nome;
-  String nomeIlMeteo;
+  String id = " ";
+  String nome = " ";
+  String nomeIlMeteo = " ";
 
   WidgetComuni({@required this.id, @required this.nome, @required this.nomeIlMeteo});
   @override

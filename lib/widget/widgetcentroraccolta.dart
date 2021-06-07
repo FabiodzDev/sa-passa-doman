@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 class WidgetCentroDiRaccolta extends StatelessWidget {
-  String indirizzo;
-  String orario;
-  String note;
-  String immagine;
+  String indirizzo = " ";
+  String orario = " ";
+  String note = " ";
+  String immagine = " ";
 
   WidgetCentroDiRaccolta(
       {@required this.indirizzo,

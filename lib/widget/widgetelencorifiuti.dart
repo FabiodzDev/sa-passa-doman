@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class WidgetElencoRifiuti extends StatelessWidget {
-  String nome_rifiutox;
-  String destinazione_rifiutox;
+  String nome_rifiutox = " ";
+  String destinazione_rifiutox = " ";
 
   WidgetElencoRifiuti(
       {@required this.nome_rifiutox, @required this.destinazione_rifiutox});

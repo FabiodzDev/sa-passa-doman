@@ -60,6 +60,8 @@ class _AvvisiState extends State<Avvisi> {
     return Scaffold(
       appBar: AppBar(
         title: Text("AVVISI"),
+        brightness: Brightness.dark, // orologio e wifi bianchi
+
       ),
       body: SafeArea(
         child: Container(
