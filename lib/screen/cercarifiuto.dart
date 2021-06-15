@@ -98,7 +98,7 @@ class _CercaRifiutoState extends State<CercaRifiuto> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Dove va il rifiuto?",style: TextStyle(color: Colors.white), ), backgroundColor: Colors.black,),
+      appBar: AppBar(title: Text("Dove va il rifiuto?",style: TextStyle(color: Colors.black), ), backgroundColor: Colors.amber,),
       body: ListView(
         children: [
           SizedBox(height: 20,),

@@ -38,7 +38,7 @@ class WidgetAvvisi extends StatelessWidget {
             children: [
               Icon(
                 Icons.notifications,
-                color: Colors.pink,
+                color: Colors.amber.shade600,
                 size: 30.0,
                 ),
               Container(
@@ -59,7 +59,7 @@ class WidgetAvvisi extends StatelessWidget {
             height: 10,
           ),
           Divider(
-            color: Colors.pink,
+            color: Colors.lightBlueAccent,
             height: 15,
             thickness: 1,
           ),

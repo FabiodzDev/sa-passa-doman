@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_icons/flutter_icons.dart';
+import 'package:sapassadomantter/screen/tutteleimmagini.dart';
 
 class LuoghiePersoneDettaglio extends StatefulWidget {
 
@@ -20,14 +22,26 @@ class _LuoghiePersoneDettaglioState extends State<LuoghiePersoneDettaglio> {
       appBar: AppBar(
         title: Text("LUOGHI E PERSONE"),
         brightness: Brightness.dark, // orologio e wifi bianchi
+        actions: [
+          IconButton(
+            icon: Icon(MaterialCommunityIcons.image_album, size: 30,),
+
+            onPressed: () {
+
+//              Navigator.pop(context);
+//              Navigator.pop(context);
+              Navigator.push(context, MaterialPageRoute(builder: (context) => TutteLeImmagini() ));
+            },
+          )
+        ],
 
       ),
       body: SafeArea(
         child: Container(
-          padding: EdgeInsets.all(15),
+          padding: EdgeInsets.only(top: 15, left: 10, right: 10, bottom: 5),
           child: ListView(
             children: [
-              Center(child: Text(widget.titoloLuoghiePersone, style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700),)),
+              Center(child: Text(widget.titoloLuoghiePersone, style: TextStyle(fontSize: 18),)),
               SizedBox(
                 height: 20,
               ),

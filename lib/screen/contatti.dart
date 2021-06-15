@@ -74,7 +74,7 @@ class _ContattiState extends State<Contatti> {
         child: Container(
           decoration: BoxDecoration(
             image: DecorationImage(
-              image: AssetImage("assets/images/manph.jpg"),
+              image: AssetImage("images/manph.jpg"),
               fit: BoxFit.cover,
             ),
           ),

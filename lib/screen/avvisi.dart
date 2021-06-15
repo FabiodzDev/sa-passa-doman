@@ -60,6 +60,7 @@ class _AvvisiState extends State<Avvisi> {
     return Scaffold(
       appBar: AppBar(
         title: Text("AVVISI"),
+        centerTitle: true,
         brightness: Brightness.dark, // orologio e wifi bianchi
 
       ),

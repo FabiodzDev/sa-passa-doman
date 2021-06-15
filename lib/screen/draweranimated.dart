@@ -11,6 +11,7 @@ import 'package:animated_drawer/views/third_layer.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
+import 'package:sapassadomantter/screen/scrollinocondiverseforme.dart';
 import 'package:sapassadomantter/screen/scrollinoiniziale.dart';
 import 'package:sapassadomantter/screen/social.dart';
 
@@ -40,7 +41,7 @@ class DemoApp extends StatelessWidget {
       closeIcon: Icon(Icons.arrow_back_ios, color: Color(0xFF1f186f)),
       shadowColor: Color(0xFF1F18), // 0xFF4c41a3
       backgroundGradient: LinearGradient(
-        colors: [Color(0xFF1f186f), Color(0x850994)],
+        colors: [Colors.amber, Color(0xffFFB554)],  //Color(0xFF1f186f), Color(0x850994)
       ),
       menuPageContent: Padding(
         padding: const EdgeInsets.only(top: 100.0, left: 15),
@@ -60,18 +61,18 @@ class DemoApp extends StatelessWidget {
               SizedBox(
                 height: 20,
               ),
-              Divider(
-                color: Color(0xFF5950a0),
-                thickness: 2,
-              ),
+//              Divider(
+//                color: Color(0xFF5950a0),
+//                thickness: 2,
+//              ),
               GestureDetector(
                 child: ListTile(
                   //leading: Icon(Entypo.info),
                   title: Text(
                     "INFO APP",
-                    style: TextStyle(fontSize: 16, color: Colors.white),
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold ,color: Colors.black),
                   ),
-                  subtitle: Text("Chi siamo e Disclaimer", style: TextStyle(color: Colors.white),),
+                  subtitle: Text("Chi siamo e Disclaimer", style: TextStyle(color: Colors.black),),
                 ),
                 onTap: () {
                  // Navigator.pop(context);
@@ -85,8 +86,8 @@ class DemoApp extends StatelessWidget {
               GestureDetector(
                 child: ListTile(
                   //leading: Icon(Entypo.facebook),
-                  title: Text("SOCIAL", style: TextStyle(fontSize: 16, color: Colors.white),),
-                  subtitle: Text("Seguici su Facebook", style: TextStyle(color: Colors.white)),
+                  title: Text("SOCIAL", style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold,color: Colors.black),),
+                  subtitle: Text("Seguici su Facebook", style: TextStyle(color: Colors.black)),
                 ),
                 onTap: (){
 
@@ -103,7 +104,7 @@ class DemoApp extends StatelessWidget {
               GestureDetector(
                 child: ListTile(
              //     leading: Icon(FontAwesome5Solid.mail_bulk),
-                  title: Text("CONTATTI APP", style: TextStyle(fontSize: 16, color: Colors.white),),
+                  title: Text("CONTATTI APP", style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold ,color: Colors.black),),
                 ),
                 onTap: (){
 
@@ -117,7 +118,7 @@ class DemoApp extends StatelessWidget {
               ),
               SizedBox(height: 3,),
               Divider(
-                color: Color(0xFF5950a0),
+                color: Colors.amber.shade700,
                 thickness: 2,
               ),
 
@@ -125,7 +126,7 @@ class DemoApp extends StatelessWidget {
           ),
         ),
       ),
-      homePageContent: ComplicatedImageDemo(),
+      homePageContent: ScrollinoDiverseForme(),
     );
   }
 }

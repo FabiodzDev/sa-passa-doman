@@ -8,6 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:sapassadomantter/screen/farmaciediturno.dart';
 import 'package:sapassadomantter/screen/santodelgiorno.dart';
+import 'package:sapassadomantter/screen/scrollinocondiverseforme.dart';
 import 'package:sapassadomantter/screen/social.dart';
 import 'package:sapassadomantter/screen/staseraintv.dart';
 import 'package:sapassadomantter/screen/zonepage.dart';
@@ -334,21 +335,21 @@ class _ComplicatedImageDemoState extends State<ComplicatedImageDemo> {
         brightness: Brightness.dark, // orologio e wifi bianchi
 
         centerTitle: true,
-//        actions: [
-//          IconButton(
-//            icon: Icon(Icons.home),
-//            onPressed: () {
-//              Navigator.pop(context);
-//              Navigator.push(
-//                  context, MaterialPageRoute(builder: (context) => Comuni()));
-//            },
-//          ),
-//        ],
+        actions: [
+          IconButton(
+            icon: Icon(Icons.home),
+            onPressed: () {
+              Navigator.pop(context);
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => ScrollinoDiverseForme()));
+            },
+          ),
+        ],
       ),
       body: SafeArea(
         child: Container(
-            color: Colors.black,
-            padding: EdgeInsets.only(top: 30),
+            color: Colors.white,
+            padding: EdgeInsets.only(top: 7, left: 1, right: 1),
             child: Column(
               children: [
                 Container(
@@ -366,6 +367,8 @@ class _ComplicatedImageDemoState extends State<ComplicatedImageDemo> {
                               context, MaterialPageRoute(builder: (context) => Comuni()));
                         },
                         child: Container(
+                          color: Colors.blue.shade100, //Color(0xffd0ddff),,
+
                             padding: EdgeInsets.only(
                               top: 20,
                               left: 3,
@@ -375,7 +378,7 @@ class _ComplicatedImageDemoState extends State<ComplicatedImageDemo> {
                               children: [
                                 Text(
                                   "Il tuo comune:",
-                                  style: TextStyle(color: Colors.white),
+                                  style: TextStyle(color: Colors.blue.shade900),
                                 ),
                                 Text(
                                   nomeComune,
@@ -383,14 +386,14 @@ class _ComplicatedImageDemoState extends State<ComplicatedImageDemo> {
                                   style: TextStyle(
                                       fontWeight: FontWeight.w700,
                                       fontSize: 15,
-                                      color: Colors.pink),
+                                      color: Colors.blue.shade900),
                                 ),
                                 SizedBox(
                                   height: 3,
                                 ),
                                 Text(
                                   "La tua zona:",
-                                  style: TextStyle(color: Colors.white),
+                                  style: TextStyle(color: Colors.blue.shade900),
                                 ),
                                 Text(
                                   nomeZona,
@@ -398,7 +401,7 @@ class _ComplicatedImageDemoState extends State<ComplicatedImageDemo> {
                                   style: TextStyle(
                                       fontWeight: FontWeight.w700,
                                       fontSize: 15,
-                                      color: Colors.pink),
+                                      color: Colors.blue.shade900),
                                 ),
                               ],
                             )),
@@ -436,7 +439,7 @@ class _ComplicatedImageDemoState extends State<ComplicatedImageDemo> {
                         child: Container(
                           height: 180,
                           //width: 180,
-                          color: Colors.red,
+                          color: Colors.blue.shade900,
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.start,
                             crossAxisAlignment: CrossAxisAlignment.center,
@@ -485,7 +488,7 @@ class _ComplicatedImageDemoState extends State<ComplicatedImageDemo> {
                         child: Container(
                           height: 180,
                           // width: 180,
-                          color: Colors.lightBlue,
+                          color: Colors.blue.shade100,
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.start,
                             crossAxisAlignment: CrossAxisAlignment.center,
@@ -510,7 +513,7 @@ class _ComplicatedImageDemoState extends State<ComplicatedImageDemo> {
                                   style: TextStyle(
                                       fontSize: 15,
                                       fontWeight: FontWeight.bold,
-                                      color: Colors.white),
+                                      color: Colors.blue.shade900),
                                 ),
                               ),
                             ],
@@ -530,7 +533,7 @@ class _ComplicatedImageDemoState extends State<ComplicatedImageDemo> {
                           child: Container(
                             height: 180,
                             //width: 300,
-                            color: Colors.green.shade600,
+                            color: Colors.blue.shade100, //Color(0xffd0ddff),
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.start,
                               crossAxisAlignment: CrossAxisAlignment.center,
@@ -555,7 +558,7 @@ class _ComplicatedImageDemoState extends State<ComplicatedImageDemo> {
                                     style: TextStyle(
                                         fontSize: 15,
                                         fontWeight: FontWeight.bold,
-                                        color: Colors.white),
+                                        color: Colors.blue.shade900),
                                   ),
                                 ),
                               ],
@@ -576,7 +579,7 @@ class _ComplicatedImageDemoState extends State<ComplicatedImageDemo> {
                           child: Container(
                             height: 180,
                             //width: 300,
-                            color: Colors.amber.shade400,
+                            color: Colors.blue.shade100, //Color(0xffd0ddff),
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.start,
                               crossAxisAlignment: CrossAxisAlignment.center,
@@ -601,10 +604,10 @@ class _ComplicatedImageDemoState extends State<ComplicatedImageDemo> {
                                     style: TextStyle(
                                         fontSize: 15,
                                         fontWeight: FontWeight.bold,
-                                        color: Colors.white),
+                                        color: Colors.blue.shade900,
                                   ),
                                 ),
-                              ],
+                                ),],
                             ),
                           ),
                         ),
@@ -622,7 +625,7 @@ class _ComplicatedImageDemoState extends State<ComplicatedImageDemo> {
                           child: Container(
                             height: 180,
                             //width: 300,
-                            color: Colors.purple.shade200,
+                            color: Colors.blue.shade100,//Color(0xffd0ddff),
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.start,
                               crossAxisAlignment: CrossAxisAlignment.center,
@@ -647,10 +650,10 @@ class _ComplicatedImageDemoState extends State<ComplicatedImageDemo> {
                                     style: TextStyle(
                                         fontSize: 15,
                                         fontWeight: FontWeight.bold,
-                                        color: Colors.white),
+                                        color: Colors.blue.shade900,
                                   ),
                                 ),
-                              ],
+                                ),],
                             ),
                           ),
                         ),
@@ -668,7 +671,7 @@ class _ComplicatedImageDemoState extends State<ComplicatedImageDemo> {
                           child: Container(
                             height: 180,
                             //width: 300,
-                            color: Colors.brown,
+                            color: Colors.blue.shade100, //Color(0xffd0ddff),
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.start,
                               crossAxisAlignment: CrossAxisAlignment.center,
@@ -693,10 +696,10 @@ class _ComplicatedImageDemoState extends State<ComplicatedImageDemo> {
                                     style: TextStyle(
                                         fontSize: 15,
                                         fontWeight: FontWeight.bold,
-                                        color: Colors.white),
+                                        color: Colors.blue.shade900,
                                   ),
                                 ),
-                              ],
+                                ),],
                             ),
                           ),
                         ),
@@ -714,7 +717,7 @@ class _ComplicatedImageDemoState extends State<ComplicatedImageDemo> {
                           child: Container(
                             height: 180,
                             //width: 300,
-                            color: Colors.blue.shade900,
+                            color: Colors.blue.shade100,
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.start,
                               crossAxisAlignment: CrossAxisAlignment.center,
@@ -756,10 +759,10 @@ class _ComplicatedImageDemoState extends State<ComplicatedImageDemo> {
                                     style: TextStyle(
                                         fontSize: 15,
                                         fontWeight: FontWeight.bold,
-                                        color: Colors.white),
+                                        color: Colors.blue.shade900,
                                   ),
                                 ),
-                              ],
+                                ),],
                             ),
                           ),
                         ),
@@ -771,11 +774,12 @@ class _ComplicatedImageDemoState extends State<ComplicatedImageDemo> {
                   height: 5,
                 ),
                 Container(
-                  height: MediaQuery.of(context).size.height * .25,
+                  color: Colors.white,
+                  height: MediaQuery.of(context).size.height * .30,
                   child: CarouselSlider(
                     options: CarouselOptions(
-                      autoPlay: true,
-                      aspectRatio: 1.6,
+                      autoPlay: false,
+                      aspectRatio: 2.2,
                       enlargeCenterPage: true,
                       reverse: true,
                     ),

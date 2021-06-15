@@ -67,7 +67,7 @@ class _MenuDrawerState extends State<MenuDrawer> {
                     'SA PASSA DOMAN',
                     textAlign: TextAlign.left,
                     style: TextStyle(
-                      color: Colors.white,
+                      color: Colors.black,
                       fontWeight: FontWeight.bold,
                       fontSize: 25,
                       letterSpacing: 2,
@@ -80,7 +80,7 @@ class _MenuDrawerState extends State<MenuDrawer> {
                     "$nomeComune E FRAZIONI",
                     textAlign: TextAlign.left,
                     style: TextStyle(
-                      color: Colors.white,
+                      color: Colors.black,
                       fontSize: 20,
                       letterSpacing: 2,
                     ),
@@ -89,7 +89,7 @@ class _MenuDrawerState extends State<MenuDrawer> {
               ),
             ),
             decoration: BoxDecoration(
-              color: Colors.pink,
+              color: Colors.amber,
             ),
           ),
 //          GestureDetector(

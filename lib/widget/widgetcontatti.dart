@@ -22,7 +22,7 @@ class WidgetContatti extends StatelessWidget {
         padding: EdgeInsets.only(left: 10, top: 10, bottom: 10, right: 10),
         child: Card(
           elevation: 40,
-          color: Colors.yellowAccent.shade100,
+          color: Colors.amber,
           child: Container(
             height: 80,
             width: double.infinity,
@@ -32,7 +32,7 @@ class WidgetContatti extends StatelessWidget {
                 Container(
                   width: 100,
                   padding: EdgeInsets.all(15),
-                  child: Icon(Icons.phone, size: 50, color: Colors.grey,),
+                  child: Icon(Icons.phone, size: 50, color: Colors.white,),
 
                 ),
                 Flexible(

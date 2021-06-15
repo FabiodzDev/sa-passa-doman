@@ -36,10 +36,10 @@ class _WidgetLuoghiePersoneState extends State<WidgetLuoghiePersone> {
                   "https://www.viviarcole.it/aa_spd_immagini/fotoluoghiepersone/${widget.urlimmagine}",
                   fit: BoxFit.cover,
                   width: 1000,
-                  height: 150,
+                  height: 170,
                 ),
                             Positioned(
-                              bottom: -7,
+                              bottom: 1,
                               left: 0.0,
                               right: 0.0,
                               child: Container(

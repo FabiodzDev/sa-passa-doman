@@ -265,10 +265,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'SA PASSA DOMAN',
       theme: ThemeData(
-        accentColor: Colors.orange,
-        primarySwatch: Colors.pink,
+        accentColor: Colors.green,
+        primarySwatch: Colors.blue,
         //fontFamily: 'OpenSans',
 //        textTheme: Theme.of(context).textTheme.apply(
 //            fontFamily: 'OpenSans',
@@ -400,6 +400,7 @@ class _MyHomePageState extends State<MyHomePage> {
             onPressed: () {
 
               Navigator.pop(context);
+              Navigator.pop(context);
               Navigator.push(context, MaterialPageRoute(builder: (context) => DemoApp()));
             },
           )
@@ -416,7 +417,7 @@ class _MyHomePageState extends State<MyHomePage> {
           });
         } ,
         type: BottomNavigationBarType.fixed,
-        backgroundColor: Colors.lightBlue,// coloreDaPassare,
+        backgroundColor: Colors.amber,// coloreDaPassare,
         selectedItemColor: Colors.black, //coloreTestoDaPassare,
         selectedFontSize: 15,
         //unselectedItemColor: coloreTestoDaPassare,

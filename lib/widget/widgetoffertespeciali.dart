@@ -113,7 +113,7 @@ class _WidgetOfferteSpecialiState extends State<WidgetOfferteSpeciali> {
         },
         front: Container(
           decoration: BoxDecoration(
-            color: Colors.lightBlue,
+            color: Colors.purple,
             borderRadius: BorderRadius.all(Radius.circular(8.0)),
           ),
           child: Column(
@@ -135,6 +135,7 @@ class _WidgetOfferteSpecialiState extends State<WidgetOfferteSpeciali> {
                 decoration: BoxDecoration(
                   image: DecorationImage(
                       image: NetworkImage(
+
                           "https://www.viviarcole.it/aa_spd_immagini/fotoluoghiepersone/${widget.urllogo}"),
                       fit: BoxFit.fitWidth),
                   color: Colors.white,
@@ -159,7 +160,7 @@ class _WidgetOfferteSpecialiState extends State<WidgetOfferteSpeciali> {
         ),
         back: Container(
           decoration: BoxDecoration(
-            color: Colors.pink,
+            color: Colors.amber.shade600,
             borderRadius: BorderRadius.all(Radius.circular(8.0)),
           ),
           child: Column(

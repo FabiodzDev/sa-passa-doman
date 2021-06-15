@@ -31,6 +31,7 @@ class _SantoDelGiornoDettaglioState extends State<SantoDelGiornoDettaglio> {
 
     return Scaffold(
       appBar: AppBar(title: Text("Scorri la pagina"),
+        centerTitle: true,
 ),
 
       body: WebView(

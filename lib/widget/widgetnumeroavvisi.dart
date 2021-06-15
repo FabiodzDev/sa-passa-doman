@@ -9,7 +9,7 @@ class WidgetNumeroAvvisi extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        padding: EdgeInsets.only(right: 10, top: 10),
-        child: Text(numeroavvisi, style: TextStyle(color: Colors.red, fontSize: 20, fontWeight: FontWeight.w700), ));
+
+        child: Text(numeroavvisi, style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.w700), ));
   }
 }

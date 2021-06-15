@@ -63,7 +63,7 @@ class _ContattiAppState extends State<ContattiApp> {
                       children: [
                         Container(
                           padding: EdgeInsets.all(10),
-                          child: Icon(Icons.email, size: 80, color: Colors.blueGrey,),
+                          child: Icon(Icons.email, size: 80, color: Colors.amber,),
 
                         ),
                         Container(
@@ -102,7 +102,7 @@ class _ContattiAppState extends State<ContattiApp> {
                     children: [
                       Container(
                         padding: EdgeInsets.all(10),
-                        child: Icon(Entypo.facebook, size: 80, color: Colors.blueGrey,),
+                        child: Icon(Entypo.facebook, size: 80, color: Colors.blue.shade900,),
 
                       ),
                       GestureDetector(

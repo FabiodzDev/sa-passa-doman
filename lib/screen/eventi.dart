@@ -146,7 +146,7 @@ class _EventiState extends State<Eventi> {
                         style: TextStyle(
                             fontWeight: FontWeight.w700,
                             fontSize: 20,
-                            color: Colors.pink),
+                            color: Colors.purple),
                         textAlign: TextAlign.center,
                       ),
                     ),
@@ -165,7 +165,7 @@ class _EventiState extends State<Eventi> {
                       child: Text(
                         "sapassadoman@gmail.com",
                         textAlign: TextAlign.left,
-                        style: TextStyle(fontSize: 18, color: Colors.pink),
+                        style: TextStyle(fontSize: 18, color: Colors.purple),
                       ),
                     ),
                     Container(
@@ -288,7 +288,7 @@ class _EventiState extends State<Eventi> {
           onPressed: () => _onButtonPressed(),
 
           child: const Icon(Icons.add),
-          backgroundColor: Colors.pink,
+          backgroundColor: Colors.amber.shade600,
         ),
 
         body: CustomScrollView(
@@ -307,7 +307,7 @@ class _EventiState extends State<Eventi> {
               pinned: true,
               snap: true,
               elevation: 50,
-              backgroundColor: Colors.pink,
+              backgroundColor: Colors.purple,
               flexibleSpace: FlexibleSpaceBar(
 
                   centerTitle: true,

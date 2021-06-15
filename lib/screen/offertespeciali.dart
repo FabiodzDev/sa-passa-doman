@@ -77,7 +77,7 @@ class _OfferteSpecialiState extends State<OfferteSpeciali> {
                         style: TextStyle(
                             fontWeight: FontWeight.w700,
                             fontSize: 20,
-                            color: Colors.pink),
+                            color: Colors.purple),
                         textAlign: TextAlign.center,
                       ),
                     ),
@@ -96,7 +96,7 @@ class _OfferteSpecialiState extends State<OfferteSpeciali> {
                       child: Text(
                         "sapassadoman@gmail.com",
                         textAlign: TextAlign.left,
-                        style: TextStyle(fontSize: 18, color: Colors.pink),
+                        style: TextStyle(fontSize: 18, color: Colors.purple),
                       ),
                     ),
                     Container(

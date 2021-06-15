@@ -29,7 +29,7 @@ class WidgetZone extends StatelessWidget {
 //            Text(nome),
 
             Icon(Icons.home,
-              color: Colors.lightBlue,
+              color: Colors.amber.shade600,
               size: 40.0,),
             // Container(child: Text(id)),
             SizedBox(width: 20,),
