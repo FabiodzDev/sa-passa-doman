@@ -25,6 +25,7 @@ import 'package:sapassadomantter/widget/widgetoffertespeciali.dart';
 
 import '../main.dart';
 import '../sharedpreference.dart';
+import 'areaagricola.dart';
 import 'avvisi.dart';
 import 'chisiamo.dart';
 import 'contatti.dart';
@@ -496,7 +497,7 @@ class _ScrollinoDiverseFormeState extends State<ScrollinoDiverseForme> {
           onTap: () {
             // Navigator.pop(context);
             Navigator.push(
-                context, MaterialPageRoute(builder: (context) => StaseraInTv()));
+                context, MaterialPageRoute(builder: (context) => AreaAgrigola()));
           },
           child: Stack(
             children: [
