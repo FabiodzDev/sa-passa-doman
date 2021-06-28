@@ -57,16 +57,14 @@ class _FasiLunariState extends State<FasiLunari> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("FASI LUNARI"),
-        centerTitle: true,
-        brightness: Brightness.dark, // orologio e wifi bianchi
-      ),
+
       body: SafeArea(
         child: Center(
           child: Container(
             child: ListView(
               children: [
+                Center(child: Text('FASI LUNARI', style: TextStyle(fontSize: 25), )),
+                SizedBox(height: 10,),
                 ...listaFasiLunari,
               ],
             ),

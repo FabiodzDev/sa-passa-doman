@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:sapassadomantter/screen/scrollinocondiverseforme.dart';
+import 'package:sapassadomantter/screen/youtube.dart';
 
 
 
+import 'calendariosemina.dart';
 import 'dettaglisemina.dart';
 import 'elencocomuni.dart';
 import 'fasilunari.dart';
@@ -23,75 +25,77 @@ class _AreaAgrigolaState extends State<AreaAgrigola> {
   Widget build(BuildContext context) {
 
     List<StaggeredTile> _staggeredTiles = <StaggeredTile>[
-      StaggeredTile.count(1, 1),
-      StaggeredTile.count(1, 1),
+
+      StaggeredTile.count(2, 2),
       StaggeredTile.count(1, 1),
       StaggeredTile.count(1, 1),
 
     ];
 
     List<Widget> _tiles = <Widget>[
-      Container(
-        child: Card(
-          color: Colors.blue.shade700,
-          child: InkWell(
-            onTap: () {
-              //Navigator.pop(context);
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => FasiLunari()));
-            },
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Row(
-                  children: [
-                  Expanded(
-                    child: Icon(
-                      MaterialCommunityIcons.moon_new,
-                    color: Colors.white,
-                    size: 70,),
-                  ),
-                    Expanded(
-                      child: Icon(
-                        MaterialCommunityIcons.moon_first_quarter,
-                        color: Colors.white,
-                        size: 70,),
-                    ),
-                  ],
-                ),
-                SizedBox(
-                  height: 10,
+//      Container(
+//        child: Card(
+//          color: Colors.blue.shade700,
+//          child: InkWell(
+//            onTap: () {
+//              //Navigator.pop(context);
+//              Navigator.push(
+//                  context, MaterialPageRoute(builder: (context) => FasiLunari()));
+//            },
+//            child: Column(
+//              mainAxisAlignment: MainAxisAlignment.center,
+//              crossAxisAlignment: CrossAxisAlignment.center,
+//              children: [
+//                Row(
+//                  children: [
+//                  Expanded(
+//                    child: Icon(
+//                      MaterialCommunityIcons.moon_new,
+//                    color: Colors.white,
+//                    size: 70,),
+//                  ),
+//                    Expanded(
+//                      child: Icon(
+//                        MaterialCommunityIcons.moon_first_quarter,
+//                        color: Colors.white,
+//                        size: 70,),
+//                    ),
+//                  ],
+//                ),
+//                SizedBox(
+//                  height: 10,
+//
+//                ),
+//                Row(
+//                  children: [
+//                    Expanded(
+//                      child: Icon(
+//                        MaterialCommunityIcons.moon_last_quarter,
+//                        color: Colors.white,
+//                        size: 70,),
+//                    ),
+//                    Expanded(
+//                      child: Icon(
+//                        MaterialCommunityIcons.moon_full,
+//                        color: Colors.white,
+//                        size: 70,),
+//                    ),
+//                  ],
+//                )
+//              ],
+//            ),
+//
+//    ),
+//        ),
+//      ),
 
-                ),
-                Row(
-                  children: [
-                    Expanded(
-                      child: Icon(
-                        MaterialCommunityIcons.moon_last_quarter,
-                        color: Colors.white,
-                        size: 70,),
-                    ),
-                    Expanded(
-                      child: Icon(
-                        MaterialCommunityIcons.moon_full,
-                        color: Colors.white,
-                        size: 70,),
-                    ),
-                  ],
-                )
-              ],
-            ),
 
-    ),
-        ),
-      ),
       SoloIcona(
         backgroundColor: Colors.amber.shade400,
         iconData: FontAwesome.calendar,
         coloreIcona: Colors.white,
-        dimensioneIcona: 100,
-        destinazione: Comuni(),
+        dimensioneIcona: 150,
+        destinazione: CalendarioSemina(),
       ),
       Container(
         child: Card(
@@ -141,8 +145,8 @@ class _AreaAgrigolaState extends State<AreaAgrigola> {
         backgroundColor: Colors.red.shade400,
         coloreIcona: Colors.white,
         iconData: FontAwesome.youtube_square,
-        dimensioneIcona: 130,
-        destinazione: Comuni(),
+        dimensioneIcona: 80,
+        destinazione: YoutubeVideoAgricoli(),
       ),
 //
 //      Container(
@@ -248,11 +252,24 @@ class _AreaAgrigolaState extends State<AreaAgrigola> {
       ),
         body: SafeArea(
           child: Container(
-            color: Colors.white,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                  image: NetworkImage(
+                      "https://www.viviarcole.it/aa_spd_immagini/fotoluoghiepersone/nightluna.jpg"),
+                  fit: BoxFit.cover),
+              color: Colors.white,
+//              border: Border.all(
+//
+//                //color: Colors.pink[800], // Set border color
+//                  width: 0.0), // Set border width
+//              borderRadius: BorderRadius.all(
+//                  Radius.circular(10.0)), // Set rounded corner radius
+            ),
+//            color: Colors.white,
             child: Padding(
-                padding: const EdgeInsets.only(top: 12),
+                padding: const EdgeInsets.only(top: 260),
                 child: StaggeredGridView.count(
-                  crossAxisCount: 2,
+                  crossAxisCount: 3,
                   staggeredTiles: _staggeredTiles,
                   mainAxisSpacing: 4,
                   crossAxisSpacing: 4,

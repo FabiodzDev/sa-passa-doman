@@ -113,7 +113,7 @@ class _WidgetOfferteSpecialiState extends State<WidgetOfferteSpeciali> {
         },
         front: Container(
           decoration: BoxDecoration(
-            color: Colors.purple,
+            color: Colors.amber.shade700,
             borderRadius: BorderRadius.all(Radius.circular(8.0)),
           ),
           child: Column(
@@ -160,7 +160,7 @@ class _WidgetOfferteSpecialiState extends State<WidgetOfferteSpeciali> {
         ),
         back: Container(
           decoration: BoxDecoration(
-            color: Colors.amber.shade600,
+            color: Colors.blue.shade400,
             borderRadius: BorderRadius.all(Radius.circular(8.0)),
           ),
           child: Column(

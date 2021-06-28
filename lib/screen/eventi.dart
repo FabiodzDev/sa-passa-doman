@@ -307,7 +307,7 @@ class _EventiState extends State<Eventi> {
               pinned: true,
               snap: true,
               elevation: 50,
-              backgroundColor: Colors.purple,
+              backgroundColor: Colors.blue,
               flexibleSpace: FlexibleSpaceBar(
 
                   centerTitle: true,

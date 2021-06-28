@@ -206,6 +206,7 @@ class _OfferteSpecialiState extends State<OfferteSpeciali> {
     return Scaffold(
       appBar: AppBar(
         title: Text("OFFERTE SPECIALI"),
+        centerTitle: true,
         brightness: Brightness.dark, // orologio e wifi bianchi
         actions: [
           IconButton(

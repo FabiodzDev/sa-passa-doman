@@ -130,11 +130,11 @@ class _ScrollinoDiverseFormeState extends State<ScrollinoDiverseForme> {
 
 // SE VALORE COMUNE E' NULLO MANDIAMO L'UTENTE A SELEZIONARE IL COMUNE, ESPLODENDO QUESTA PAGINA
     if (valoreComune == null) {
-      Navigator.pop(context);
+     // Navigator.pop(context);
       Navigator.push(
           context, MaterialPageRoute(builder: (context) => Comuni()));
     } else if (valoreZona == null) {
-      Navigator.pop(context);
+     // Navigator.pop(context);
       Navigator.push(
           context,
           MaterialPageRoute(
@@ -565,16 +565,25 @@ class _ScrollinoDiverseFormeState extends State<ScrollinoDiverseForme> {
 //            ),
 //          ],
         ),
-        body: Padding(
-            padding: const EdgeInsets.only(top: 12),
-            child: StaggeredGridView.count(
-              crossAxisCount: 4,
-              staggeredTiles: _staggeredTiles,
-              mainAxisSpacing: 4,
-              crossAxisSpacing: 4,
-              padding: const EdgeInsets.all(4),
-              children: _tiles,
-            )));
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Container(
+              height: MediaQuery.of(context).size.height * 0.85,
+              child: Padding(
+                  padding: const EdgeInsets.only(top: 12),
+                  child: StaggeredGridView.count(
+                    crossAxisCount: 4,
+                    staggeredTiles: _staggeredTiles,
+                    mainAxisSpacing: 4,
+                    crossAxisSpacing: 4,
+                    padding: const EdgeInsets.all(5),
+                    children: _tiles,
+                  )),
+            ),
+          ],
+        ));
   }
 }
 

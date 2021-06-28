@@ -158,7 +158,7 @@ class _DettagliSeminaState extends State<DettagliSemina> {
                           children: [
                             Container(
                               padding: EdgeInsets.only(top: 5),
-                                child: Text("Porfondità semina: cm ", style: TextStyle(fontSize: 17),)
+                                child: Text("Profondità semina: cm ", style: TextStyle(fontSize: 17),)
                             ),
                             Container(
                               child: Text(
@@ -240,5 +240,5 @@ class ItemModel {
   Color colorsItem = Colors.black;
   String img;
 
-  ItemModel({@required this.expanded: false, @required this.headerItem, @required this.nrgrammisemi, @required this.distanzafila, @required this.distanzatrafile, @required this.profonditasemina, @required this.temperaturaideale , @required this.colorsItem, @required this.img});
+  ItemModel({this.expanded: false, @required this.headerItem, @required this.nrgrammisemi, @required this.distanzafila, @required this.distanzatrafile, @required this.profonditasemina, @required this.temperaturaideale , @required this.colorsItem, this.img});
 }

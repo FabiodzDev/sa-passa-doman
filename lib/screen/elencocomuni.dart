@@ -67,6 +67,7 @@ class _ComuniState extends State<Comuni> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Scegli il tuo COMUNE"),
+        centerTitle: true,
         brightness: Brightness.dark, // orologio e wifi bianchi
 
       ),

@@ -22,6 +22,7 @@ class _FarmaciediturnoState extends State<Farmaciediturno> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text("FARMACIE DI TURNO"),
+        centerTitle: true,
         brightness: Brightness.dark, // orologio e wifi bianchi
 
 //        actions: [
