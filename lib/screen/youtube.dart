@@ -57,7 +57,7 @@ class _YoutubeVideoAgricoliState extends State<YoutubeVideoAgricoli> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("VIDEO"),
+        title: Text("TUTTI I VIDEO"),
         centerTitle: true,
         brightness: Brightness.dark, // orologio e wifi bianchi
 
