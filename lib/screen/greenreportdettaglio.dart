@@ -2,17 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 import 'dart:io';
 
-class YoutubeDettaglio extends StatefulWidget {
+class GreenReportDettaglio extends StatefulWidget {
 
-  String linkVideo = " ";
+  String linkgreenreport;
 
-  YoutubeDettaglio({@required this.linkVideo});
+  GreenReportDettaglio({@required this.linkgreenreport});
 
   @override
-  _YoutubeDettaglioState createState() => _YoutubeDettaglioState();
+  _GreenReportDettaglioState createState() => _GreenReportDettaglioState();
 }
 
-class _YoutubeDettaglioState extends State<YoutubeDettaglio> {
+class _GreenReportDettaglioState extends State<GreenReportDettaglio> {
 
   @override
   void initState() {
@@ -26,12 +26,12 @@ class _YoutubeDettaglioState extends State<YoutubeDettaglio> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("BUONA VISIONE"),
+      appBar: AppBar(title: Text("LEGGI L'ARTICOLO"),
         centerTitle: true,
       ),
 
       body: WebView(
-        initialUrl: 'http://youtube.com/watch?v=taHuJ0trOTc&t=75s',
+        initialUrl: widget.linkgreenreport,
       ),
     );
   }

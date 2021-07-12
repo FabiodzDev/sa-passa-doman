@@ -378,24 +378,9 @@ class _MyHomePageState extends State<MyHomePage> {
         brightness: Brightness.dark, // orologio e wifi bianchi
 
         actions: [
-//          IconButton(
-//            icon: Icon(Icons.update),
-//            onPressed: () {
-//              Navigator.pop(context);
-//              Navigator.push(context,
-//                  MaterialPageRoute(builder: (context) => Comuni()));},
-//          ),
-//          IconButton(
-//            icon: Icon(Icons.delete_forever),
-//            onPressed: () {
-//
-//              sharedpref.rimuoviComuneZona();
-//              Navigator.pop(context);
-//              Navigator.push(context, MaterialPageRoute(builder: (context) => ComplicatedImageDemo()));
-//            },
-//          ),
+
           IconButton(
-            icon: Icon(MaterialCommunityIcons.grid),
+            icon: Icon(MaterialCommunityIcons.chevron_left, size: 40,),
 
             onPressed: () {
 

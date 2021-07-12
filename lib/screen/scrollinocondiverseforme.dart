@@ -34,6 +34,7 @@ import 'elencocomuni.dart';
 import 'package:http/http.dart' as http;
 
 import 'eventi.dart';
+import 'greenreport.dart';
 import 'ilmeteoit.dart';
 import 'offertespeciali.dart';
 
@@ -246,6 +247,8 @@ class _ScrollinoDiverseFormeState extends State<ScrollinoDiverseForme> {
       StaggeredTile.count(2, 2),
       StaggeredTile.count(1, 1),
       StaggeredTile.count(1, 1),
+      StaggeredTile.count(4, 1),
+
     ];
 
     List<Widget> _tiles = <Widget>[
@@ -327,26 +330,14 @@ class _ScrollinoDiverseFormeState extends State<ScrollinoDiverseForme> {
                       style: TextStyle(fontSize: 20, color: Colors.white),
                     )),
 
-//                Transform.rotate(
-//                  child: Text(
-//                      'FARMACIE H24',
-//                      style: TextStyle(color: Colors.teal, fontSize: 20)
-//                  ),
-//                  angle: 90,
-//                ),
+
               ],
             ),
           ),
         ),
       ),
 
-//      TestoEIcona(
-//        backgroundColor: Colors.lightBlue,
-//        iconData: Icons.wifi,
-//        coloreIcona: Colors.white,
-//        testo: "FARMACIE H24",
-//        altezzaTesto: 15,
-//      ),
+
 
       SoloIcona(
         backgroundColor: Colors.amber,
@@ -387,7 +378,7 @@ class _ScrollinoDiverseFormeState extends State<ScrollinoDiverseForme> {
 
       SoloIcona(
         backgroundColor: Colors.indigo,
-        iconData: MaterialIcons.person_pin,
+        iconData: AntDesign.adduser,
         coloreIcona: Colors.white,
         dimensioneIcona: 50,
         destinazione: SantoDelGiorno(),
@@ -483,13 +474,7 @@ class _ScrollinoDiverseFormeState extends State<ScrollinoDiverseForme> {
         ),
       ),
 
-//      SoloIcona(
-//        backgroundColor: Colors.lightBlueAccent,
-//        iconData: MaterialCommunityIcons.tractor,
-//        coloreIcona: Colors.white,
-//        dimensioneIcona: 50,
-//        destinazione: StaseraInTv(),
-//      ),
+
 
       Card(
         color: Colors.lightBlueAccent,
@@ -533,18 +518,20 @@ class _ScrollinoDiverseFormeState extends State<ScrollinoDiverseForme> {
                   ),
                 ],
               ),
+
             ]
           ),
         ),
       ),
+      SoloTesto(
+        backgroundColor: Colors.green.shade900,
+        testo: "GREEN Report",
+        altezzaTesto: 21,
+        coloreTesto: Colors.white,
+        destinazione: GreenReport(),
+      ),
 
-//      TestoEIcona(
-//        backgroundColor: Colors.purple,
-//        iconData: Icons.desktop_windows,
-//        coloreIcona: Colors.white,
-//        testo: " ",
-//        altezzaTesto: 15,
-//      ),
+
       // Example01Tile(backgroundColor: Colors.blue, iconData: Icons.radio, testo: " ",altezzaTesto: 15,),
     ];
 
@@ -554,16 +541,7 @@ class _ScrollinoDiverseFormeState extends State<ScrollinoDiverseForme> {
           centerTitle: true,
           brightness: Brightness.dark, // orologio e wifi bianchi
 
-//          actions: [
-//            IconButton(
-//              icon: Icon(Icons.home),
-//              onPressed: () {
-//                Navigator.pop(context);
-//                Navigator.push(
-//                    context, MaterialPageRoute(builder: (context) => ScrollinoDiverseForme()));
-//              },
-//            ),
-//          ],
+
         ),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,

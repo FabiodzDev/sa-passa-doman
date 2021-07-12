@@ -113,11 +113,11 @@ class _DettagliSeminaState extends State<DettagliSemina> {
                             Container(
                                 padding: EdgeInsets.only(top: 5),
 
-                                child: Text("Distanza nella stessa fila: cm ", style: TextStyle(fontSize: 17),)
+                                child: Text("Distanza nella stessa fila:", style: TextStyle(fontSize: 17),)
                             ),
                             Container(
                               child: Text(
-                                itemData[index].distanzafila,
+                                itemData[index].distanzafila + " cm",
                                 style: TextStyle(
                                     color: Colors.amber[900],
                                     fontSize: 17,
@@ -136,11 +136,11 @@ class _DettagliSeminaState extends State<DettagliSemina> {
                             Container(
                                 padding: EdgeInsets.only(top: 5),
 
-                                child: Text("Distanza tra le file: cm ", style: TextStyle(fontSize: 17),)
+                                child: Text("Distanza tra le file:", style: TextStyle(fontSize: 17),)
                             ),
                             Container(
                               child: Text(
-                                itemData[index].distanzatrafile,
+                                itemData[index].distanzatrafile + " cm",
                                 style: TextStyle(
                                     color: Colors.amber[900],
                                     fontSize: 17,
@@ -158,11 +158,11 @@ class _DettagliSeminaState extends State<DettagliSemina> {
                           children: [
                             Container(
                               padding: EdgeInsets.only(top: 5),
-                                child: Text("Profondità semina: cm ", style: TextStyle(fontSize: 17),)
+                                child: Text("Profondità semina:", style: TextStyle(fontSize: 17),)
                             ),
                             Container(
                               child: Text(
-                                itemData[index].profonditasemina,
+                                itemData[index].profonditasemina + " cm",
                                 style: TextStyle(
                                     color: Colors.amber[900],
                                     fontSize: 17,
@@ -181,11 +181,11 @@ class _DettagliSeminaState extends State<DettagliSemina> {
                             Container(
                                 padding: EdgeInsets.only(top: 5),
 
-                                child: Text("Temp. ideale semina: gradi ", style: TextStyle(fontSize: 17),)
+                                child: Text("Temp. ideale semina: ", style: TextStyle(fontSize: 17),)
                             ),
                             Container(
                               child: Text(
-                                itemData[index].temperaturaideale,
+                                itemData[index].temperaturaideale + " °C",
                                 style: TextStyle(
                                     color: Colors.amber[900],
                                     fontSize: 17,

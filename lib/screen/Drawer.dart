@@ -53,45 +53,46 @@ class _MenuDrawerState extends State<MenuDrawer> {
       // Add a ListView to the drawer. This ensures the user can scroll
       // through the options in the drawer if there isn't enough vertical
       // space to fit everything.
-      child: ListView(
-        // crossAxisAlignment: CrossAxisAlignment.stretch,
-        // Important: Remove any padding from the ListView.
-        //padding: EdgeInsets.zero,
-        children: <Widget>[
-          DrawerHeader(
-            child: Container(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: [
-                  Text(
-                    'SA PASSA DOMAN',
-                    textAlign: TextAlign.left,
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 25,
-                      letterSpacing: 2,
+      child: Container(
+        color: Colors.amber,
+        child: ListView(
+          // crossAxisAlignment: CrossAxisAlignment.stretch,
+          // Important: Remove any padding from the ListView.
+          //padding: EdgeInsets.zero,
+          children: <Widget>[
+            Container(
+              color: Colors.amber,
+              child: DrawerHeader(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    Text(
+                      'SA PASSA DOMAN',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 25,
+                        letterSpacing: 2,
+                      ),
                     ),
-                  ),
-                  SizedBox(
-                    height: 20,
-                  ),
-                  Text(
-                    "$nomeComune E FRAZIONI",
-                    textAlign: TextAlign.left,
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 20,
-                      letterSpacing: 2,
+                    SizedBox(
+                      height: 20,
                     ),
-                  ),
-                ],
+                    Text(
+                      "$nomeComune E FRAZIONI",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 20,
+                        letterSpacing: 2,
+                      ),
+                    ),
+                  ],
+                ),
+
               ),
             ),
-            decoration: BoxDecoration(
-              color: Colors.amber,
-            ),
-          ),
 //          GestureDetector(
 //            child: ListTile(
 //              leading: Icon(Entypo.info),
@@ -146,66 +147,96 @@ class _MenuDrawerState extends State<MenuDrawer> {
 //            },
 //          ),
 //          SizedBox(height: 3,),
+            Container(
+              height: 500,
+              color: Colors.white,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
 
-          GestureDetector(
-            child: ListTile(
-              leading: Icon(FontAwesome5Solid.phone
+                  SizedBox(height: 15,),
 
+
+                  Container(
+                    color: Colors.white,
+                    child: GestureDetector(
+                      child: ListTile(
+                        leading: Icon(FontAwesome5Solid.phone
+
+                        ),
+                        title: Text("NUMERI UTILI", style: TextStyle(fontSize: 18),),
+                        subtitle: Text("Comune e ritiro ingombranti"),
+                      ),
+                      onTap: (){
+                        Navigator.pop(context);
+
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Contatti(id_comune: codiceComune,)));
+                      },
+                    ),
+                  ),
+                  Divider(),
+                  SizedBox(height: 5,),
+                  Container(
+                    color: Colors.white,
+                    child: GestureDetector(
+                      child: ListTile(
+                        leading: Icon(FontAwesome5Solid.location_arrow
+
+                        ),
+                        title: Text("CENTRO DI RACCOLTA RIFIUTI", style: TextStyle(fontSize: 18),),
+                        subtitle: Text("Urbani per utenze domestiche"),
+                      ),
+                      onTap: (){
+
+                        Navigator.pop(context);
+
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => CentroDiRaccolta(id_comune: codiceComune)));
+                      },
+                    ),
+                  ),
+                  Divider(),
+
+                  SizedBox(height: 5,),
+                  Container(
+                    color: Colors.white,
+                    child: GestureDetector(
+                      child: ListTile(
+                        leading: Icon(FontAwesome5Solid.book_open
+
+                        ),
+                        title: Text("ALTRE INFO", style: TextStyle(fontSize: 18),),
+                      ),
+                      onTap: (){
+
+                        Navigator.pop(context);
+
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => AltreInfo(id_comune: codiceComune)));
+                      },
+                    ),
+                  ),
+                  Divider(),
+
+
+                ],
               ),
-              title: Text("NUMERI UTILI", style: TextStyle(fontSize: 18),),
-              subtitle: Text("Comune e ritiro ingombranti"),
             ),
-            onTap: (){
-              Navigator.pop(context);
-
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => Contatti(id_comune: codiceComune,)));
-            },
-          ),
-          SizedBox(height: 3,),
-          GestureDetector(
-            child: ListTile(
-              leading: Icon(FontAwesome5Solid.location_arrow
-
-              ),
-              title: Text("CENTRO DI RACCOLTA RIFIUTI", style: TextStyle(fontSize: 18),),
-              subtitle: Text("Urbani per utenze domestiche"),
-            ),
-            onTap: (){
-
-              Navigator.pop(context);
-
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => CentroDiRaccolta(id_comune: codiceComune)));
-            },
-          ),
-          SizedBox(height: 3,),
-          GestureDetector(
-            child: ListTile(
-              leading: Icon(FontAwesome5Solid.book_open
-
-              ),
-              title: Text("ALTRE INFO", style: TextStyle(fontSize: 18),),
-            ),
-            onTap: (){
-
-              Navigator.pop(context);
-
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => AltreInfo(id_comune: codiceComune)));
-            },
-          ),
 
 
 
 
-        ],
+
+          ],
+        ),
       ),
     );
   }

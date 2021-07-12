@@ -28,7 +28,6 @@ class _DettaglioEventoState extends State<DettaglioEvento> {
       appBar: AppBar(
         title: Text(widget.citta),
         centerTitle: true,
-        backgroundColor: Colors.pink,
         brightness: Brightness.dark, // orologio e wifi bianchi
       ),
       body: SafeArea(

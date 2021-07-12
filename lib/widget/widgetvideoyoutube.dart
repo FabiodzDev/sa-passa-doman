@@ -20,6 +20,7 @@ class WidgetVideoYoutube extends StatelessWidget {
             MaterialPageRoute(
               builder: (context) => YoutubeDettaglio(linkVideo: linkVideo),
             ));
+        print(linkVideo);
 
       },
       child: Container(

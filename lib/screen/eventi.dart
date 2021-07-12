@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_icons/flutter_icons.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
@@ -146,7 +147,7 @@ class _EventiState extends State<Eventi> {
                         style: TextStyle(
                             fontWeight: FontWeight.w700,
                             fontSize: 20,
-                            color: Colors.purple),
+                            color: Colors.blue),
                         textAlign: TextAlign.center,
                       ),
                     ),
@@ -165,7 +166,7 @@ class _EventiState extends State<Eventi> {
                       child: Text(
                         "sapassadoman@gmail.com",
                         textAlign: TextAlign.left,
-                        style: TextStyle(fontSize: 18, color: Colors.purple),
+                        style: TextStyle(fontSize: 18, color: Colors.blue),
                       ),
                     ),
                     Container(
@@ -297,7 +298,7 @@ class _EventiState extends State<Eventi> {
               brightness: Brightness.dark, // orologio e wifi bianchi
 
               leading: IconButton(
-                  icon: Icon(Icons.arrow_back),
+                  icon: Icon(MaterialCommunityIcons.chevron_left, size: 40,),
                   onPressed: () {
                     Navigator.pop(context);
                   }
